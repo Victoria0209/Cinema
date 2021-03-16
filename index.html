@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/favicon.png">
     <title> Продажа билетов в кино в Иннополисе</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        th, 
+        td{
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -36,25 +46,27 @@
         </div>
         
         <div>
-            <span>+7 (800) 355 12-56</span>
-            <span>kino@innopolis.ru</span>
-            <span>ул.Спортивная д.1</span>
-            <span>Заказать звонок</span>
-            <span>RU</span>
+            <ul>
+                <li><a href="tel:+78003551256">+7 (800) 355 12-56</a></li>
+                <li><a href="mailto:kino@innopolis.ru">kino@innopolis.ru</a></li>
+                <li><span>ул.Спортивная д.1</span></li>
+                <li><span>Заказать звонок</span></li>
+                <li><span>RU</span></li>
+            </ul>
         </div>
 
         <nav>
             <ul>    
-                <li><a href="">EVENT DETAILS</a></li>
-                <li><a href="">SPEAKERS</a></li>
-                <li><a href="">SPONSORS</a></li>
-                <li><a href="">PAST EVENTS</a></li>
-                <li><a href="">CONTACT</a></li>
+                <li><a href="#WhyWe">EVENT DETAILS</a></li>
+                <li><a href="#FilmSelection">SPEAKERS</a></li>
+                <li><a href="#Sponsors">SPONSORS</a></li>
+                <li><a href="#PastEvents">PAST EVENTS</a></li>
+                <li><a href="Contact">CONTACT</a></li>
             </ul>
         </nav>
 
         <div>
-            <span>Закажите билет в кино</span>
+            <h1>Закажите билет в кино</h1>
             <span><b>Всем покупателям подарок!</b></span>
         </div>
     </header>
@@ -70,7 +82,7 @@
         </p>
     </article>
 
-    <section> 
+    <section id="WhyWe"> 
         <div>
             <span><b>Почему мы?</b></span>
         </div>
@@ -157,46 +169,53 @@
         </div>
     </section>
 
-    <section>
+    <section id="FilmSelection">
         <div>
-            <span><b>Выберите фильм</b></span>
+            <h2>Выберите фильм</h2>
         </div>
 
         <table >
-            <tr>
-             <th>&nbsp;</th><th><b>Начало сеанса</b></th><th><b>Название фильма</b></th><th><b>Жанр</b></th>
-            </tr>
-            <tr>
-                <td>&nbsp;</td> 
-                <td>10:00</td>
-                <td>
-                    <a href="https://www.kinopoisk.ru/film/838/" title="Кинопоиск" target="_blank">Человек-паук</a>
-                </td>
-                <td>Фантастика, боевик, приключения</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>12:00</td>
-                <td>
-                    <a href="https://www.kinopoisk.ru/film/1122114/" title="Кинопоиск" target="_blank">Собачья жизнь 2</a>
-                </td>
-                <td>Фэнтэзи, драма, комедия</td>
-            </tr>
-            <tr>
-             <td>&nbsp;</td>
-             <td>14:00</td>
-             <td>
-                <a href="https://www.kinopoisk.ru/film/846824/" title="Кинопоиск" target="_blank">История игрушек 4</a>
-            </td>
-             <td>Мультфильм, фэнтэзи, комедия</td>
-             <tr>
-            <td>&nbsp;</td>
-            <td>16:00</td>
-            <td>
-                <a href="https://www.kinopoisk.ru/film/693730/" title="Кинопоиск" target="_blank">Люди в чёрном: Интэрнэшнл</a>
-            </td>
-            <td>Фантастика, боевик, комедия</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Начало сеанса</th>
+                    <th>Название фильма</th>
+                    <th>Жанр</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr> 
+                    <td>10:00</td>
+                    <td>
+                        <a href="https://www.kinopoisk.ru/film/838/" title="Кинопоиск" target="_blank">Человек-паук</a>
+                    </td>
+                    <td>Фантастика, боевик, приключения</td>
+                </tr>
+
+                <tr>
+                    <td>12:00</td>
+                    <td>
+                        <a href="https://www.kinopoisk.ru/film/1122114/" title="Кинопоиск" target="_blank">Собачья жизнь 2</a>
+                    </td>
+                    <td>Фэнтэзи, драма, комедия</td>
+                </tr>
+
+                <tr>
+                    <td>14:00</td>
+                    <td>
+                        <a href="https://www.kinopoisk.ru/film/846824/" title="Кинопоиск" target="_blank">История игрушек 4</a>
+                    </td>
+                    <td>Мультфильм, фэнтэзи, комедия</td>
+                </tr> 
+
+                <tr>
+                    <td>16:00</td>
+                    <td>
+                        <a href="https://www.kinopoisk.ru/film/693730/" title="Кинопоиск" target="_blank">Люди в чёрном: Интэрнэшнл</a>
+                    </td>
+                    <td>Фантастика, боевик, комедия</td>
+                </tr>
+            </tbody>    
         </table>
 
         <div>
@@ -209,7 +228,7 @@
     <section>
         <div>
             <img src="images/gift.png" alt="Подарок">
-            <span><b>Подарок каждому!</b></span>
+            <h2>Подарок каждому!</h2>
         </div>
 
         <div>
@@ -244,7 +263,7 @@
     <section>
         <div>
             <div>
-                <span><b>Фильмы</b></span>
+                <h2>Фильмы</h2>
             </div>
 
             <div>
@@ -262,10 +281,10 @@
         </div>
     </section> 
 
-    <section>
+    <section id="Sponsors">
         <div>
             <div>
-                <span><b>Товары</b></span>
+                <h2>Товары</h2>
             </div>
 
             <div>
@@ -298,7 +317,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="PastEvents">
         <div>
             <div>
                 <span><b>Отзывы</b></span>
@@ -317,7 +336,7 @@
             <div>
                 <div>
                     <img src="images/review1.png" alt="Отзывы">
-                    <span><b>Елена Еленова</b></span>
+                    <h3>Елена Еленова</h3>
                 </div>
                 <div>
                     <blockquote>
@@ -330,7 +349,7 @@
             <div>
                 <div>
                     <img src="images/review2.png" alt="Отзывы">
-                    <span><b>Борис Борисов</b></span>
+                    <h3>Борис Борисов</h3>
                 </div>
                 <div>
                     <blockquote>
@@ -343,7 +362,7 @@
             <div>
                 <div>
                     <img src="images/review3.png" alt="Отзывы">
-                    <span><b>Леонардо ДиКаприо</b></span>
+                    <h3>Леонардо ДиКаприо</h3>
                 </div>
                 <div>
                     <blockquote>
@@ -363,7 +382,52 @@
             </div>
             
             <div>
-                <span>Форма Обратная связь</span>
+                <form action="order.php"> Обратная связь
+                    <div>
+                        <label>
+                            <input type="text" name="username" required placeholder="Полное имя">
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <select name="place" required placeholder="Номер места">
+                                <option value="">--Не выбрано--</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <textarea placeholder="Напишите свой отзыв"></textarea>
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="checkbox"  required>
+                            Я согласен на обработку своих персональных данных
+                        </label>
+                    </div>
+                    
+                    <div>
+                        <label>
+                            <button type="submit">
+                                Послать
+                            </button>
+                        </label>
+                    </div> 
+                </form>
             </div>
         </div>
 
@@ -378,7 +442,7 @@
         </div>
     </div> 
 
-    <footer>
+    <footer id="Contact">
         <div style="padding: 20px;background-color:green;">
             <a  href="http://university.innopolis.ru" title="Иннополис" target="_blank" >
             <svg width="161" height="42" viewBox="0 0 161 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -430,11 +494,11 @@
 
             <nav>
                 <ul>
-                    <li><a href=""> DETAILS</a></li>
-                    <li><a href="">SPEAKERS</a></li>
-                    <li><a href="">SPONSORS</a></li>
-                    <li><a href="">PAST EVENTS</a></li>
-                    <li><a href="">CONTACT</a></li>
+                    <li><a href="#WhyWe">EVENT DETAILS</a></li>
+                    <li><a href="#FilmSelection">SPEAKERS</a></li>
+                    <li><a href="#Sponsors">SPONSORS</a></li>
+                    <li><a href="#PastEvents">PAST EVENTS</a></li>
+                    <li><a href="Contact">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
@@ -446,8 +510,8 @@
 
             <nav>
                 <ul>
-                    <li>+7 (800) 355 12-56</li>
-                    <li>kino@innopolis.ru</li>
+                    <li><a href="tel:+78003551256"> +7 (800) 355 12-56</a></li>
+                    <li><a href="mailto:kino@innopolis.ru">kino@innopolis.ru</a></li>
                     <li>420500, г. Иннополис ул.Университетская, д.1</li>
                     <li><a href="">Как добраться</a></li>
                     <li><a href="">Все контакты</a></li>
