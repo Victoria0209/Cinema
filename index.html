@@ -46,8 +46,8 @@
         </header>
 
         <main>
-            <article>
-                <span><b>Добро пожаловать!</b></span>
+            <section>
+                <h2>Добро пожаловать!</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et
@@ -59,7 +59,7 @@
                     pariatur.
                     Excepteur sint occaecat cupidatat non proident, sunt.
                 </p>
-            </article>
+            </section>
 
             <section id="why-we">
                 <div>
@@ -149,115 +149,111 @@
             </section>
 
             <section id="film-selection">
-                <div class="container">
+
+                <div class="container-table">
+
                     <div>
-                        <h2>Выберите фильм</h2>
+                        <h2 class="h2_table">Выберите фильм</h2>
                     </div>
 
-                    <table class="table_film">
+                    <table class="table">
 
                         <tr>
-                            <th></th>
-                            <th>
-                                <a href="#" class="table_link">
-                                    Начало сеанса
-                                    <img src="svg/arrowup.svg">
-                                </a>
+                            <th class="table_size_s"></th>
+                            <th class="table_size_m">
+                                <button type="submit" class="table__button button_arrow">Начало сеанса</button>
                             </th>
-                            <th>
-                                <a href="#" class="table_link">
-                                    Название фильма
-                                    <img src="svg/arrowdown.svg">
-                                </a>
+                            <th class="table_size_m">
+                                <button type="submit" class="table__button button_arrow">Название фильма</button>
                             </th>
-                            <th>
-                                <a href="#" class="table_link">Жанр</a>
+                            <th class="table_size_m">
+                                <button type="submit" class="table__button">Жанр</button>
                             </th>
                         </tr>
 
-
-
                         <tr>
-                            <td>
+                            <td class="table_size_s">
                                 <label>
                                     <input type="checkbox" required>
                                 </label>
                             </td>
 
-                            <td>10:00</td>
+                            <td class="table_size_m">10:00</td>
 
-                            <td>
+                            <td class="table_size_m">
                                 <a href="https://www.kinopoisk.ru/film/838/" title="Кинопоиск"
                                     target="_blank">Человек-паук</a>
                             </td>
-                            <td>Фантастика, боевик, приключения</td>
+                            <td class="table_size_m">Фантастика, боевик, приключения</td>
                         </tr>
 
                         <tr>
-                            <td>
+                            <td class="table_size_s">
                                 <label>
                                     <input type="checkbox" required>
                                 </label>
                             </td>
 
-                            <td>12:00</td>
+                            <td class="table_size_m">12:00</td>
 
-                            <td>
+                            <td class="table_size_m">
                                 <a href="https://www.kinopoisk.ru/film/1122114/" title="Кинопоиск"
                                     target="_blank">Собачья
                                     жизнь
                                     2</a>
                             </td>
 
-                            <td>Фэнтэзи, драма, комедия</td>
+                            <td class="table_size_m">Фэнтэзи, драма, комедия</td>
                         </tr>
 
                         <tr>
-                            <td>
+                            <td class="table_size_s">
                                 <label>
                                     <input type="checkbox" required>
                                 </label>
                             </td>
 
-                            <td>14:00</td>
+                            <td class="table_size_m">14:00</td>
 
-                            <td>
+                            <td class="table_size_m">
                                 <a href="https://www.kinopoisk.ru/film/846824/" title="Кинопоиск"
                                     target="_blank">История
                                     игрушек 4</a>
                             </td>
 
-                            <td>Мультфильм, фэнтэзи, комедия</td>
+                            <td class="table_size_m">Мультфильм, фэнтэзи, комедия</td>
                         </tr>
 
                         <tr>
-                            <td>
+                            <td class="table_size_s">
                                 <label>
                                     <input type="checkbox" required>
                                 </label>
                             </td>
 
-                            <td>16:00</td>
+                            <td class="table_size_m">16:00</td>
 
-                            <td>
+                            <td class="table_size_m">
                                 <a href="https://www.kinopoisk.ru/film/693730/" title="Кинопоиск" target="_blank">Люди в
                                     чёрном:
                                     Интэрнэшнл</a>
                             </td>
 
-                            <td>Фантастика, боевик, комедия</td>
+                            <td class="table_size_m">Фантастика, боевик, комедия</td>
                         </tr>
-
                     </table>
-                </div>
 
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam.
-                    </p>
+
+                    <div class="div_description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore<br>
+                            magna aliqua.
+                            Ut enim ad minim veniam.
+                        </p>
+                    </div>
                 </div>
             </section>
+
             <section>
                 <div>
                     <img src="images/gift.png" alt="Подарок">

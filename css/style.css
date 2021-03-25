@@ -4,49 +4,93 @@ a {
     text-decoration: none;
 }
 
-.container .table_film {
+.h2_table {
+    font-family: IBM Plex Sans;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 1.2;
+    color: #A3CC40;
+}
+
+.container-table {
     width: 850px;
     margin: 0 auto;
 }
 
-.table_film {
+.table {
     border-collapse: collapse;
     border-radius: 10px;
     overflow: hidden;
+    margin-top: 100px;
 }
 
-.table_film th {
+.table_size_s,
+.table_size_m {
     background: #A3CC40;
-    padding: 10px 20px;
+}
+
+.table_size_s {
+    width: 75px;
+    text-align: center;
+}
+
+.table_size_m {
+    width: 258px;
     text-align: left;
 }
 
-.table_link {
+.table__button {
     font-weight: 600;
     font-size: 20px;
     line-height: 1.3;
     color: white;
+    border: none;
+    background-color: #A3CC40;
+    cursor: pointer;
+    padding: 10px 0px 10px 0px;
 }
 
-.table_link img {
+.table__button:active {
+    outline: none;
+    color: grey;
+}
+
+.table__button:focus {
+    outline: none;
+}
+
+.button_arrow::after {
+    content: "▲";
     display: inline-block;
-    vertical-align: top;
-    margin-top: 12px;
-    padding-left: 12px;
+    font-size: 9px;
+    vertical-align: middle;
+    margin-left: 5px;
 }
 
-.table_film td {
+.button_arrow:active::after {
+    transform: rotate(180deg);
+}
+
+.table td {
     font-family: IBM Plex Sans;
     background: #373737;
-    padding: 12px 20px;
+    padding: 12px 0px 12px 0;
     color: white;
     font-size: 14px;
 }
 
-.table_film td a {
+.table td a {
     color: white;
 }
 
-.table_film tr:nth-child(2n) td {
+.table tr:nth-child(2n) td {
     background: #4C4D4F;
+}
+
+.div_description {
+    font-family: IBM Plex Sans;
+    font-size: 11px;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 35px;
 }
