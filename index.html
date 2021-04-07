@@ -6,428 +6,477 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/style.css">
     <title> Продажа билетов в кино в Иннополисе</title>
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <div style="padding: 20px;background-color:green;">
-                <a href="http://university.innopolis.ru" title="Иннополис" target="_blank">
-                    <img src="svg/logo.svg">
-                </a>
+
+    <header class="header block">
+        <div class="header__container">
+            <div class="header_block">
+                <div class="logo">
+                    <a href="http://university.innopolis.ru" title="Иннополис" target="_blank">
+                        <img src="svg/logo.svg">
+                    </a>
+                </div>
+
+                <div class="header__navigation">
+                    <div class="navigation__list">
+                        <ul class="list list1">
+                            <li><a href="tel:+78003551256">+7 (800) 355 12-56</a></li>
+                            <li><a href="mailto:kino@innopolis.ru">kino@innopolis.ru</a></li>
+                            <li class="list_white">ул.Спортивная д.1</li>
+                            <li>
+                                <button class="call">
+                                    <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M5.67222 7.98889C4.1 7.18333 2.81111 5.9 2.01111 4.32778L3.12371 3.49804C3.44322 3.25977 3.59072 2.85451 3.49912 2.4666L3.09853 0.770184C2.99196 0.318844 2.58905 0 2.1253 0H0.555556C0.25 0 0 0.25 0 0.555556C0 5.77222 4.22778 10 9.44444 10C9.75 10 10 9.75 10 9.44444V7.87332C10 7.4102 9.68201 7.00767 9.23146 6.90048L7.53545 6.49696C7.14653 6.40442 6.73987 6.55242 6.50139 6.87328L5.67222 7.98889Z" />
+                                    </svg>
+                                    <p>Заказать звонок</p>
+                                </button>
+                            </li>
+                            <li><span class="lang">RU</span></li>
+                        </ul>
+                    </div>
+
+                    <nav class="navigation__list" role="navigation" aria-label="MainHeader">
+                        <ul class="list list2">
+                            <li><a href="#why-we">event details</a></li>
+                            <li><a href="#film-selection">speakers</a></li>
+                            <li><a href="#sponsors">sponsors</a></li>
+                            <li><a href="#past-events">pat events</a></li>
+                            <li><a href="#contact">contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
 
-            <div>
-                <ul>
-                    <li><a href="tel:+78003551256">+7 (800) 355 12-56</a></li>
-                    <li><a href="mailto:kino@innopolis.ru">kino@innopolis.ru</a></li>
-                    <li><span>ул.Спортивная д.1</span></li>
-                    <li><button><img src="svg/tel.svg">Заказать звонок</button></li>
-                    <li><span><img src="svg/arrow.svg">RU</span></li>
-                </ul>
+            <div class="header2">
+                <h1 class="header2_large">Закажите билет в кино</h1>
+                <p class="header2_small">Всем покупателям подарок!</p>
             </div>
+        </div>
+    </header>
 
-            <nav role="navigation" aria-label="MainHeader">
-                <ul>
-                    <li><a href="#why-we">EVENT DETAILS</a></li>
-                    <li><a href="#film-selection">SPEAKERS</a></li>
-                    <li><a href="#sponsors">SPONSORS</a></li>
-                    <li><a href="#past-events">PAST EVENTS</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
-            </nav>
-
-            <div>
-                <h1>Закажите билет в кино</h1>
-                <span><b>Всем покупателям подарок!</b></span>
-            </div>
-        </header>
-
-        <main>
-            <section>
-                <h2>Добро пожаловать!</h2>
-                <p>
+    <main>
+        <section class="welcome">
+            <div class="block02">
+                <h2 class="welcome_h2">Добро пожаловать!</h2>
+                <p class="welcome_text1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et
                     dolore magna aliqua. Ut enim ad minim veniam.
                 </p>
 
-                <p>
+                <p class="welcome_text2">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
                     pariatur.
                     Excepteur sint occaecat cupidatat non proident, sunt.
                 </p>
-            </section>
+            </div>
+        </section>
 
-            <section id="why-we">
-                <div>
-                    <span><b>Почему мы?</b></span>
-                </div>
-
-                <div>
-                    <div>
-                        <div>
-                            <img src="images/large_screens.png" alt="Большие экраны">
-                            <span><b>Большие экраны</b></span>
-                        </div>
-                        <div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam.
-                            </p>
-                        </div>
+        <section id="why-we">
+            <div class="block03 block">
+                <div class="container">
+                    <div class="headers">
+                        <span><b>Почему мы?</b></span>
                     </div>
 
                     <div>
                         <div>
-                            <img src="images/surround_sound.png" alt="Объёмный звук">
-                            <span><b>Объёмный звук</b></span>
-                        </div>
-
-                        <div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div>
-                            <img src="images/comfortable_armchairs.png" alt="Удобные кресла">
-                            <span><b>Удобные кресла</b></span>
-                        </div>
-                        <div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div>
-                            <img src="images/cozy_atmosphere.png" alt="Уютная атмосфера">
-                            <span><b>Уютная атмосфера</b></span>
-                        </div>
-                        <div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div>
-                            <img src="images/full_immersion.png" alt="Полное погружение">
-                            <span><b>Полное погружение</b></span>
-                        </div>
-                        <div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div>
-                            <img src="images/back_row_kisses.png" alt="Поцелуи на заднем ряду">
-                            <span><b>Поцелуи на заднем ряду</b></span>
-                        </div>
-                        <div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="film-selection">
-
-                <div class="container-table">
-
-                    <div>
-                        <h2 class="h2_table">Выберите фильм</h2>
-                    </div>
-
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th class="table_size_s"></th>
-                                <th class="table_size_m">
-                                    <button type="submit" class="table__button button_arrow">Начало сеанса</button>
-                                </th>
-                                <th class="table_size_m">
-                                    <button type="submit" class="table__button button_arrow">Название фильма</button>
-                                </th>
-                                <th class="table_size_m">
-                                    <button type="submit" class="table__button">Жанр</button>
-                                </th>
-                            </tr>
-                        </thead>
-                        
-                        <tr>
-                            <td class="table_size_s">
-                                <label>
-                                    <input type="checkbox" required>
-                                </label>
-                            </td>
-
-                            <td class="table_size_m">10:00</td>
-
-                            <td class="table_size_m">
-                                <a href="https://www.kinopoisk.ru/film/838/" title="Кинопоиск"
-                                    target="_blank">Человек-паук</a>
-                            </td>
-                            <td class="table_size_m">Фантастика, боевик, приключения</td>
-                        </tr>
-
-                        <tr>
-                            <td class="table_size_s">
-                                <label>
-                                    <input type="checkbox" required>
-                                </label>
-                            </td>
-
-                            <td class="table_size_m">12:00</td>
-
-                            <td class="table_size_m">
-                                <a href="https://www.kinopoisk.ru/film/1122114/" title="Кинопоиск" target="_blank">
-                                    Собачья жизнь 2
-                                </a>
-                            </td>
-
-                            <td class="table_size_m">Фэнтэзи, драма, комедия</td>
-                        </tr>
-
-                        <tr>
-                            <td class="table_size_s">
-                                <label>
-                                    <input type="checkbox" required>
-                                </label>
-                            </td>
-
-                            <td class="table_size_m">14:00</td>
-
-                            <td class="table_size_m">
-                                <a href="https://www.kinopoisk.ru/film/846824/" title="Кинопоиск" target="_blank">
-                                    История игрушек 4
-                                </a>
-                            </td>
-
-                            <td class="table_size_m">Мультфильм, фэнтэзи, комедия</td>
-                        </tr>
-
-                        <tr>
-                            <td class="table_size_s">
-                                <label>
-                                    <input type="checkbox" required>
-                                </label>
-                            </td>
-
-                            <td class="table_size_m">16:00</td>
-
-                            <td class="table_size_m">
-                                <a href="https://www.kinopoisk.ru/film/693730/" title="Кинопоиск" target="_blank">
-                                    Люди в чёрном: Интэрнэшнл
-                                </a>
-                            </td>
-
-                            <td class="table_size_m">Фантастика, боевик, комедия</td>
-                        </tr>
-                    </table>
-
-
-                    <div class="div_description">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore<br>
-                            magna aliqua.
-                            Ut enim ad minim veniam.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div>
-                    <img src="images/gift.png" alt="Подарок">
-                    <h2>Подарок каждому!</h2>
-                </div>
-
-                <div>
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Nibh mauris cursus mattis molestie a iaculis at. Vel quam elementum pulvinar etiam non quam.
-                            Ut
-                            pharetra sit amet aliquam id diam maecenas.
-                        </p>
-                    </div>
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Nibh mauris cursus mattis molestie a iaculis at. Vel quam elementum pulvinar etiam non quam.
-                            Ut
-                            pharetra sit amet aliquam id diam maecenas.
-                        </p>
-                    </div>
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Nibh mauris cursus mattis molestie a iaculis at. Vel quam elementum pulvinar etiam non quam.
-                            Ut
-                            pharetra sit amet aliquam id diam maecenas.
-                        </p>
-                    </div>
-                </div>
-
-                <div>
-                    <span>Получить подарок</span>
-                </div>
-            </section>
-
-            <section>
-                <div>
-                    <div>
-                        <h2>Фильмы</h2>
-                    </div>
-
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Nibh mauris cursus mattis molestie a iaculis at.
-                            Vel quam elementum pulvinar etiam non quam.
-                        </p>
-                    </div>
-
-                    <div>
-                        <span>Мозайка фильмов</span>
-                    </div>
-                </div>
-            </section>
-
-            <section id="sponsors">
-                <div>
-                    <div>
-                        <h2>Товары</h2>
-                    </div>
-
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Nibh mauris cursus mattis molestie a iaculis at.
-                            Vel quam elementum pulvinar etiam non quam.
-                        </p>
-                    </div>
-                </div>
-
-                <div>
-                    <a href="" title="">
-                        <div>
-                            <div><b>Coca-cola</b></div>
-                        </div>
-                    </a>
-                    <a href="" title="">
-                        <div>
-                            <div><b>Брелок “Железный человек”</b></div>
-                        </div>
-                    </a>
-
-                    <a href="" title="">
-                        <div>
-                            <div><b>Постер “Мстители”</b></div>
-                        </div>
-                    </a>
-                </div>
-            </section>
-
-            <section id="past-events">
-                <div>
-                    <div>
-                        <span><b>Отзывы</b></span>
-                    </div>
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Nibh mauris cursus mattis molestie a iaculis at.
-                            Vel quam elementum pulvinar etiam non quam.
-                        </p>
-                    </div>
-                </div>
-
-                <div>
-                    <div>
-                        <div>
-                            <img src="images/review1.png" alt="Отзыв Еленова">
-                            <h3>Елена Еленова</h3>
-                        </div>
-                        <div>
-                            <blockquote>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </blockquote>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div>
-                            <img src="images/review2.png" alt="Отзыв Борисов">
-                            <h3>Борис Борисов</h3>
-                        </div>
-                        <div>
-                            <blockquote>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </blockquote>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div>
-                            <img src="images/review3.png" alt="Отзыв ДиКаприо">
-                            <h3>Леонардо ДиКаприо</h3>
-                        </div>
-                        <div>
-                            <blockquote>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div>
-                    <div>
-                        <img src="images/forbacground.png" alt="">
-                        <img src="images/gradient.png" alt="">
-                    </div>
-
-                    <div>
-                        <form action="order.php"> Обратная связь
                             <div>
-                                <label>Полное имя
+                                <img src="images/large_screens.png" alt="Большие экраны">
+                                <span><b>Большие экраны</b></span>
+                            </div>
+                            <div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                <img src="images/surround_sound.png" alt="Объёмный звук">
+                                <span><b>Объёмный звук</b></span>
+                            </div>
+
+                            <div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                <img src="images/comfortable_armchairs.png" alt="Удобные кресла">
+                                <span><b>Удобные кресла</b></span>
+                            </div>
+                            <div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                <img src="images/cozy_atmosphere.png" alt="Уютная атмосфера">
+                                <span><b>Уютная атмосфера</b></span>
+                            </div>
+                            <div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                <img src="images/full_immersion.png" alt="Полное погружение">
+                                <span><b>Полное погружение</b></span>
+                            </div>
+                            <div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                <img src="images/back_row_kisses.png" alt="Поцелуи на заднем ряду">
+                                <span><b>Поцелуи на заднем ряду</b></span>
+                            </div>
+                            <div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="film-selection">
+            <div class="block04 block">
+                <div class="container">
+                    <div class="container-table">
+
+                        <div class="headers">
+                            <h2 class="h2_table">Выберите фильм</h2>
+                        </div>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="table_size_s"></th>
+                                    <th class="table_size_m">
+                                        <button type="submit" class="table__button button_arrow">Начало сеанса</button>
+                                    </th>
+                                    <th class="table_size_m">
+                                        <button type="submit" class="table__button button_arrow">Название
+                                            фильма</button>
+                                    </th>
+                                    <th class="table_size_m">
+                                        <button type="submit" class="table__button">Жанр</button>
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tr>
+                                <td class="table_size_s">
+                                    <label>
+                                        <input type="checkbox" required>
+                                    </label>
+                                </td>
+
+                                <td class="table_size_m">10:00</td>
+
+                                <td class="table_size_m">
+                                    <a href="https://www.kinopoisk.ru/film/838/" title="Кинопоиск"
+                                        target="_blank">Человек-паук</a>
+                                </td>
+                                <td class="table_size_m">Фантастика, боевик, приключения</td>
+                            </tr>
+
+                            <tr>
+                                <td class="table_size_s">
+                                    <label>
+                                        <input type="checkbox" required>
+                                    </label>
+                                </td>
+
+                                <td class="table_size_m">12:00</td>
+
+                                <td class="table_size_m">
+                                    <a href="https://www.kinopoisk.ru/film/1122114/" title="Кинопоиск" target="_blank">
+                                        Собачья жизнь 2
+                                    </a>
+                                </td>
+
+                                <td class="table_size_m">Фэнтэзи, драма, комедия</td>
+                            </tr>
+
+                            <tr>
+                                <td class="table_size_s">
+                                    <label>
+                                        <input type="checkbox" required>
+                                    </label>
+                                </td>
+
+                                <td class="table_size_m">14:00</td>
+
+                                <td class="table_size_m">
+                                    <a href="https://www.kinopoisk.ru/film/846824/" title="Кинопоиск" target="_blank">
+                                        История игрушек 4
+                                    </a>
+                                </td>
+
+                                <td class="table_size_m">Мультфильм, фэнтэзи, комедия</td>
+                            </tr>
+
+                            <tr>
+                                <td class="table_size_s">
+                                    <label>
+                                        <input type="checkbox" required>
+                                    </label>
+                                </td>
+
+                                <td class="table_size_m">16:00</td>
+
+                                <td class="table_size_m">
+                                    <a href="https://www.kinopoisk.ru/film/693730/" title="Кинопоиск" target="_blank">
+                                        Люди в чёрном: Интэрнэшнл
+                                    </a>
+                                </td>
+
+                                <td class="table_size_m">Фантастика, боевик, комедия</td>
+                            </tr>
+                        </table>
+
+
+                        <div class="div_description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore<br>
+                                magna aliqua.
+                                Ut enim ad minim veniam.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="block05 block">
+                <div class="container">
+                    <div>
+                        <img src="images/gift.png" alt="Подарок">
+                        <h2>Подарок каждому!</h2>
+                    </div>
+
+                    <div>
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Nibh mauris cursus mattis molestie a iaculis at. Vel quam elementum pulvinar etiam non
+                                quam.
+                                Ut
+                                pharetra sit amet aliquam id diam maecenas.
+                            </p>
+                        </div>
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Nibh mauris cursus mattis molestie a iaculis at. Vel quam elementum pulvinar etiam non
+                                quam.
+                                Ut
+                                pharetra sit amet aliquam id diam maecenas.
+                            </p>
+                        </div>
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Nibh mauris cursus mattis molestie a iaculis at. Vel quam elementum pulvinar etiam non
+                                quam.
+                                Ut
+                                pharetra sit amet aliquam id diam maecenas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span>Получить подарок</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="block06 block">
+                <div class="container">
+                    <div>
+                        <div class="headers">
+                            <h2>Фильмы</h2>
+                        </div>
+
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Nibh mauris cursus mattis molestie a iaculis at.
+                                Vel quam elementum pulvinar etiam non quam.
+                            </p>
+                        </div>
+
+                        <div>
+                            <span>Мозайка фильмов</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sponsors">
+            <div class="block07 block">
+                <div class="container">
+                    <div>
+                        <div class="headers">
+                            <h2>Товары</h2>
+                        </div>
+
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Nibh mauris cursus mattis molestie a iaculis at.
+                                Vel quam elementum pulvinar etiam non quam.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a href="" title="">
+                            <div>
+                                <div><b>Coca-cola</b></div>
+                            </div>
+                        </a>
+                        <a href="" title="">
+                            <div>
+                                <div><b>Брелок “Железный человек”</b></div>
+                            </div>
+                        </a>
+
+                        <a href="" title="">
+                            <div>
+                                <div><b>Постер “Мстители”</b></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="past-events">
+            <div class="block08 block">
+                <div class="container">
+                    <div>
+                        <div class="headers">
+                            <span><b>Отзывы</b></span>
+                        </div>
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Nibh mauris cursus mattis molestie a iaculis at.
+                                Vel quam elementum pulvinar etiam non quam.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <div>
+                                <img src="images/review1.png" alt="Отзыв Еленова">
+                                <h3>Елена Еленова</h3>
+                            </div>
+                            <div>
+                                <blockquote>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                <img src="images/review2.png" alt="Отзыв Борисов">
+                                <h3>Борис Борисов</h3>
+                            </div>
+                            <div>
+                                <blockquote>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                <img src="images/review3.png" alt="Отзыв ДиКаприо">
+                                <h3>Леонардо ДиКаприо</h3>
+                            </div>
+                            <div>
+                                <blockquote>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="block09 block">
+                <div class="container_block09">
+                    <div class="block_pic">
+                        <div class="block_pic01">
+                            <div class="block_pic02"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="block_form">
+                        <form class="form" action="order.php">
+                            <p class="form_feedback">Обратная связь</p>
+                            <div class="input">
+                                <label>
                                     <input type="text" name="username" required placeholder="Полное имя">
                                 </label>
                             </div>
 
-                            <div>
+                            <div class="select">
                                 <label>
                                     <select aria-label="places" name="place" required>
-                                        <option value="">--Не выбрано--</option>
+                                        <option value="">Номер места</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -442,100 +491,105 @@
                                 </label>
                             </div>
 
-                            <div>
-                                <label>Напишите свой отзыв
+                            <div class="textarea">
+                                <label>
                                     <textarea placeholder="Напишите свой отзыв"></textarea>
                                 </label>
                             </div>
 
-                            <div>
+                            <div class="input_checkbox">
                                 <label>
-                                    <input type="checkbox" required>
-                                    Я согласен на обработку своих персональных данных
+                                    <input class="checkbox" type="checkbox" required>
+                                    <p class="check">Я согласен на обработку своих персональных данных</p>
                                 </label>
                             </div>
 
-                            <div>
+                            <div class="button_form">
                                 <label>
                                     <button type="submit">
-                                        Послать
+                                        послать
                                     </button>
                                 </label>
                             </div>
                         </form>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
+        <section>
 
-            <div>
-                <div>
-                    <img src="images/map.png" alt="Карта">
+            <div class="block10 block">
+                <div class="container">
+                    <div class="map">
+                        <img src="images/map.png" alt="Карта">
+                    </div>
                 </div>
             </div>
-        </main>
+        </section>
+    </main>
 
-        <footer id="contact">
-            <div style="padding: 20px;background-color:green;">
-                <a href="http://university.innopolis.ru" title="Иннополис" target="_blank">
-                    <img src="svg/logo.svg">
-                </a>
-            </div>
+    <footer id="contact">
+        <div style="padding: 20px;background-color:green;">
+            <a href="http://university.innopolis.ru" title="Иннополис" target="_blank">
+                <img src="svg/logo.svg">
+            </a>
+        </div>
 
+        <div>
             <div>
-                <div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam
-                    </p>
-                </div>
-
-                <div style="background: black;">
-                    <a href="" title="Инстаграм"><img src="svg/inst.svg"></a>
-                    <a href="" title="Линкинтел"><img src="svg/linkedIn.svg"></a>
-                    <a href="" title="Твитер"><img src="svg/twiter.svg"></a>
-                    <a href="" title="Ютуб"><img src="svg/you_tube.svg"></a>
-                    <a href="" title="Фейсбук"><img src="svg/facebook.svg"></a>
-                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam
+                </p>
             </div>
 
+            <div style="background: black;">
+                <a href="" title="Инстаграм"><img src="svg/inst.svg"></a>
+                <a href="" title="Линкинтел"><img src="svg/linkedIn.svg"></a>
+                <a href="" title="Твитер"><img src="svg/twiter.svg"></a>
+                <a href="" title="Ютуб"><img src="svg/you_tube.svg"></a>
+                <a href="" title="Фейсбук"><img src="svg/facebook.svg"></a>
+            </div>
+        </div>
+
+        <div>
             <div>
-                <div>
-                    <span><b>SITE</b></span>
-                </div>
-
-                <nav role="navigation" aria-label="main-footer">
-                    <ul>
-                        <li><a href="#why-we">EVENT DETAILS</a></li>
-                        <li><a href="#film-selection">SPEAKERS</a></li>
-                        <li><a href="#sponsors">SPONSORS</a></li>
-                        <li><a href="#past-events">PAST EVENTS</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
-                    </ul>
-                </nav>
+                <span><b>SITE</b></span>
             </div>
 
+            <nav role="navigation" aria-label="main-footer">
+                <ul>
+                    <li><a href="#why-we">event details</a></li>
+                    <li><a href="#film-selection">speakers</a></li>
+                    <li><a href="#sponsors">sponsors</a></li>
+                    <li><a href="#past-events">pat events</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div>
             <div>
-                <div>
-                    <span><b>CONTACT</b></span>
-                </div>
-
-                <nav>
-                    <ul>
-                        <li><a href="tel:+78003551256"> +7 (800) 355 12-56</a></li>
-                        <li><a href="mailto:kino@innopolis.ru">kino@innopolis.ru</a></li>
-                        <li>420500, г. Иннополис ул.Университетская, д.1</li>
-                        <li><a href="">Как добраться</a></li>
-                        <li><a href="">Все контакты</a></li>
-                    </ul>
-                </nav>
+                <span><b>CONTACT</b></span>
             </div>
 
-            <div>
-                <span>Copyright @ 2020 Innopolis University . All Rights Reserved.</span>
-            </div>
-        </footer>
-    </div>
+            <nav>
+                <ul>
+                    <li><a href="tel:+78003551256"> +7 (800) 355 12-56</a></li>
+                    <li><a href="mailto:kino@innopolis.ru">kino@innopolis.ru</a></li>
+                    <li>420500, г. Иннополис ул.Университетская, д.1</li>
+                    <li><a href="">Как добраться</a></li>
+                    <li><a href="">Все контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div>
+            <span>Copyright @ 2020 Innopolis University . All Rights Reserved.</span>
+        </div>
+    </footer>
+
 </body>
 
 </html>
