@@ -1,6 +1,10 @@
 /* общие */
 html {
     box-sizing: border-box;
+
+}
+
+body {
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
@@ -10,7 +14,9 @@ html {
     box-sizing: inherit;
 }
 
-a {
+.logo a,
+.list li a,
+.footer_list a {
     text-decoration: none;
     font-style: normal;
     font-weight: 500;
@@ -35,9 +41,4 @@ a {
 .container {
     max-width: 850px;
     margin: 0 auto;
-}
-
-
-section {
-    margin-top: 50px;
 }
