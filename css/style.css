@@ -59,9 +59,9 @@
 }
 
 .card_big:hover {
-    width: 107%;
+    transform: scale(1.07);
+    cursor: pointer;
 }
-
 
 .header__container {
     max-width: 940px;
@@ -287,11 +287,24 @@
 .table_size_s,
 .table_size_m {
     background: #A3CC40;
+
+}
+
+.table_size_m a {
+    text-decoration: none;
 }
 
 .table_size_s {
     width: 75px;
     text-align: center;
+}
+
+.svg_green {
+    fill: #FFFFFF;
+}
+
+.svg_green:hover {
+    fill: #A3CC40;
 }
 
 .table_size_m {
@@ -335,6 +348,7 @@
     padding: 12px 0px 12px 0;
     color: white;
     font-size: 14px;
+    line-height: 1.2;
 }
 
 .table td a {
@@ -388,7 +402,7 @@
 .gift_img {
     position: absolute;
     left: 115px;
-    bottom: 381px;
+    bottom: 454px;
     border-radius: 100%;
     overflow: hidden;
 }
@@ -916,12 +930,16 @@
 }
 
 .icon:hover {
-    box-shadow: 7px 4px 10px grey;
-
+    box-shadow: 7px 4px 10px #4C4D4F;
 }
 
-.icon img {
+.white {
     margin: auto;
+    fill: white;
+}
+
+.icon:hover .white {
+    fill:#4C4D4F;
 }
 
 .copyright {
@@ -953,10 +971,7 @@
 }
 
 .footer_list_uppercase li a {
-    padding-bottom: 10px;
     padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
 }
 
 .footer_list_uppercase a:hover {
@@ -964,7 +979,6 @@
     background: #DCDCDC;
     font-weight: 500;
     font-size: 12px;
-    line-height: 1.2;
     text-decoration-line: underline;
     color: #FFFFFF;
     margin-bottom: 0;
