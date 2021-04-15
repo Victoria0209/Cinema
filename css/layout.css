@@ -34,10 +34,6 @@ body {
 }
 
 /* сетка */
-.block {
-    min-height: 100vh;
-}
-
 .container {
     max-width: 42.5rem;
     margin: 0 auto;
