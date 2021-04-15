@@ -924,7 +924,7 @@
     margin-top: 1.25rem;
 }
 
-.check {
+/* .check {
     font-size: 0.5rem;
     line-height: 1.2;
     color: #333333;
@@ -936,10 +936,31 @@
 .checkbox {
     width: 0.9rem;
     height: 0.9rem;
-    /* appearance: none; */
-    /* border: 1px solid #A3CC40; */
+    appearance: none;
+    border: 1px solid #A3CC40;
     border-radius: 0.25rem;
     box-shadow: 0.05rem 0.05rem 0 #A3CC40 inset;
+} */
+.visually-hidden{
+    display: none;
+}
+.checkbox:checked + .check::before {
+    background: url(../images/checkbox-icon.png) no-repeat center;
+    background-size: 0.8rem 0.5rem;
+}
+.check {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.5rem;
+}
+.check::before {
+    content: "";
+    width: 0.9rem;
+    height: 0.85rem;
+    margin-right: 0.3rem;
+    border: 0.05rem solid #A3CC40;
+    border-radius: 0.25rem;
 }
 
 .button_form [type="submit"] {
