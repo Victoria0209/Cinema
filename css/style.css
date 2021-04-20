@@ -193,7 +193,6 @@
     display: block;
 }
 
-/* rgba(0, 0, 0, 8) */
 .call {
     font-family: IBM Plex Sans;
     background: #FFFFFF;
@@ -285,19 +284,17 @@
 .card {
     display: flex;
     margin-top: 4.9rem;
-    flex-direction: column;
-}
-
-.row2,
-.row1 {
-    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.row2 {
+.card4,
+.card5,
+.card6 {
     margin-top: 3rem;
 }
-.card_main{
+
+.card_main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -311,15 +308,10 @@
     margin-top: 1.65rem;
 }
 
-/* .card_desk,
 .card_all {
-    width: 12.5rem;
-    display: inline-block;
-
-} */
-.card_all{
     width: 29%;
 }
+
 .card_desk {
     font-size: 0.55rem;
     line-height: 1.2;
@@ -329,7 +321,6 @@
 }
 
 .card_big {
-    /* width: 12.25rem; */
     width: 100%;
     height: 8.5rem;
     border-radius: 0.35rem;
@@ -567,7 +558,7 @@
 .block06_table {
     margin-top: 3.25rem;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .headers_desc {
