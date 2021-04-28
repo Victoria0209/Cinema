@@ -55,15 +55,17 @@
 
 /* Header */
 .header-block01 {
-    min-height: 100vh;
+    height: 33.25rem;
     background: url(../images/first_page.jpg) no-repeat center / cover;
     overflow: hidden;
     position: relative;
 }
 
 .header-block01_container {
-    max-width: 47rem;
+    max-width: 950px;
+    min-width: 320px;
     margin: 0 auto;
+    padding: 0 12px;
 }
 
 .header-block01::after {
@@ -72,35 +74,42 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    border-top: 5rem solid transparent;
+    border-top: 6rem solid transparent;
     border-right: 100vw solid #fff;
 }
 
+.logo {
+    width: 7.8rem;
+    height: 2rem;
+}
+
 .header-block01_menu {
-    margin-top: 2.25rem;
-    height: 2.5rem;
+    margin-top: 2.2rem;
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
 }
 
-.header-block01_navigation {
-    margin-left: 2.25rem;
+.wrap_menu {
+    margin-left: 2rem;
 }
 
-.list li {
+.list {
     display: inline-block;
 }
 
 .list_li {
     margin-right: 2.5rem;
+    display: inline-block;
 }
 
-.list1 li:last-child,
-.list2 li:last-child {
-    margin-right: 0;
+.list_li__last {
+    margin-right: 3.7rem;
 }
 
 .list2 li {
+    display: inline-block;
     margin-right: 3.5rem;
     margin-top: 0.25rem;
     text-transform: uppercase;
@@ -130,7 +139,23 @@
     line-height: 1.3;
 }
 
+.lang_hidden {
+    display: none;
+}
+
 .lang {
+    position: absolute;
+    display: inline-block;
+    top: 2.05rem;
+    right: 3.5rem;
+}
+
+.lang_trigger__arrow {
+    width: 0.4rem;
+    height: 0.2rem;
+}
+
+.dropdown {
     position: relative;
 }
 
@@ -139,7 +164,6 @@
     font-size: 0.6rem;
     line-height: 1.3;
     color: #FFFFFF;
-    display: inline-block;
 }
 
 .lang svg {
@@ -192,6 +216,12 @@
 .dropdown_opened .lang_list {
     display: block;
 }
+.cross{
+    display: none;
+}
+.cross_svg{
+    width:1.37rem; height: 1.35rem;; 
+}
 
 .call {
     font-family: IBM Plex Sans;
@@ -219,6 +249,11 @@
     transition: .2s;
 }
 
+.call_svg {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
 .call:hover svg {
     fill: #FFFFFF;
 }
@@ -226,20 +261,34 @@
 .header2 {
     text-align: center;
     color: #FFFFFF;
-    margin-top: 8.5rem;
+    margin-top: 6.8rem;
+    margin-left: 1rem;
 }
 
 .header2_large {
     font-weight: 100;
     font-size: 3.4rem;
     line-height: 1.2;
-    font-style: normal;
 }
 
 .header2_small {
     font-size: 2.05rem;
     line-height: 1.2;
     margin-top: 1.25rem;
+}
+
+.button_menu {
+    display: none;
+}
+
+.button_menu__burger {
+    width: 2.35rem;
+    height: 1.3rem;
+}
+
+.rect1 {
+    width: 46px;
+    height: 3px;
 }
 
 /* block welcome */
@@ -250,8 +299,8 @@
     background: #FFFFFF;
     box-shadow: 0 1.35rem 1.95rem rgba(163, 204, 64, 0.18);
     border-radius: 0.5rem;
-    bottom: -5rem;
-    right: 4rem;
+    top: 26.3rem;
+    right: 5.9rem;
 }
 
 .welcome_h2 {
@@ -259,40 +308,36 @@
     font-size: 1.65rem;
     line-height: 1.3;
     color: #333333;
-    margin: 2rem 2rem 1rem 2rem;
+    margin: 1.6rem 2rem 1rem 2rem;
 }
 
 .welcome_text1,
 .welcome_text2 {
     width: 16.25rem;
     font-size: 0.55rem;
-    line-height: 1.2;
+    line-height: 1.3;
     color: #333333;
     margin-left: 2rem;
 }
 
 .welcome_text2 {
-    margin-top: 1.05rem;
+    margin-top: .7rem;
 }
 
 /* why-we */
 #why-we {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     min-height: 42.5rem;
 }
 
 .card {
     display: flex;
-    margin-top: 4.9rem;
+    margin-top: 1.3rem;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.card4,
-.card5,
-.card6 {
-    margin-top: 3rem;
-}
+
 
 .card_main {
     display: flex;
@@ -309,7 +354,16 @@
 }
 
 .card_all {
-    width: 29%;
+
+    max-width: 242px;
+    flex: 1 0 242px;
+    margin: 2.7rem 5px 0 5px;
+
+}
+
+.card_img {
+    width: 100%;
+    display: inline-block;
 }
 
 .card_desk {
@@ -321,8 +375,8 @@
 }
 
 .card_big {
-    width: 100%;
-    height: 8.5rem;
+    max-width: 100%;
+    min-width: 100%;
     border-radius: 0.35rem;
     transition: .3s;
 }
@@ -334,21 +388,26 @@
 
 /*table*/
 #film-selection {
-    margin-top: 9.25rem;
+    margin-top: 7rem;
     min-height: 21.25rem;
+}
+
+.table-scroll {
+    min-width: 40.5rem;
 }
 
 .container-table {
     width: 42.5rem;
     margin: 0 auto;
+    padding: 0 12px;
 }
 
 .table {
     border-collapse: collapse;
     border-radius: 0.5rem;
     overflow: hidden;
-    margin-top: 4.75rem;
-    width: 42.5rem;
+    margin-top: 4.4rem;
+    width: 100%;
     table-layout: fixed;
 }
 
@@ -369,6 +428,8 @@
 
 .svg_green {
     fill: #FFFFFF;
+    width: 0.55rem;
+    height: 0.45rem;
 }
 
 .svg_green:hover {
@@ -377,7 +438,6 @@
 
 .table_size_m {
     text-align: left;
-    /* height: 0.6rem; */
 }
 
 .table__button {
@@ -416,7 +476,7 @@
 
 .table td {
     background: #373737;
-    padding: 0.6rem 0 0.6rem 0;
+    padding: 0.7rem 0 0.7rem 0;
     color: white;
     font-size: 0.7rem;
     line-height: 1.2;
@@ -440,13 +500,14 @@
 
 /* gift */
 .gift_block {
-    margin-top: 5.5rem;
+    margin-top: 5rem;
     min-height: 30rem;
+    position: relative;
 }
 
 .gift {
     background: url(../images/cassettes2.jpg) no-repeat center / cover;
-    min-height: 35rem;
+    height: 30rem;
     position: relative;
     overflow: hidden;
 }
@@ -467,7 +528,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    border-bottom: 6.98rem solid transparent;
+    border-bottom: 6.5rem solid transparent;
     border-left: 100vw solid #fff;
 }
 
@@ -478,16 +539,17 @@
 
 .gift_img {
     position: absolute;
-    left: 5.75rem;
-    /* bottom: 22.7rem; */
+    left: 7rem;
+    bottom: 18rem;
     border-radius: 100%;
     overflow: hidden;
+    z-index: 1;
 }
 
 .gift_desk {
     position: absolute;
-    top: 6.5rem;
-    right: 6.75rem;
+    top: 6.4rem;
+    right: 6rem;
     width: 26.75rem;
 }
 
@@ -501,12 +563,12 @@
 }
 
 .desk1 {
-    margin-top: 2.75rem;
+    margin-top: 2rem;
 }
 
 .desk2,
 .desk3 {
-    margin-top: 1rem;
+    margin-top: 0.9rem;
 }
 
 .gift_h2 {
@@ -520,8 +582,8 @@
 .gift_button {
     width: 9.5rem;
     position: absolute;
-    top: 22.25rem;
-    right: 6.75rem;
+    top: 21.24rem;
+    right: 6rem;
 }
 
 .button__size {
@@ -534,7 +596,7 @@
     background: #A3CC40;
     border-radius: 0.3rem;
     width: 9.5rem;
-    padding: 0.25rem 0.85rem 0.25rem 0.85rem;
+    padding: 0.34rem 0.85rem 0.34rem 0.85rem;
     border: none;
 }
 
@@ -551,7 +613,7 @@
 
 /* table films-mosaic */
 .block06 {
-    margin-top: 3.5rem;
+    margin-top: 3rem;
     min-height: 51.25rem;
 }
 
@@ -562,7 +624,7 @@
 }
 
 .headers_desc {
-    margin-top: 2rem;
+    margin-top: 1.3rem;
     width: 27rem;
     font-size: 0.55rem;
     line-height: 1.2;
@@ -572,11 +634,13 @@
 .film_pic {
     position: relative;
     overflow: hidden;
+    flex: 1 0 225px;
 }
 
 .film_pic img {
-    width: 14.2rem;
-    height: 14.3rem;
+    min-width: 100%;
+    max-width: 280px;
+
 }
 
 .films_block {
@@ -626,12 +690,12 @@
 
 /* sponsors */
 #sponsors {
-    margin-top: 5.25rem;
+    margin-top: 4rem;
     min-height: 25rem;
 }
 
 .block07_desk {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     width: 27rem;
     font-size: 0.55rem;
     line-height: 1.2;
@@ -745,7 +809,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    border-bottom: 3.75rem solid transparent;
+    border-bottom: 4.4rem solid transparent;
     border-left: 100vw solid #fff;
 }
 
@@ -756,7 +820,7 @@
 
 .events_headers {
     z-index: 2;
-    margin-top: 7.5rem;
+    margin-top: 6.5rem;
 }
 
 .headers_p__size {
@@ -765,7 +829,7 @@
     color: #FFFFFF;
     width: 27rem;
     height: 1.25rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 /* ячейки */
@@ -774,6 +838,7 @@
     justify-content: space-between;
     margin-top: 3.75rem;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .events {
@@ -854,91 +919,105 @@
     text-align: end;
 }
 
-/* form */
-.container_block09 {
-    max-width: 38.5rem;
-    box-shadow: 0.4rem 0.45rem 1.95rem rgba(185, 185, 185, 0.37);
-    border-radius: 1rem;
-    margin: 0 8.7rem 0 8.7rem;
-    display: flex;
-    overflow: hidden;
+.feedback {
+    margin-top: 1.9rem;
+}
+
+.feedback__block09 {
+    width: 38.35rem;
     margin: 0 auto;
+    padding: 1.55rem 2.1rem 1.65rem;
+    border-radius: 1rem;
+    box-shadow: 0.4rem 0.45rem 1.95rem 0 rgba(185, 185, 185, 0.37);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    background-image: linear-gradient(270deg, #FFFFFF 12.2%, rgba(30, 30, 30, 0) 100%), url(/images/forbacground.jpg);
+    background-position: 1.35rem 0, 0 0;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 19.35rem 100%, 20.7rem;
 }
 
-.block09 {
-    margin-top: 4rem;
-}
-
-.block_pic01 {
-    background: url(/images/forbacground.jpg) no-repeat center / cover;
-    height: 25rem;
-    width: 18rem;
-    position: relative;
-}
-
-.block_pic02 {
-    background: url(/images/gradient.png) no-repeat center / cover;
-    filter: alpha(Opacity=1);
-    opacity: 1;
-    height: 25rem;
-    width: 18rem;
-    position: absolute;
-    left: 1.7rem;
-}
-
-.form_feedback {
+.feedback__title {
     font-weight: 500;
     font-size: 1.25rem;
     line-height: 1.2;
     color: #A3CC40;
-    padding: 2rem 5.9rem 1.35rem 4.4rem;
+    padding-bottom: 1.1rem;
+    padding-left: 3.7rem;
 }
 
-.block_form {
-    padding-left: 0.75rem;
-    z-index: 1;
+.form-field::placeholder {
+    color: #A1A1A1;
 }
 
-.form input[type="text"],
-.form textarea,
-.form select {
-
-    background: #DEDEDE;
-    border-radius: 0.25rem;
-    font-size: 0.75rem;
-    padding: 0 0 0 0.75rem;
-    border: 0.05rem solid #bebebe;
-    width: 17.25rem;
-    height: 2rem;
-    outline: 0;
+.feedback-form {
+    width: 17rem;
 }
 
-.form select,
-.form textarea {
-    margin-top: 1.75rem;
+.feedback-form__name {
+    margin: 0 0 1.65rem;
 }
 
-.form textarea {
-    height: 5rem;
+.feedback-form__place {
+    margin: 0 0 1.5rem;
+    cursor: pointer;
+}
+
+.feedback-form__review-field {
+    margin: 0 0 1.65rem;
     resize: none;
-    padding: 0.8rem 0 0 0.75rem;
 }
 
-.form input[type="text"]::placeholder,
-.form textarea::placeholder {
+.feedback-form__button {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.2;
+    color: #FFFFFF;
+    width: 17.2rem;
+    background: #A3CC40;
+    border-radius: 0.3rem;
+    padding: 0.75rem 1.5rem;
+    margin-top: 2.2rem;
+    border: 0;
+    transition: .2s;
+}
+
+.form-field {
+    width: 100%;
+    padding: 0.6rem 0.8rem 0.55rem;
+    border-radius: 0.25rem;
+    border: 0;
+    background-color: #DEDEDE;
+    font-size: 0.75rem;
     color: #A1A1A1;
 }
 
-.form select {
-    color: #A1A1A1;
+.feedback-select {
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
-    background: url(../svg/arrow_down.svg) 96% center / 5% no-repeat #DEDEDE;
+    background: #DEDEDE url(../svg/arrow_down.svg) no-repeat center right 0.6rem;
 }
 
-.input_checkbox {
-    margin-top: 1.25rem;
+.checkbox-field__checkbox:checked+.checkbox-field__label::before {
+    background: url(../images/checkbox-icon.png) no-repeat center;
+    background-size: 0.8rem 0.5rem;
+}
+
+.checkbox-field__label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.5rem;
+}
+
+.checkbox-field__label::before {
+    content: "";
+    width: 0.9rem;
+    height: 0.85rem;
+    margin-right: 0.3rem;
+    border: 0.05rem solid #A3CC40;
+    border-radius: 0.25rem;
 }
 
 .visually-hidden {
@@ -952,85 +1031,57 @@
     width: 1px;
 }
 
-.checkbox:checked+.check::before {
-    background: url(../images/checkbox-icon.png) no-repeat center;
-    background-size: 0.8rem 0.5rem;
-}
-
-.check {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-size: 0.5rem;
-}
-
-.check::before {
-    content: "";
-    width: 0.9rem;
-    height: 0.85rem;
-    margin-right: 0.3rem;
-    border: 0.05rem solid #A3CC40;
-    border-radius: 0.25rem;
-}
-
-.button_form [type="submit"] {
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.2;
-    color: #FFFFFF;
-    width: 17.2rem;
-    background: #A3CC40;
-    border-radius: 0.3rem;
-    padding: 0.75rem 1.5rem;
-    margin-top: 1.95rem;
-    border: 0;
-    transition: .2s;
-}
-
-.button_form [type="submit"]:active {
+.feedback-form__button:active {
     background: #FFFFFF;
     color: #A3CC40;
     border: 0.05rem solid rgba(163, 204, 64, 0.62);
     box-shadow: 0 0.1rem 0.45rem rgba(144, 210, 61, 0.3);
 }
 
+*/
+
 /* map */
-.block10 {
+section.block10 {
     margin-top: 3.25rem;
 }
 
-.block10_map {
-    overflow: hidden;
-    min-height: 20rem;
+.container-map {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 0 12px;
+    margin-top: 3.25rem;
 }
 
 .map {
-    width: 48rem;
-    height: 20rem;
+    width: 100%;
 }
 
 /* footer */
 #contact {
     background: #A3CC40;
-    height: 17rem;
+    height: 18rem;
     overflow: hidden;
 }
 
 .columns {
-    /* скорректировать */
-    padding-top: 4.4rem;
+    padding-top: 4.1rem;
     display: flex;
 }
 
 .column1 {
-    margin-left: 3.5rem;
+    margin-left: 4.5rem;
     width: 21.75rem;
-    margin-right: 2.5rem;
+    margin-right: 1.5rem;
 }
 
 .column2 {
     width: 10.35rem;
     margin-right: 1.75rem;
+    margin-left: -2rem;
+}
+
+.column3 {
+    margin-left: -1rem;
 }
 
 .column2 .head_li {
@@ -1043,7 +1094,7 @@
     color: #FFFFFF;
     width: 13.25rem;
     height: 3.5rem;
-    margin-top: 1.25rem;
+    margin-top: .8rem;
 }
 
 .icons {
@@ -1058,7 +1109,7 @@
     display: flex;
     width: 1.5rem;
     height: 1.5rem;
-    margin-right: 1.5rem;
+    margin-right: 1.6rem;
 }
 
 .icon:hover {
@@ -1068,6 +1119,31 @@
 .white {
     margin: auto;
     fill: white;
+}
+
+.inst_svg {
+    width: 0.7rem;
+    height: 0.7rem;
+}
+
+.ld_svg {
+    width: 0.8rem;
+    height: 0.75rem;
+}
+
+.tw_svg {
+    width: 0.8rem;
+    height: 0.65rem;
+}
+
+.yt_svg {
+    width: 0.9rem;
+    height: 0.65rem;
+}
+
+.fb_svg {
+    width: 0.4rem;
+    height: 0.8rem;
 }
 
 .icon:hover .white {
@@ -1080,7 +1156,7 @@
     color: #FFFFFF;
     width: 21.8rem;
     height: 1.95rem;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
 }
 
 .head_li {
@@ -1095,11 +1171,11 @@
 }
 
 .footer_list {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .footer_list li {
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
 }
 
 .footer_list_uppercase li a {
