@@ -630,15 +630,15 @@
 .block06_mosaic {
     margin-top: 3.25rem;
     display: grid;
-    /* grid-template-areas:
+    grid-template-areas:
     "item1 item2 item3"
     "item4 item5 item6"
-    "item7 item8 item9"; */
-    grid-template-rows: repeat(auto-fill, 285px);
-    grid-template-columns:repeat(auto-fill, 285px);
+    "item7 item8 item9";
+    /* grid-template-rows: repeat(auto-fill, 285px);
+    grid-template-columns:repeat(auto-fill, 285px); */
     justify-content: center;
 }
-/* .film_item1{
+.film_item1{
     grid-area: item1;
 }
 .film_item2{
@@ -650,18 +650,19 @@
 .film_item4{
     grid-area: item4;
 }
+.film_item5{
+    grid-area: item5;
+}
 .film_item6{
     grid-area: item6;
 }
 .film_item7{
     grid-area: item7;
 }
+
 .film_item8{
-    grid-area: item8;
-}
-.film_item9{
     grid-area: item9;
-} */
+}
 
 .headers_desc {
     margin-top: 1.3rem;
