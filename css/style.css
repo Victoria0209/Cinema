@@ -183,6 +183,7 @@
 .lang_trigger {
     padding-left: 0.7rem;
     padding-bottom: 0.15rem;
+    text-decoration: none;
     display: block;
 }
 

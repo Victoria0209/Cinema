@@ -4,17 +4,88 @@
     }
 
     .card_all {
-        max-width: 197px;
+        max-width: 226px;
     }
 
     .header-block01_container {
         justify-content: center;
     }
+
+    .welcome_h2 {
+        margin: 1.6rem 2rem 0.8rem 2rem;
+    }
+
+    .welcome_text1,
+    .welcome_text2 {
+        width: 18.25rem;
+        font-size: 0.65rem;
+    }
+
+    .card_desk {
+        font-size: 0.65rem;
+    }
+
+    .div_description {
+        font-size: 0.65rem;
+    }
+
+    .desk1,
+    .desk2,
+    .desk3 {
+        font-size: 0.65rem;
+    }
+
+    .headers_desc {
+        width: auto;
+        font-size: 0.65rem;
+    }
+
+    .film_desc {
+        font-size: 0.65rem;
+    }
+
+    .block07_desk {
+        width: auto;
+        font-size: 0.65rem;
+    }
+
+    .headers_p__size {
+        font-size: 0.65rem;
+        width: auto;
+    }
+
+    .events_block1,
+    .events_block3 {
+        width: 11rem;
+        height: 15.25rem;
+    }
+
+    .event1_blockquote,
+    .event3_blockquote {
+        font-size: 0.65rem;
+    }
+
+    .events_block2 {
+        width: 13.25rem;
+        height: 17.5rem;
+    }
+
+    .event2_blockquote {
+        font-size: 0.65rem;
+    }
+
+    .data {
+        font-size: 0.65rem;
+    }
+
+    .checkbox-field__label {
+        font-size: 0.65rem;
+    }
 }
 
 @media screen and (max-width:850px) {
     html {
-        font-size: 15px;
+        font-size: 19px;
     }
 
     .table-scroll {
@@ -26,20 +97,78 @@
     }
 
     .gift_img {
-        left: 4rem;
+        left: 1rem;
+    }
+
+    .gift_img img {
+        width: 10.75rem;
+        height: 10.75rem;
+    }
+
+    .wrap_menu {
+        margin-left: 1rem;
+    }
+
+    .list_li {
+        margin-right: 1.5rem;
+    }
+
+    .list2 li {
+        margin-right: 2.5rem;
+    }
+
+    .lang {
+        right: 1.5rem;
+    }
+
+    .card_all {
+        max-width: 228px;
+    }
+
+    .container-table {
+        width: 40.5rem;
+    }
+
+    .table-scroll {
+        min-width: 38.5rem;
     }
 }
 
 @media screen and (max-width:768px) {
     html {
-        font-size: 16px;
+        font-size: 18px;
+    }
+
+    .welcome_h2 {
+        font-size: 1.4rem;
+        text-align: center;
+        margin: 1.6rem 1rem 0.8rem 0.5rem;
+        letter-spacing: -0.05rem;
     }
 
     .header-block01_menu {
         justify-content: space-between;
         display: flex;
         margin-top: 2.6rem;
+    }
 
+    .welcome_text1,
+    .welcome_text2 {
+        margin-right: 1.2rem;
+        font-size: 0.5rem;
+        margin-left: 1.77rem;
+        width: auto;
+    }
+
+    .welcome {
+        top: 21.3rem;
+        right: 10rem;
+        width: 23.3rem;
+        height: 10rem;
+    }
+
+    .welcome_text2 {
+        margin-top: 1rem;
     }
 
     .header-block01_container {
@@ -68,7 +197,6 @@
     .header2_large {
         font-size: 3.1rem;
         letter-spacing: -0.1rem;
-
     }
 
     .header2_small {
@@ -77,35 +205,12 @@
         letter-spacing: -0.05rem;
     }
 
-    .welcome {
-        top: 21.3rem;
-        right: 10rem;
-        width: 23.3rem;
-        height: 10rem;
-    }
-
-    .welcome_h2 {
-        text-align: center;
-        margin: 1.6rem 1rem 0.8rem 0.5rem;
-        letter-spacing: -0.05rem;
-    }
-
-    .welcome_text2 {
-        margin-top: 1rem;
-    }
-
-    .welcome_text1,
-    .welcome_text2 {
-        margin-left: 1.77rem;
-        width: auto;
-    }
-
     #why-we {
         margin-top: 2.7rem;
     }
 
     .card_all {
-        max-width: 284px;
+        max-width: 344px;
     }
 
     .container {
@@ -134,7 +239,7 @@
         bottom: 0;
         margin: 0;
         width: 22.7rem;
-        display: none;
+        /* display: none; */
     }
 
     .button_menu:hover+.wrap_menu,
@@ -154,7 +259,6 @@
     }
 
     .list li a {
-
         font-weight: 500;
         font-size: 1rem;
         line-height: 1.3;
@@ -260,18 +364,24 @@
         padding-bottom: 8.6rem;
     }
 
-    .gift_img {
-        left: 2rem;
+    .feedback__block09 {
+        background-image: linear-gradient(270deg, #FFFFFF 19.2%, rgba(30, 30, 30, 0) 100%), url(/images/forbacground.jpg);
+        background-position: 2.35rem 0, 0 0;
     }
+
+    .column1 {
+        margin-left: 1.5rem;
+        width: 21.75rem;
+        margin-right: 0;
+    }
+
 }
 
 @media (max-width:720px) {
     html {
-        font-size: 13px;
+        font-size: 17px;
     }
-}
 
-@media (max-width:600px) {
     .gift_img img {
         width: 9.75rem;
         height: 9.75rem;
@@ -301,15 +411,16 @@
 
     .welcome {
         top: 18.8rem;
-        right: 8.99rem;
-        width: 20.6rem;
-        height: 10rem;
+        right: 3rem;
+        width: 21.6rem;
+        height: 11rem;
     }
 
     .welcome_text1,
     .welcome_text2 {
         margin-right: 1rem;
         margin-top: .7rem;
+        font-size: 0.7rem;
     }
 
     .header-block01_menu {
@@ -454,11 +565,11 @@
 
     .card {
         margin-top: 2.3rem;
+        justify-content: center;
     }
 
     .card_all {
         max-width: 324px;
-        margin: 0 auto;
     }
 
     .card_main {
@@ -466,11 +577,11 @@
     }
 
     .card_header {
-        font-size: 1.7rem;
+        font-size: 1.2rem;
     }
 
     .card_desk {
-        font-size: 1rem;
+        font-size: .8rem;
     }
 
     .feedback-select {
@@ -479,21 +590,25 @@
 
     .feedback__block09 {
         background-image: url(/images/group.png);
-        background-size: 13.35rem 68%;
-        background-position: 1.35rem 3rem;
+        background-size: 13.35rem 60%;
+        background-position: 0.35rem 3rem;
     }
 
     .feedback__block09 {
-        width: 32.35rem;
+        width: 29.35rem;
     }
 
     .feedback-form {
-        width: 14rem;
+        width: 12rem;
+    }
+
+    .feedback__title {
+        padding-left: 0.7rem;
     }
 
     .feedback-form__button {
-        width: 14.2rem;
-        padding: 0.75rem 2.5rem;
+        width: 12.2rem;
+        padding: 0.5rem 2rem;
         margin-top: 0.6rem;
     }
 
@@ -533,13 +648,34 @@
     }
 
     .column1 {
-        margin-left: 1.5rem;
+        margin-left: 0;
         margin-right: 0;
+        width: auto;
     }
 
     .column2 {
-        width: 10.35rem;
         margin-right: 0;
+    }
+
+    .footer_desc {
+        height: auto;
+    }
+
+    .icon {
+        margin-right: 0.6rem;
+    }
+
+    .copyright {
+        width: 14.8rem;
+    }
+
+    .column3 {
+        margin-left: 0;
+    }
+
+    .columns {
+        display: flex;
+        padding: 4.1rem 12px;
     }
 
     .gift_img {
@@ -566,7 +702,7 @@
     .desk1,
     .desk2,
     .desk3 {
-        font-size: .4em;
+        font-size: .5em;
     }
 
     .desk1 {
@@ -614,11 +750,12 @@
     .headers_p__size {
         width: auto;
     }
+
 }
 
 @media (max-width:500px) {
     html {
-        font-size: 2.6vw;
+        font-size: 3vw;
     }
 
     .header-block01 {
@@ -627,16 +764,100 @@
 
     .welcome {
         top: 35rem;
+        width: 22.6rem;
+        height: 12rem;
+    }
+
+    .welcome_text1,
+    .welcome_text2 {
+        font-size: 0.8rem;
+    }
+
+    .card_header {
+        font-size: 1.6rem;
+    }
+
+    .card_desk {
+        font-size: 1rem;
     }
 
     .container-table {
         width: 25.5em;
     }
 }
+
 @media (max-width:420px) {
     .welcome {
         top: 42rem;
     }
+
     .wrap_menu {
-        overflow-y: hidden;}
+        overflow-y: hidden;
+    }
+
+    .table__button {
+        font-size: 1.3rem;
+    }
+
+    .table td,
+    .table td a {
+        font-size: 1rem;
+    }
+
+    .div_description {
+        font-size: 0.9rem;
+    }
+
+    .desk1 {
+        margin-top: 1em;
+    }
+
+    .desk1,
+    .desk2,
+    .desk3 {
+        font-size: .6em;
+    }
+
+    .gift_button {
+        top: 22.5rem;
+    }
+
+    .headers_desc {
+        font-size: 0.9rem;
+    }
+
+    .headers_p__size {
+        font-size: 0.85rem;
+    }
+
+    .checkbox-field__label {
+        font-size: 0.8rem;
+    }
+
+    .footer_desc {
+        font-size: 0.8rem;
+    }
+
+    .copyright {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
+
+    .logo a,
+    .list li a,
+    .footer_list a {
+        font-size: 0.9rem;
+    }
+
+    .footer_list_uppercase a:hover {
+        font-size: 0.9rem;
+    }
+
+    .city {
+        font-size: 0.9rem;
+    }
+
+    .columns {
+        padding: 4.1rem 8px;
+    }
 }
