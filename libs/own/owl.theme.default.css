@@ -83,6 +83,4 @@
 /* отвечает за увеличение блока */
 .active:nth-child(even){
   transform: scale(1.4) !important;
-
-  color: red;
 }
