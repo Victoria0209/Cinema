@@ -636,9 +636,10 @@
     "item4 item5 item6"
     "item7 item8 item9"; */
     grid-template-rows: repeat(auto-fill, 285px);
-    grid-template-columns:repeat(auto-fill, 285px);
+    grid-template-columns: repeat(auto-fill, 285px);
     justify-content: center;
 }
+
 /* .film_item1{
     grid-area: item1;
 }
@@ -739,8 +740,12 @@
 
 .goods {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 3rem;
+}
+
+.goods_block_men {
+    margin: 9px 4rem;
 }
 
 .goods_block1 {
@@ -764,7 +769,14 @@
     border-radius: 0.5rem;
     overflow: hidden;
     position: relative;
+    flex: 0 0 12.25rem;
 }
+
+.goods_block3,
+.goods_block1 {
+    margin: 9px;
+}
+
 
 .goods__position {
     background: rgba(163, 204, 64, 0.8);
@@ -898,31 +910,34 @@
 }
 
 .events_block1,
+.events_block2,
 .events_block3 {
     width: 10rem;
     height: 14.25rem;
 }
 
 .event1,
+.event2,
 .event3 {
     height: 50%;
     border-radius: 0.35rem 0.35rem 0 0;
 }
 
-.event2 {
+/* .event2 {
     height: 50%;
     border-radius: 0.35rem 0.35rem 0 0;
-}
+} */
 
-.event2_head {
+/* .event2_head {
     font-weight: 600;
     font-size: 0.9rem;
     line-height: 1.2;
     color: #FFFFFF;
     padding-bottom: .5rem;
-}
+} */
 
 .event1_head,
+.event2_head,
 .event3_head {
     font-weight: 600;
     font-size: 0.75rem;
@@ -931,14 +946,15 @@
     padding-bottom: .5rem;
 }
 
-.event2_blockquote {
+/* .event2_blockquote {
     font-size: 0.55rem;
     line-height: 1.2;
     color: #FFFFFF;
     flex: 1;
-}
+} */
 
 .event1_blockquote,
+.event2_blockquote,
 .event3_blockquote {
     font-size: 0.5rem;
     line-height: 1.2;
@@ -953,6 +969,8 @@
     color: #FFFFFF;
     text-align: end;
 }
+
+/* feedback */
 
 .feedback {
     margin-top: 1.9rem;
@@ -970,7 +988,7 @@
     background-image: linear-gradient(270deg, #FFFFFF 12.2%, rgba(30, 30, 30, 0) 100%), url(/images/forbacground.jpg);
     background-position: 1.35rem 0, 0 0;
     background-repeat: no-repeat, no-repeat;
-    background-size: 19.35rem 100%, 20.7rem;
+    background-size: 19.5rem 100%, 20.7rem;
 }
 
 .feedback__title {

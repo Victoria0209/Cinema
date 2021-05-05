@@ -1,6 +1,6 @@
 @media screen and (max-width:970px) {
     html {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .card_all {
@@ -19,6 +19,10 @@
     .welcome_text2 {
         width: 18.25rem;
         font-size: 0.65rem;
+    }
+
+    .container_film {
+        max-width: 44rem;
     }
 
     .card_desk {
@@ -54,23 +58,20 @@
         width: auto;
     }
 
+    .goods_block_men {
+        margin: 9px 2rem;
+    }
+
     .events_block1,
+    .events_block2,
     .events_block3 {
         width: 11rem;
         height: 15.25rem;
     }
 
     .event1_blockquote,
+    .event2_blockquote,
     .event3_blockquote {
-        font-size: 0.65rem;
-    }
-
-    .events_block2 {
-        width: 13.25rem;
-        height: 17.5rem;
-    }
-
-    .event2_blockquote {
         font-size: 0.65rem;
     }
 
@@ -83,7 +84,7 @@
     }
 }
 
-@media screen and (max-width:850px) {
+@media screen and (max-width:873px) {
     html {
         font-size: 19px;
     }
@@ -134,10 +135,21 @@
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:805px) {
     html {
         font-size: 18px;
     }
+
+    .feedback__block09 {
+        background-size: 19.5rem 100%, 20.7rem;
+    }
+
+    .goods_block_men {
+        margin: 9px 0;
+    }
+}
+
+@media screen and (max-width:768px) {
 
     .welcome_h2 {
         font-size: 1.4rem;
@@ -375,32 +387,122 @@
         margin-right: 0;
     }
 
+    .gift_desk {
+        right: 2rem;
+    }
+
+    .container-table {
+        width: 36.5rem;
+    }
+
+    .table-scroll {
+        min-width: 34.5rem;
+    }
 }
 
 @media (max-width:720px) {
     html {
-        font-size: 17px;
+        font-size: 2.4vw;
+    }
+
+    .gift_img {
+        font-size: 3.6vw;
+        left: 1em;
     }
 
     .gift_img img {
-        width: 9.75rem;
-        height: 9.75rem;
+        font-size: 3.6vw;
+        width: 6.75em;
+        height: 6.75em;
     }
 
-    .table-scroll {
-        min-width: 37.5rem;
+    .gift_h2 {
+        font-size: 1.4em;
     }
 
-    .container-table {
-        width: 39.5rem;
+    .desk1 {
+        margin-top: 2em;
+    }
+
+    .desk1,
+    .desk2,
+    .desk3 {
+        font-size: .45em;
     }
 
     .gift_desk {
-        right: 4rem;
+        font-size: 3.6vw;
+        right: 1em;
+        width: 17.75em;
+        top: 5.4rem;
+    }
+
+    .table-scroll {
+        font-size: 3.6vw;
+        min-width: 16.5em;
+    }
+
+    .container-table {
+        font-size: 3.6vw;
+        width: 26.5em;
+    }
+
+    .goods_block3,
+    .goods_block2,
+    .goods_block1 {
+        flex: none;
+    }
+
+    .goods {
+        flex-wrap: wrap;
+    }
+
+    .events_block {
+        justify-content: center;
+    }
+
+    .feedback__block09 {
+        width: 33.35rem;
+    }
+
+    .feedback__block09 {
+        background-size: 17.5rem 100%, 17.7rem;
+    }
+
+    .feedback-form {
+        width: 14rem;
+    }
+
+    .feedback__title {
+        padding-left: 1.7rem;
+    }
+
+    .feedback-form__button {
+        width: 14.2rem;
+        padding: 0.2rem 0.5rem;
+        margin-top: 1.2rem;
+    }
+
+    .feedback-form__review-field {
+        margin: 0 0 0.65rem;
+    }
+
+    .feedback-form__name {
+        margin: 0 0 1rem;
+    }
+
+    .events_block1,
+    .events_block2,
+    .events_block3 {
+        margin: 9px 9px;
     }
 }
 
 @media screen and (max-width: 550px) {
+    html {
+        font-size: 3.09vw;
+    }
+
     .header-block01 {
         height: 25.4rem;
     }
@@ -517,7 +619,6 @@
 
     .goods {
         flex-wrap: wrap;
-
     }
 
     .goods_block3,
@@ -595,7 +696,7 @@
     }
 
     .feedback__block09 {
-        width: 29.35rem;
+        width: 28.35rem;
     }
 
     .feedback-form {
@@ -623,16 +724,6 @@
     .table {
         min-width: 567px;
         table-layout: auto;
-    }
-
-    .table-scroll {
-        font-size: 3.6vw;
-        min-width: 16.5em;
-    }
-
-    .container-table {
-        font-size: 3.6vw;
-        width: 26.5em;
     }
 
     .headers_desc {
@@ -679,45 +770,15 @@
     }
 
     .gift_img {
-        font-size: 3.6vw;
-        left: 1em;
+        bottom: 22rem;
     }
-
-    .gift_img img {
-        font-size: 3.6vw;
-        width: 6.75em;
-        height: 6.75em;
-    }
-
     .gift_desk {
-        font-size: 3.6vw;
-        right: 1em;
-        width: 17.75em;
-    }
-
-    .gift_h2 {
-        font-size: 1.4em;
-    }
-
-    .desk1,
-    .desk2,
-    .desk3 {
-        font-size: .5em;
-    }
-
-    .desk1 {
-        margin-top: 2em;
+        font-size: 4.6vw;
     }
 
     .events_block1,
+    .events_block2,
     .events_block3 {
-        width: 14rem;
-        height: 18.25rem;
-        margin-top: 1rem;
-    }
-
-    .events_block2 {
-        margin: 0 10px;
         width: 14rem;
         height: 18.25rem;
         margin-top: 1rem;
@@ -763,7 +824,7 @@
     }
 
     .welcome {
-        top: 35rem;
+        top: 28rem;
         width: 22.6rem;
         height: 12rem;
     }
@@ -788,7 +849,7 @@
 
 @media (max-width:420px) {
     .welcome {
-        top: 42rem;
+        top: 35rem;
     }
 
     .wrap_menu {
@@ -839,25 +900,28 @@
     }
 
     .copyright {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         margin-top: 1rem;
     }
 
     .logo a,
     .list li a,
     .footer_list a {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
 
     .footer_list_uppercase a:hover {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
 
     .city {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
 
     .columns {
         padding: 4.1rem 8px;
+    }
+    .gift_desk {
+        font-size: 4vw;
     }
 }
