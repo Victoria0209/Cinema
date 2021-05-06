@@ -73,7 +73,7 @@
 
 .owl-prev {
   bottom: 11rem;
-  left: 11.7rem;
+  left: 11rem;
 }
 .owl-next {
   bottom: 11rem;
@@ -81,6 +81,7 @@
 }
 
 /* отвечает за увеличение блока */
-.active:nth-child(even){
-  transform: scale(1.4) !important;
+.center{
+  transform: scale(1.1) !important;
+  transition: transform 0.3s ease-in-out;
 }

@@ -850,14 +850,14 @@
 .events_block {
     display: flex;
     justify-content: space-between;
-    margin-top: 3.75rem;
+    margin-top: 2.75rem;
     align-items: center;
     flex-wrap: wrap;
 }
 
 .events {
-    width: 12.25rem;
-    height: 16.5rem;
+    width: 244px;
+    height: 330px;
     background: #97B13C;
     border-radius: 0.5rem;
 
@@ -879,8 +879,8 @@
 .events_block1,
 .events_block2,
 .events_block3 {
-    width: 10rem;
-    height: 14.25rem;
+    width: 200px;
+    height: 285px;
 }
 
 .event1,
@@ -894,7 +894,7 @@
 .event2_head,
 .event3_head {
     font-weight: 600;
-    font-size: 0.75rem;
+    font-size: 15px;
     line-height: 1.2;
     color: #FFFFFF;
     padding-bottom: .5rem;
@@ -903,7 +903,7 @@
 .event1_blockquote,
 .event2_blockquote,
 .event3_blockquote {
-    font-size: 0.5rem;
+    font-size: 10px;
     line-height: 1.2;
     color: #FFFFFF;
     flex: 1;
@@ -911,7 +911,7 @@
 
 .data {
     font-weight: 300;
-    font-size: 0.45rem;
+    font-size: 9px;
     line-height: 0.6rem;
     color: #FFFFFF;
     text-align: end;
