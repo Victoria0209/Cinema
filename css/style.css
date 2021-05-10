@@ -990,10 +990,11 @@
     border: 0;
     background-color: #DEDEDE;
     font-size: 0.75rem;
-    color: #A1A1A1;
+    /* color: #A1A1A1; */
 }
 
 .feedback-select {
+    color: #A1A1A1;
     -webkit-appearance: none;
     -moz-appearance: none;
     background: #DEDEDE url(../svg/arrow_down.svg) no-repeat center right 0.6rem;
@@ -1196,4 +1197,56 @@ section.block10 {
     line-height: 1.2;
     color: #FFFFFF;
     width: 9.45rem;
+}
+
+/* pop-up */
+.hidden {
+    display: none;
+}
+
+.pop-up {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(51, 51, 51, 0.24);
+    z-index: 1000;
+}
+
+.close {
+    position: absolute;
+    right: 22px;
+    top: 22px;
+    border: none;
+    background-color: #FFFFFF;
+}
+
+.form_wrap {
+    position: relative;
+    background-color: #fff;
+    max-width: 600px;
+    height: 400px;
+    margin: 120px auto;
+    border-radius: 40px;
+}
+
+.form_prize {
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.btn_wrapper_prize {
+    display: flex;
+    justify-content: center;
+}
+
+.button_form_prize {
+    width: 11.2rem;
+    padding: 0.5rem 1rem;
+    margin-top: 1.2rem;
+}
+
+.feedback__title__prize {
+    padding-left: 7.7rem;
 }

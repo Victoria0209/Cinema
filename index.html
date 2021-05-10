@@ -20,6 +20,7 @@
     <script defer src="libs/own/owl.carousel.min.js"></script>
     <script defer src="js/main.js"></script>
     <script defer src="/js/table.js"></script>
+    <script defer src="/js/prize.js"></script>
     <title> Продажа билетов в кино в Иннополисе</title>
 </head>
 
@@ -469,7 +470,7 @@
                     </div>
                 </div>
                 <div class="gift_button">
-                    <button class="button__size">Получить подарок</button>
+                    <button class="button__size" id="btn_prize_open">Получить подарок</button>
                 </div>
             </div>
         </section>
@@ -930,7 +931,49 @@
             </div>
         </div>
     </footer>
+    <div class="pop-up hidden" id="prize_pop-up">
+        <div class="form_wrap">
+            <button class="close" id="prize_pop-up__close"><svg width="35" height="35" viewBox="0 0 35 35" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="17.5" cy="17.5" r="17.5" fill="#A3CC40" />
+                    <path
+                        d="M25.5363 11.8271L23.9176 10.2084L17.5 16.626L11.0824 10.2084L9.46362 11.8271L15.8812 18.2447L9.46362 24.6623L11.0824 26.2811L17.5 19.8635L23.9176 26.2811L25.5363 24.6623L19.1187 18.2447L25.5363 11.8271Z"
+                        fill="white" />
+                </svg>
+            </button>
+            <form class="form_prize" action="">
+                <h2 title="Связаться с кинотеатром Иннополис" class="feedback__title feedback__title__prize">Выберите
+                    подарок</h2>
+                <label for="feedback_name" id="name_label_prize"></label>
+                <input class="feedback-form__name form-field" id="feedback_name" name="feedback_name" type="text"
+                    placeholder="Введите имя" aria-labelledby="name_label" required>
+                <label for="feedback_name" id="name_label_prize"></label>
 
+                <input class="feedback-form__name form-field" id="feedback_name_prize" name="feedback_name"
+                    type="text" placeholder="Введите адрес" aria-labelledby="name_label" required>
+
+                <label for="feedback_select" id="select_label_prize"></label>
+                <select class="feedback-form__place feedback-select form-field" name="feedback_select"
+                    id="feedback_select_prize" aria-labelledby="select_label" required>
+                    <option value="" disabled selected>Выберите подарок</option>
+                    <option value="1">Подарок №1</option>
+                    <option value="2">Подарок №2</option>
+                    <option value="3">Подарок №3</option>
+                </select>
+
+                <div class="checkbox-field">
+                    <input class="checkbox-field__checkbox visually-hidden" type="checkbox" id="feedback_checkbox_prize"
+                        name="feedback_checkbox_prize" required>
+                    <label class="checkbox-field__label" for="feedback_checkbox_prize">Я согласен на обработку своих
+                        персональных данных</label>
+                </div>
+                <div class="btn_wrapper_prize">
+                    <button class="feedback-form__button button_color_green button_form_prize"
+                        type="submit">Послать</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
