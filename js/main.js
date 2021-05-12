@@ -8,7 +8,7 @@ $(".owl-carousel").owlCarousel({
       items: 1
     },
     769: {
-      items: 3
+      items: 2
     },
     1124: {
       items: 3
