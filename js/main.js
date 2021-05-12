@@ -12,7 +12,6 @@ $(".owl-carousel").owlCarousel({
     },
     1124: {
       items: 3
-      
     }
   }
 });
