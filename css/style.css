@@ -956,7 +956,7 @@
 }
 
 .feedback-form__name {
-    margin: 0 0 1.65rem;
+    margin: 0 0 .65rem;
 }
 
 .feedback-form__place {
@@ -978,19 +978,70 @@
     background: #A3CC40;
     border-radius: 0.3rem;
     padding: 0.75rem 1.5rem;
-    margin-top: 2.2rem;
+    margin-top: 1rem;
     border: 0;
     transition: .2s;
+}
+
+.input_block {
+    position: relative;
+    border-radius: 0.25rem;
+
+}
+
+.input__input {
+    font-size: 0.75rem;
+    padding: 0.6rem 0.8rem;
+    width: 100%;
+    background-color: #DEDEDE;
+    border: 0.05rem solid #DEDEDE;
+    border-radius: 0.25rem;
+}
+
+.input_lable {
+    position: absolute;
+    left: 0.8rem;
+    top: 0.7rem;
+    font-size: 0.75rem;
+    color: #A1A1A1;
+}
+
+.input__filled .input_lable {
+    top: -0.5rem;
+    left: 0.3rem;
+    background: #fff;
+    padding: 0 0.4rem;
+}
+
+.input__filled .input__input {
+    background: #fff;
+    border: 0.05rem solid #c4c4c4;
+    box-shadow: 0 0 0 0.25rem rgba(170, 243, 77, 0.52);
+}
+.input__input:hover {
+    box-shadow: 0 0 0 0.25rem rgba(170, 243, 77, 0.52);
+}
+
+.input__error .input__input,
+select.input__error
+{
+    box-shadow: 0 0 0 0.25rem rgba(243, 77, 77, 0.52);
+}
+
+.input__error_mmsg{
+    position: absolute;
+    color: red;
+    font-size: .5rem;
+    top: 1.46rem;
+    left: 0.8rem;
 }
 
 .form-field {
     width: 100%;
     padding: 0.6rem 0.8rem 0.55rem;
-    border-radius: 0.25rem;
-    border: 0;
     background-color: #DEDEDE;
     font-size: 0.75rem;
-    /* color: #A1A1A1; */
+    border-radius: 0.25rem;
 }
 
 .feedback-select {
@@ -998,6 +1049,11 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     background: #DEDEDE url(../svg/arrow_down.svg) no-repeat center right 0.6rem;
+    border: none;
+}
+.input_select_selected{
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 0.25rem rgb(170 243 77 / 52%);
 }
 
 .checkbox-field__checkbox:checked+.checkbox-field__label::before {
@@ -1219,14 +1275,20 @@ section.block10 {
     right: 22px;
     top: 22px;
     border: none;
-    background-color: #FFFFFF;
+    background-color: transparent;
+    background-image: url(/svg/close.svg);
+    width: 35px;
+    height: 35px;
+}
+.close:hover{
+    background-image: url(/svg/close_hovered.svg);
 }
 
 .form_wrap {
     position: relative;
     background-color: #fff;
     max-width: 600px;
-    height: 400px;
+    height: 425px;
     margin: 120px auto;
     border-radius: 40px;
 }

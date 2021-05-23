@@ -1,3 +1,5 @@
+"use strict";
+
 $(".owl-carousel").owlCarousel({
   loop: true,
   nav: true,
@@ -9,6 +11,6 @@ $(".owl-carousel").owlCarousel({
     },
     769: {
       items: 3
-    },
+    }
   }
 });

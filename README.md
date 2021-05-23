@@ -1,2 +1,4 @@
-Виктория. 22 года. Работаю в ГК АО Тандер.
-Цель на курс: Получение знаний для смены профиля работы.
+npm install --save-dev @babel/core @babel/cli
+npm install @babel/preset-env --save-dev
+
+npx babel js -d target --watch

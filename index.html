@@ -18,9 +18,14 @@
 
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script defer src="libs/own/owl.carousel.min.js"></script>
-    <script defer src="js/main.js"></script>
-    <script defer src="/js/table.js"></script>
-    <script defer src="/js/prize.js"></script>
+    <script defer src="target/utilits.js"></script>
+    <script defer src="target/film.js"></script>
+
+    <script defer src="target/table.js"></script>
+    <script defer src="target/main.js"></script>
+    <script defer src="target/prize.js"></script>
+    <script defer src="/target/form_feedback.js"></script>
+    <script defer src="/target/film-mosaic.js"></script>
     <title> Продажа билетов в кино в Иннополисе</title>
 </head>
 
@@ -205,8 +210,6 @@
         </div>
     </section>
     <main>
-
-
         <section id="why-we" class="block03">
             <div class="container_film">
                 <div class="headers">
@@ -344,7 +347,7 @@
                             </tr>
                         </thead>
                         <tbody id="block04_table_tbody">
-                            <tr>
+                            <!-- <tr>
                                 <td class="table_size_s">
                                     <svg class="svg_green" viewBox="0 0 11 9" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -416,7 +419,7 @@
                                 </td>
 
                                 <td class="table_size_m">Фантастика, боевик, комедия</td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
@@ -430,8 +433,6 @@
                 </div>
             </div>
         </section>
-
-
 
         <section class="gift_block" class="block05">
             <div class="gift_img">
@@ -744,17 +745,22 @@
             </div>
         </section>
 
-        <section class="feedback container">
+        <section class="feedback container" id="feedback_form__id">
             <div class="feedback__block09">
-                <form action="#" method="post" class="feedback-form">
+                <form action="#" method="post" class="feedback-form" id="feddback_form__id">
                     <h2 title="Связаться с кинотеатром Иннополис" class="feedback__title">Обратная связь</h2>
-                    <label for="feedback_name" id="name_label"></label>
-                    <input class="feedback-form__name form-field" id="feedback_name" name="feedback_name" type="text"
-                        placeholder="Полное имя" aria-labelledby="name_label" required>
+
+                    <div class="input_block input__filled input__error feedback-form__name">
+                        <p class="input_lable" id="name_label">Полное имя</p>
+                        <input class="input__input" id="feedback_name" name="feedback_name__form" type="text"
+                            aria-labelledby="name_label">
+                        <p class="input__error_mmsg">Error message</p>
+                    </div>
+
                     <label for="feedback_select" id="select_label"></label>
                     <select class="feedback-form__place feedback-select form-field" name="feedback_select"
-                        id="feedback_select" aria-labelledby="select_label" required>
-                        <option value="" disabled selected>Номер места</option>
+                        id="feedback_select" aria-labelledby="select_label">
+                        <option value="none" disabled selected>Номер места</option>
                         <option value="1">1 ряд 1 место</option>
                         <option value="2">1 ряд 2 место</option>
                         <option value="3">1 ряд 3 место</option>
@@ -766,16 +772,22 @@
                         <option value="9">1 ряд 9 место</option>
                         <option value="10">1 ряд 10 место</option>
                     </select>
-                    <label for="feedback_textarea" id="textarea_label"></label>
-                    <textarea class="feedback-form__review-field form-field" name="feedback_textarea"
-                        id="feedback_textarea" rows="5" placeholder="Напишите свой отзыв"
-                        aria-labelledby="textarea_label" required></textarea>
+
+                    <div class="input_block input__filled input__error feedback-form__name">
+                        <label for="feedback_textarea" id="textarea_label"></label>
+                        <textarea class="feedback-form__review-field form-field input__input" name="feedback_textarea"
+                            id="feedback_textarea" rows="5" placeholder="Напишите свой отзыв"
+                            aria-labelledby="textarea_label"></textarea>
+                        <p class="input__error_mmsg">Error message</p>
+                    </div>
+
                     <div class="checkbox-field">
                         <input class="checkbox-field__checkbox visually-hidden" type="checkbox" id="feedback_checkbox"
-                            name="feedback_checkbox" required>
+                            name="feedback_checkbox">
                         <label class="checkbox-field__label" for="feedback_checkbox">Я согласен на обработку своих
                             персональных данных</label>
                     </div>
+
                     <button class="feedback-form__button button_color_green button_form" type="submit">Послать</button>
                 </form>
             </div>
@@ -931,39 +943,40 @@
             </div>
         </div>
     </footer>
+
     <div class="pop-up hidden" id="prize_pop-up">
         <div class="form_wrap">
-            <button class="close" id="prize_pop-up__close"><svg width="35" height="35" viewBox="0 0 35 35" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="17.5" cy="17.5" r="17.5" fill="#A3CC40" />
-                    <path
-                        d="M25.5363 11.8271L23.9176 10.2084L17.5 16.626L11.0824 10.2084L9.46362 11.8271L15.8812 18.2447L9.46362 24.6623L11.0824 26.2811L17.5 19.8635L23.9176 26.2811L25.5363 24.6623L19.1187 18.2447L25.5363 11.8271Z"
-                        fill="white" />
-                </svg>
+            <button class="close" id="prize_pop-up__close">
             </button>
-            <form class="form_prize" action="">
+            <form id="form_prize__id" class="form_prize" action="">
                 <h2 title="Связаться с кинотеатром Иннополис" class="feedback__title feedback__title__prize">Выберите
                     подарок</h2>
-                <label for="feedback_name" id="name_label_prize"></label>
-                <input class="feedback-form__name form-field" id="feedback_name" name="feedback_name" type="text"
-                    placeholder="Введите имя" aria-labelledby="name_label" required>
-                <label for="feedback_name" id="name_label_prize"></label>
 
-                <input class="feedback-form__name form-field" id="feedback_name_prize" name="feedback_name"
-                    type="text" placeholder="Введите адрес" aria-labelledby="name_label" required>
+                <div class="input_block input__filled input__error feedback-form__name">
+                    <p class="input_lable" id="feedback_name">Введите имя</p>
+                    <input class="input__input" id="feedback_name" name="feedback_name" type="text"
+                        aria-labelledby="name_label" value="name">
+                    <p class="input__error_mmsg ">Error message</p>
+                </div>
+
+                <div class="input_block input__filled input__error feedback-form__name">
+                    <p class="input_lable" id="name_label_prize">Введите email</p>
+                    <input class="input__input" id="feedback_name_prize" name="email" type="text"
+                        aria-labelledby="name_label" value="name">
+                    <p class="input__error_mmsg">Error message</p>
+                </div>
 
                 <label for="feedback_select" id="select_label_prize"></label>
                 <select class="feedback-form__place feedback-select form-field" name="feedback_select"
                     id="feedback_select_prize" aria-labelledby="select_label" required>
-                    <option value="" disabled selected>Выберите подарок</option>
-                    <option value="1">Подарок №1</option>
-                    <option value="2">Подарок №2</option>
-                    <option value="3">Подарок №3</option>
+                    <option value="none" disabled selected>Выберите подарок</option>
+                    <option value="freePop">Удвоим напиток</option>
+                    <option value="tiket4Free">3-й билет бесплатно</option>
                 </select>
 
                 <div class="checkbox-field">
                     <input class="checkbox-field__checkbox visually-hidden" type="checkbox" id="feedback_checkbox_prize"
-                        name="feedback_checkbox_prize" required>
+                        name="feedback_checkbox_prize">
                     <label class="checkbox-field__label" for="feedback_checkbox_prize">Я согласен на обработку своих
                         персональных данных</label>
                 </div>
