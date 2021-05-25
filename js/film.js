@@ -4,11 +4,11 @@ class Film {
         this.start = `${toHour(getRandomToMax(14) + 9)}:${toMinuts(getRandomToMax(5))}`;
     }
 
-    getStart() {
+    #getStart() {
         return this.start;
     }
 
-    getTitle() {
+    #getTitle() {
         return this.data.title;
     }
 
@@ -16,7 +16,7 @@ class Film {
         return !this.data.adult;
     }
 
-    getGenre() {
+    #getGenre() {
         return this.data.genre
             .map(g => g.name)
             .join(', ');
@@ -31,13 +31,13 @@ class Film {
                     </svg>
                 </td>
 
-                <td class="table_size_m">${this.getStart()}</td>
+                <td class="table_size_m">${this.#getStart()}</td>
 
                 <td class="table_size_m">
                     <a href="https://www.kinopoisk.ru/film/838/" title="Кинопоиск"
-                        target="_blank">${this.getTitle()}</a>
+                        target="_blank">${this.#getTitle()}</a>
                 </td>
-                <td class="table_size_m">${this.getGenre()}</td>
+                <td class="table_size_m">${this.#getGenre()}</td>
             </tr>
             `
     }

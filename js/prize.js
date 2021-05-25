@@ -95,6 +95,12 @@ function handleSubmit(event) {
         emailFieldUtiles.addError('Укажите email');
         return;
     }
+
+    if (!/^[\w-]{2,16}@[\w]{3,16}\.[a-z]{2,3}$/i.test(emailValue)) {
+        emailFieldUtiles.addError('Укажите корректный email');
+        return;
+    }
+
     if (selectPrize.value === "none") {
         selectPrize.classList.add(ERROR_CLASS_NAME);
         return;
@@ -110,12 +116,12 @@ function handleSubmit(event) {
     url.search = new URLSearchParams(data).toString();
 
     fetch(url.toString())
-    .then(data => data.json())
-    .then((data) => {
-        popUpToggle();
-        nameFieldUtiles.reset();
-        emailFieldUtiles.reset();
-    })
+        .then(data => data.json())
+        .then((data) => {
+            popUpToggle();
+            nameFieldUtiles.reset();
+            emailFieldUtiles.reset();
+        })
 }
 
 form.addEventListener('submit', handleSubmit);

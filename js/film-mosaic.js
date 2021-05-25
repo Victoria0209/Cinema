@@ -1,49 +1,82 @@
 const blockFilmsWrapper = document.getElementById('block-mosaic_wrapper__id');
-blockFilmsWrapper.innerHTML = '';
-
-const apiHeaders = {
-    'accept': 'application/json',
-    'X-API-KEY': '4ff0511d-539f-4451-98c7-d1076f9af595',
-}
-
-fetch('https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_AWAIT_FILMS&page=1', {
+const kinopoiskapiunofficialRequest = (url) => {
+    return fetch(url, {
         headers: {
-            ...apiHeaders
+            'accept': 'application/json',
+            'X-API-KEY': '4ff0511d-539f-4451-98c7-d1076f9af595',
         },
         cors: 'no-cors'
     })
-    .then(data => data.json())
-    .then(data => {data.films.forEach((film) => {
-            const id = `blocks-films-desk-${film.filmId}`
-            blockFilmsWrapper.innerHTML += `
-                <div class="film_pic film_item1">
-                    <div class="wrapper_block__img">
-                        <img alt="film1" src=${film.posterUrlPreview}>
-                    </div>
+}
+const topFilmsRequest = () => {
+    return kinopoiskapiunofficialRequest('https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_AWAIT_FILMS&page=1')
+};
+const filmDetailsRequest = (id) => {
+    return kinopoiskapiunofficialRequest(`https://kinopoiskapiunofficial.tech/api/v2.1/films/${id}`)
+};
 
-                    <div class="film_shadow">
-                        <div class="films_block">
-                            <h2 class="film_name">${film.nameRu}</h2>
-                            <div id="${id}" class="film_desc">Loading...</div>
-                        </div>
-                    </div>
-                </div>
-            `
+function renderFilmBlock(posterUrl, filmName, id) {
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('film_pic', 'film_item1');
+    const link = document.createElement('a');
+    link.href = `/single/?id${id}`;
+    const wrapperImg = document.createElement('div');
+    wrapperImg.classList.add('wrapper_block__img');
+    const imgTag = document.createElement('img');
+    imgTag.src = posterUrl;
+    const divShadow = document.createElement('div');
+    divShadow.classList.add('film_shadow');
+    const divFilmBlock = document.createElement('div');
+    divFilmBlock.classList.add('films_block');
+    const header2 = document.createElement('h2');
+    header2.classList.add('film_name');
+    header2.textContent = filmName;
+    const divDesc = document.createElement('div');
+    divDesc.classList.add('film_desc');
 
-            fetch(`https://kinopoiskapiunofficial.tech/api/v2.1/films/409424`, {
-                    headers: {
-                        ...apiHeaders
-                    },
-                    cors: 'no-cors'
-                })
-                .then(data => data.json())
-                .then(({data: {description}}) => {
-                    const desc = document.getElementById(id);
-                    desc.innerHTML = description;
-                    if (!description) {
-                        const root = desc.parentNode.parentNode;
-                        blockFilmsWrapper.removeChild(root);
-                    }
-                })
-        })
+    wrapper.append(link);
+    link.append(wrapperImg, divShadow);
+    wrapperImg.append(imgTag);
+    divShadow.append(divFilmBlock);
+    divFilmBlock.append(header2, divDesc);
+
+    return [wrapper, divDesc];
+};
+
+const fetchBlockFilms = async () => {
+    const result = await topFilmsRequest();
+    const data = await result.json();
+
+    const requests = [];
+    const filmBlocksMap = new Map();
+
+    data.films.forEach((film) => {
+        const [filmLayout, divDesc] = renderFilmBlock(film.posterUrlPreview, film.nameRu, film.filmId)
+        filmBlocksMap.set(film.filmId, filmLayout)
+
+        requests.push(new Promise(async (resolve, reject) => {
+            const detailResult = await filmDetailsRequest(film.filmId);
+            const detailData = await detailResult.json();
+            const description = detailData.data.description;
+            if (!description) {
+                filmBlocksMap.delete(film.filmId);
+            } else {
+                divDesc.textContent = description;
+            }
+            resolve();
+        }));
     })
+    await Promise.all(requests);
+
+    // let i = 0;
+    // for (const [id, element] of filmBlocksMap) {
+    //     blockFilmsWrapper.append(element);
+    //     i++;
+    //     if (i >= 9) {
+    //         break;
+    //     }
+    // }
+    const elements = [...filmBlocksMap.values()].slice(0, 9)
+    blockFilmsWrapper.append(...elements)
+}
+fetchBlockFilms();

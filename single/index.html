@@ -1,34 +1,22 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/favicon.png">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
+    <title>Film</title>
+    <link rel="shortcut icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/media.css">
 
-    <link rel="stylesheet" href="libs/own/owl.carousel.min.css">
-    <link rel="stylesheet" href="libs/own/owl.theme.default.css">
-
-    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script defer src="libs/own/owl.carousel.min.js"></script>
-    <script defer src="js/utilits.js"></script>
-    <script defer src="js/film.js"></script>
-
-    <script defer src="js/table.js"></script>
-    <script defer src="js/main.js"></script>
-    <script defer src="js/prize.js"></script>
-    <script defer src="js/form_feedback.js"></script>
-    <script defer src="js/film-mosaic.js"></script>
-    <title> Продажа билетов в кино в Иннополисе</title>
+    <script defer src="/js/single-film.js"></script>
 </head>
 
-<body>
-    <header class="header-block01">
+<body class="body_films">
+    <header class="header-block02">
         <div class="header-block01_container">
             <div class="header-block01_menu">
                 <div class="header-block01_logo">
@@ -168,10 +156,6 @@
                 </div>
             </div>
 
-            <div class="header2">
-                <h1 class="header2_large">Закажите билет в кино</h1>
-                <p class="header2_small">Всем покупателям подарок!</p>
-            </div>
         </div>
         <div class="lang">
             <div class="dropdown">
@@ -191,484 +175,165 @@
             </div>
         </div>
     </header>
-    <section class="welcome">
-        <div class="block02">
-            <h2 class="welcome_h2">Добро пожаловать!</h2>
-            <p class="welcome_text1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et
-                dolore magna aliqua. Ut enim ad minim veniam.
-            </p>
-
-            <p class="welcome_text2">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt.
-            </p>
-        </div>
-    </section>
     <main>
-        <section id="why-we" class="block03">
-            <div class="container_film">
-                <div class="headers">
-                    Почему мы?
-                </div>
-
-                <div class="card">
-                    <div class="card_all card1">
-                        <div class="card_img img1">
-                            <img class="card_big" src="images/large_screens.jpg" alt="Большие экраны">
-                        </div>
-                        <div class="card_main">
-                            <div class="card_header">
-                                <h3>Большие экраны</h3>
-                            </div>
-                            <div class="card_desk">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam.
-                                </p>
-                            </div>
-                        </div>
+        <div class="wrapper_block_film">
+            <div class="block__wrap_all">
+                <div class="block__wrap_img">
+                    <div class="block_img">
+                        <img class="block_img__img" src="/images/film1.jpg">
                     </div>
-                    <div class="card_all card2">
-                        <div class="card_img img2">
-                            <img class="card_big" src="images/surround_sound.jpg" alt="Объёмный звук">
-                        </div>
-                        <div class="card_main">
-                            <div class="card_header">
-                                <h3>Объёмный звук</h3>
-                            </div>
-                            <div class="card_desk">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card_all card3">
-                        <div class="card_img img3">
-                            <img class="card_big" src="images/comfortable_armchairs.jpg" alt="Удобные кресла">
-                        </div>
-                        <div class="card_main">
-                            <div class="card_header">
-                                <h3>Удобные кресла</h3>
-                            </div>
-                            <div class="card_desk">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card_all card4">
-                        <div class="card_img img4">
-                            <img class="card_big" src="images/cozy_atmosphere.jpg" alt="Уютная атмосфера">
-                        </div>
-                        <div class="card_main">
-                            <div class="card_header">
-                                <h3>Уютная атмосфера</h3>
-                            </div>
-                            <div class="card_desk">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card_all card5">
-                        <div class="card_img img5">
-                            <img class="card_big" src="images/full_immersion.jpg" alt="Полное погружение">
-                        </div>
-                        <div class="card_main">
-                            <div class="card_header">
-                                <h3>Полное погружение</h3>
-                            </div>
-                            <div class="card_desk">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card_all card6">
-                        <div class="card_img img6">
-                            <img class="card_big" src="images/back_row_kisses.jpg" alt="Поцелуи на заднем ряду">
-                        </div>
-                        <div class="card_main">
-                            <div class="card_header">
-                                <h3>Поцелуи на заднем ряду</h3>
-                            </div>
-                            <div class="card_desk">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam.
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="film-selection" class="block04">
-            <div class="container-table">
-                <div class="headers">
-                    <h2 class="h2_table">Выберите фильм</h2>
-                </div>
-                <div class="table-scroll">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th class="table_size_s"></th>
-                                <th class="table_size_m">
-                                    <button type="submit" class="table__button button_arrow">Начало сеанса</button>
-                                </th>
-                                <th class="table_size_m">
-                                    <button type="submit" class="table__button button_arrow">Название
-                                        фильма</button>
-                                </th>
-                                <th class="table_size_m">
-                                    <button type="submit" class="table__button">Жанр</button>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody id="block04_table_tbody">
-                            <!-- <tr>
-                                <td class="table_size_s">
-                                    <svg class="svg_green" viewBox="0 0 11 9" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M4.60581 6.79378L1.46056 3.93033L0.787354 4.66979L4.70255 8.23421L10.8223 0.94099L10.0562 0.298203L4.60581 6.79378Z" />
+                    <div class="block_desc">
+                        <h1 class="header_film">Живое</h1>
+                        <div class="rating">
+                            <div class="appraisal">
+                                <div class="rating_stars_wrap">
+                                    <svg width="88" height="18" viewBox="0 0 88 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M24.9925 1.5C20.8525 1.5 17.5 4.86 17.5 9C17.5 13.14 20.8525 16.5 24.9925 16.5C29.14 16.5 32.5 13.14 32.5 9C32.5 4.86 29.14 1.5 24.9925 1.5ZM28.1725 13.5L25 11.5875L21.8275 13.5L22.6675 9.8925L19.87 7.47L23.56 7.155L25 3.75L26.44 7.1475L30.13 7.4625L27.3325 9.885L28.1725 13.5Z"
+                                            fill="#A3CC40" />
+                                        <path
+                                            d="M60.9925 1.5C56.8525 1.5 53.5 4.86 53.5 9C53.5 13.14 56.8525 16.5 60.9925 16.5C65.14 16.5 68.5 13.14 68.5 9C68.5 4.86 65.14 1.5 60.9925 1.5ZM64.1725 13.5L61 11.5875L57.8275 13.5L58.6675 9.8925L55.87 7.47L59.56 7.155L61 3.75L62.44 7.1475L66.13 7.4625L63.3325 9.885L64.1725 13.5Z"
+                                            fill="#A3CC40" />
+                                        <path
+                                            d="M42.9925 1.5C38.8525 1.5 35.5 4.86 35.5 9C35.5 13.14 38.8525 16.5 42.9925 16.5C47.14 16.5 50.5 13.14 50.5 9C50.5 4.86 47.14 1.5 42.9925 1.5ZM46.1725 13.5L43 11.5875L39.8275 13.5L40.6675 9.8925L37.87 7.47L41.56 7.155L43 3.75L44.44 7.1475L48.13 7.4625L45.3325 9.885L46.1725 13.5Z"
+                                            fill="#A3CC40" />
+                                        <path
+                                            d="M78.9925 1.5C74.8525 1.5 71.5 4.86 71.5 9C71.5 13.14 74.8525 16.5 78.9925 16.5C83.14 16.5 86.5 13.14 86.5 9C86.5 4.86 83.14 1.5 78.9925 1.5ZM82.1725 13.5L79 11.5875L75.8275 13.5L76.6675 9.8925L73.87 7.47L77.56 7.155L79 3.75L80.44 7.1475L84.13 7.4625L81.3325 9.885L82.1725 13.5Z"
+                                            fill="#A3CC40" />
+                                        <path
+                                            d="M8.9925 1.5C4.8525 1.5 1.5 4.86 1.5 9C1.5 13.14 4.8525 16.5 8.9925 16.5C13.14 16.5 16.5 13.14 16.5 9C16.5 4.86 13.14 1.5 8.9925 1.5ZM12.1725 13.5L9 11.5875L5.8275 13.5L6.6675 9.8925L3.87 7.47L7.56 7.155L9 3.75L10.44 7.1475L14.13 7.4625L11.3325 9.885L12.1725 13.5Z"
+                                            fill="#A3CC40" />
                                     </svg>
-                                </td>
-
-                                <td class="table_size_m">10:00</td>
-
-                                <td class="table_size_m">
-                                    <a href="https://www.kinopoisk.ru/film/838/" title="Кинопоиск"
-                                        target="_blank">Человек-паук</a>
-                                </td>
-                                <td class="table_size_m">Фантастика, боевик, приключения</td>
-                            </tr>
-
-                            <tr>
-                                <td class="table_size_s">
-                                    <svg class="svg_green" viewBox="0 0 11 9" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M4.60581 6.79378L1.46056 3.93033L0.787354 4.66979L4.70255 8.23421L10.8223 0.94099L10.0562 0.298203L4.60581 6.79378Z" />
-                                    </svg>
-                                </td>
-
-                                <td class="table_size_m">12:00</td>
-
-                                <td class="table_size_m">
-                                    <a href="https://www.kinopoisk.ru/film/1122114/" title="Кинопоиск" target="_blank">
-                                        Собачья жизнь 2
-                                    </a>
-                                </td>
-
-                                <td class="table_size_m">Фэнтэзи, драма, комедия</td>
-                            </tr>
-
-                            <tr>
-                                <td class="table_size_s">
-                                    <svg class="svg_green" viewBox="0 0 11 9" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M4.60581 6.79378L1.46056 3.93033L0.787354 4.66979L4.70255 8.23421L10.8223 0.94099L10.0562 0.298203L4.60581 6.79378Z" />
-                                    </svg>
-                                </td>
-
-                                <td class="table_size_m">14:00</td>
-
-                                <td class="table_size_m">
-                                    <a href="https://www.kinopoisk.ru/film/846824/" title="Кинопоиск" target="_blank">
-                                        История игрушек 4
-                                    </a>
-                                </td>
-
-                                <td class="table_size_m">Мультфильм, фэнтэзи, комедия</td>
-                            </tr>
-
-                            <tr>
-                                <td class="table_size_s">
-                                    <svg class="svg_green" viewBox="0 0 11 9" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M4.60581 6.79378L1.46056 3.93033L0.787354 4.66979L4.70255 8.23421L10.8223 0.94099L10.0562 0.298203L4.60581 6.79378Z" />
-                                    </svg>
-                                </td>
-
-                                <td class="table_size_m">16:00</td>
-
-                                <td class="table_size_m">
-                                    <a href="https://www.kinopoisk.ru/film/693730/" title="Кинопоиск" target="_blank">
-                                        Люди в чёрном: Интэрнэшнл
-                                    </a>
-                                </td>
-
-                                <td class="table_size_m">Фантастика, боевик, комедия</td>
-                            </tr> -->
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="div_description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore<br>
-                        magna aliqua.
-                        Ut enim ad minim veniam.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="gift_block" class="block05">
-            <div class="gift_img">
-                <img alt="gift" src="images/gift.jpg" alt="Подарок">
-            </div>
-            <div class="gift">
-
-
-                <div class="gift_desk">
-                    <div class="gift_h2">
-                        <h2>Подарок каждому!</h2>
-                    </div>
-
-                    <div class="desk1">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Nibh mauris cursus mattis molestie a iaculis at. Vel quam
-                            elementum pulvinar etiam non quam. Ut pharetra sit amet aliquam id diam maecenas.
-                        </p>
-                    </div>
-                    <div class="desk2">
-                        <p>
-                            Nunc vel risus commodo viverra maecenas accumsan. Morbi enim nunc faucibus a. Mauris commodo
-                            quis imperdiet massa.Sed elementum tempus egestas sed sed risus pretium quam vulputate.
-                            Aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus.
-                        </p>
-                    </div>
-                    <div class="desk3">
-                        <p>
-                            Nibh mauris cursus mattis molestie a iaculis at. Vel quam elementum pulvinar etiam non quam.
-                            Ut pharetra sit amet aliquam id diam maecenas. Sed elementum tempus egestas sed sed risus
-                            pretium quam vulputate. Aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus.
-                            Facilisi cras fermentum odio eu feugiat pretium nibh. Eu nisl nunc mi ipsum. Nibh sit amet
-                            commodo nulla facilisi nullam vehicula ipsum.
-                        </p>
-                    </div>
-                </div>
-                <div class="gift_button">
-                    <button class="button__size" id="btn_prize_open">Получить подарок</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="block06">
-            <div class="container">
-                <div class="headers">
-                    <h2 class="headers_films">Фильмы</h2>
-                </div>
-
-                <div class="headers_desc">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Nibh mauris cursus mattis molestie a iaculis at.
-                        Vel quam elementum pulvinar etiam non quam.
-                    </p>
-                </div>
-
-                <div class="block06_mosaic" id="block-mosaic_wrapper__id">
-                    <!-- <div class="film_pic film_item1"><img alt="film1" src="images/film1.jpg">
-                        <div class="film_shadow">
-                            <div class="films_block">
-                                <h2 class="film_name">Выживший</h2>
-                                <div class="film_desc">Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Nibh mauris
-                                    cursus
-                                    mattis molestie a iaculis at. Vel quam elementum pulvinar etiam
-                                    non
-                                    quam. Ut pharetra sit amet aliquam id diam maecenas.
+                                    <span class="stars">5.0</span>
+                                </div>
+                                <div class="rating_wrap">
+                                    <span class="rating_second">9/10</span>
+                                    <span class="rating_from">Rotten Tomatoes</span>
                                 </div>
                             </div>
-                        </div>
-                    </div>-->
-                </div>
-            </div>
-        </section>
 
-        <section id="sponsors">
-            <div class="container">
-                <div class="headers">
-                    <h2>Товары</h2>
-                </div>
+                            <div class="film_info">
+                                <div class="film_info__blocks">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.5 5.5H3.5V6.5H4.5V5.5ZM6.5 5.5H5.5V6.5H6.5V5.5ZM8.5 5.5H7.5V6.5H8.5V5.5ZM9.5 2H9V1H8V2H4V1H3V2H2.5C1.945 2 1.505 2.45 1.505 3L1.5 10C1.5 10.55 1.945 11 2.5 11H9.5C10.05 11 10.5 10.55 10.5 10V3C10.5 2.45 10.05 2 9.5 2ZM9.5 10H2.5V4.5H9.5V10Z"
+                                            fill="#A3CC40" />
+                                    </svg>
+                                    <span class="text_decor">25 Ноябрь 2019</span>
 
-                <div class="block07_desk">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Nibh mauris cursus mattis molestie a iaculis at.
-                        Vel quam elementum pulvinar etiam non quam.
-                    </p>
-                </div>
+                                </div>
+                                <div class="film_info__blocks">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6 2.25C3.5 2.25 1.365 3.805 0.5 6C1.365 8.195 3.5 9.75 6 9.75C8.5 9.75 10.635 8.195 11.5 6C10.635 3.805 8.5 2.25 6 2.25ZM6 8.5C4.62 8.5 3.5 7.38 3.5 6C3.5 4.62 4.62 3.5 6 3.5C7.38 3.5 8.5 4.62 8.5 6C8.5 7.38 7.38 8.5 6 8.5ZM6 4.5C5.17 4.5 4.5 5.17 4.5 6C4.5 6.83 5.17 7.5 6 7.5C6.83 7.5 7.5 6.83 7.5 6C7.5 5.17 6.83 4.5 6 4.5Z"
+                                            fill="#A3CC40" />
+                                    </svg>
+                                    <span class="text_decor">2.5K Views</span>
 
-                <div class="goods">
-                    <a class="goods_block1" href="" title="">
-                        <div class="goods_coca-cola">
-                            <div class="goods__position"></div>
-                        </div>
-                        <div class="goods__position__one"> Coca-cola</div>
-                    </a>
+                                </div>
+                                <div class="film_info__blocks">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6 10.675L5.275 10.015C2.7 7.68 1 6.14 1 4.25C1 2.71 2.21 1.5 3.75 1.5C4.62 1.5 5.455 1.905 6 2.545C6.545 1.905 7.38 1.5 8.25 1.5C9.79 1.5 11 2.71 11 4.25C11 6.14 9.3 7.68 6.725 10.02L6 10.675Z"
+                                            fill="#A3CC40" />
+                                    </svg>
+                                    <span class="text_decor">200 Likes</span>
 
-                    <a class="goods_block2 goods_block_men" href="" title="">
-                        <div class="goods_men">
-                            <div class="goods__position"></div>
-                        </div>
-                        <div class="goods__position__three"> Брелок "Железный человек"</div>
-                    </a>
+                                </div>
+                            </div>
+                            <div class="film_desc__block">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Duis aute irure
+                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim id est laborum.
 
-                    <a class="goods_block3" href="" title="">
-                        <div class="goods_poster">
-                            <div class="goods__position"></div>
-                        </div>
-                        <div class="goods__position__two"> Постер "Мстители"</div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="past-events" class="block08">
-            <div class="container column">
-                <div class="events_headers">
-                    <div class="headers">Отзывы</div>
-                    <p class="headers_p__size">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Nibh mauris cursus mattis molestie a iaculis at.
-                        Vel quam elementum pulvinar etiam non quam.
-                    </p>
-                </div>
-                <div class="events_block owl-carousel owl-theme">
-                    <div class="wrap_event events_block1 events item">
-                        <img alt="review1" class="event1" src="images/review1.jpg" alt="Отзыв Еленова">
-                        <div class="event_text">
-                            <h3 class="event1_head">Елена Еленова</h3>
-                            <blockquote class="event1_blockquote">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </blockquote>
-                            <div class="data"><time datetime="2015-11-18">18.10.2015</time></div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="wrap_event events_block2 events item">
-                        <img alt="review2" class="event2" src="images/review2.jpg" alt="Отзыв Борисов">
-                        <div class="event_text">
-                            <h3 class="event2_head">Борис Борисов</h3>
-                            <blockquote class="event2_blockquote">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </blockquote>
-                            <div class="data"><time datetime="2015-11-18">19.12.2019</time></div>
-                        </div>
-                    </div>
-
-                    <div class="wrap_event events_block3 events item">
-                        <img alt="review2" class="event3" src="images/review3.jpg" alt="Отзыв ДиКаприо">
-                        <div class="event_text">
-                            <h3 class="event3_head">Леонардо ДиКаприо</h3>
-                            <blockquote class="event3_blockquote">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </blockquote>
-                            <div class="data"><time datetime="2015-11-18">25.01.2021</time></div>
-                        </div>
-                    </div>
-                    <div class="wrap_event events_block3 events item">
-                        <img alt="review2" class="event3" src="images/review3.jpg" alt="Отзыв ДиКаприо">
-                        <div class="event_text">
-                            <h3 class="event3_head">Леонардо ДиКаприо</h3>
-                            <blockquote class="event3_blockquote">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </blockquote>
-                            <div class="data"><time datetime="2015-11-18">25.01.2021</time></div>
+                            </div>
+                            <div class="table_fiml__info">
+                                <table>
+                                    <tbody class="table_body">
+                                        <tr>
+                                            <td class="head_info">Страна</td>
+                                            <td class="head_desc">Дания</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="head_info">Режиссер</td>
+                                            <td class="head_desc">Михаэль Ноер</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="head_info">Сценарий</td>
+                                            <td class="head_desc">Джеспер Финк, Михаэль Ноер</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="head_info">Продюсер</td>
+                                            <td class="head_desc">Матильда Аппелин, Рене Эзра, Томас Радур, ...</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="head_info">Оператор</td>
+                                            <td class="head_desc">Стурла Брандт Грёвлен</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="head_info">Композитор</td>
+                                            <td class="head_desc">Руне Тонсгор Сёренсен</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="head_info">Художник</td>
+                                            <td class="head_desc">Сорен Шварцберг, Луиз Ниссен</td>
+                                        </tr>
+                                        <tr class="head_desc__bold_block">
+                                            <td class="head_info">Время</td>
+                                            <td class="head_info head_desc__bold"> 104 мин. / 01:44</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section class="feedback container" id="feedback_form__id">
-            <div class="feedback__block09">
-                <form action="#" method="post" class="feedback-form" id="feddback_form__id">
-                    <h2 title="Связаться с кинотеатром Иннополис" class="feedback__title">Обратная связь</h2>
-
-                    <div class="input_block input__filled input__error feedback-form__name">
-                        <p class="input_lable" id="name_label">Полное имя</p>
-                        <input class="input__input" id="feedback_name" name="feedback_name__form" type="text"
-                            aria-labelledby="name_label">
-                        <p class="input__error_mmsg">Error message</p>
+            
+            <div class="head__other_film__wrapper">
+                <div class="head__other_film">Другие фильмы</div>
+                <div class="block__other_films">
+                    <div class="head__genre_film">Экшн</div>
+                    <div class="block__films_genre">
+                        <div class="film_block_carousel">
+                            <div class="wrap_block_carousel__img">
+                                <img src="/images/film2.jpg" alt="">
+                            </div>
+                            <div class="film_block_wrap_other_films">
+                                <span class="name_block_film">Лёд</span>
+                                <span class="author_year_block_film">2018, фильм Ивана Иванова</span>
+                            </div>
+                        </div>
+                        <div class="film_block_carousel">
+                            <div class="wrap_block_carousel__img">
+                                <img src="/images/film2.jpg" alt="">
+                            </div>
+                            <div class="film_block_wrap_other_films">
+                                <span class="name_block_film">Лёд</span>
+                                <span class="author_year_block_film">2018, фильм Ивана Иванова</span>
+                            </div>
+                        </div>
+                        <div class="film_block_carousel">
+                            <div class="wrap_block_carousel__img">
+                                <img src="/images/film2.jpg" alt="">
+                            </div>
+                            <div class="film_block_wrap_other_films">
+                                <span class="name_block_film">Лёд</span>
+                                <span class="author_year_block_film">2018, фильм Ивана Иванова</span>
+                            </div>
+                        </div>
                     </div>
-
-                    <label for="feedback_select" id="select_label"></label>
-                    <select class="feedback-form__place feedback-select form-field" name="feedback_select"
-                        id="feedback_select" aria-labelledby="select_label">
-                        <option value="none" disabled selected>Номер места</option>
-                        <option value="1">1 ряд 1 место</option>
-                        <option value="2">1 ряд 2 место</option>
-                        <option value="3">1 ряд 3 место</option>
-                        <option value="4">1 ряд 4 место</option>
-                        <option value="5">1 ряд 5 место</option>
-                        <option value="6">1 ряд 6 место</option>
-                        <option value="7">1 ряд 7 место</option>
-                        <option value="8">1 ряд 8 место</option>
-                        <option value="9">1 ряд 9 место</option>
-                        <option value="10">1 ряд 10 место</option>
-                    </select>
-
-                    <div class="input_block input__filled input__error feedback-form__name">
-                        <label for="feedback_textarea" id="textarea_label"></label>
-                        <textarea class="feedback-form__review-field form-field input__input" name="feedback_textarea"
-                            id="feedback_textarea" rows="5" placeholder="Напишите свой отзыв"
-                            aria-labelledby="textarea_label"></textarea>
-                        <p class="input__error_mmsg">Error message</p>
-                    </div>
-
-                    <div class="checkbox-field">
-                        <input class="checkbox-field__checkbox visually-hidden" type="checkbox" id="feedback_checkbox"
-                            name="feedback_checkbox">
-                        <label class="checkbox-field__label" for="feedback_checkbox">Я согласен на обработку своих
-                            персональных данных</label>
-                    </div>
-
-                    <button class="feedback-form__button button_color_green button_form" type="submit">Послать</button>
-                </form>
+                </div>
             </div>
-        </section>
-
-        <section class="block10">
-            <div class="container-map">
-                <img class="map" alt="map" src="images/map.jpg" alt="Карта">
-            </div>
-        </section>
     </main>
-
-    <footer id="contact" class="container_footer">
+    <footer id="contact" class="container_footer footer_films">
         <div class="columns">
             <div class="column1">
                 <a href="http://university.innopolis.ru" title="Иннополис" target="_blank">
@@ -811,50 +476,6 @@
             </div>
         </div>
     </footer>
-
-    <div class="pop-up hidden" id="prize_pop-up">
-        <div class="form_wrap">
-            <button class="close" id="prize_pop-up__close">
-            </button>
-            <form id="form_prize__id" class="form_prize" action="">
-                <h2 title="Связаться с кинотеатром Иннополис" class="feedback__title feedback__title__prize">Выберите
-                    подарок</h2>
-
-                <div class="input_block input__filled input__error feedback-form__name">
-                    <p class="input_lable" id="feedback_name">Введите имя</p>
-                    <input class="input__input" id="feedback_name" name="feedback_name" type="text"
-                        aria-labelledby="name_label" value="name">
-                    <p class="input__error_mmsg ">Error message</p>
-                </div>
-
-                <div class="input_block input__filled input__error feedback-form__name">
-                    <p class="input_lable" id="name_label_prize">Введите email</p>
-                    <input class="input__input" id="feedback_name_prize" name="email" type="text"
-                        aria-labelledby="name_label" value="name">
-                    <p class="input__error_mmsg">Error message</p>
-                </div>
-
-                <label for="feedback_select" id="select_label_prize"></label>
-                <select class="feedback-form__place feedback-select form-field" name="feedback_select"
-                    id="feedback_select_prize" aria-labelledby="select_label" required>
-                    <option value="none" disabled selected>Выберите подарок</option>
-                    <option value="freePop">Удвоим напиток</option>
-                    <option value="tiket4Free">3-й билет бесплатно</option>
-                </select>
-
-                <div class="checkbox-field">
-                    <input class="checkbox-field__checkbox visually-hidden" type="checkbox" id="feedback_checkbox_prize"
-                        name="feedback_checkbox_prize">
-                    <label class="checkbox-field__label" for="feedback_checkbox_prize">Я согласен на обработку своих
-                        персональных данных</label>
-                </div>
-                <div class="btn_wrapper_prize">
-                    <button class="feedback-form__button button_color_green button_form_prize"
-                        type="submit">Послать</button>
-                </div>
-            </form>
-        </div>
-    </div>
 </body>
 
 </html>

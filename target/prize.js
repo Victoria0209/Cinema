@@ -101,6 +101,11 @@ function handleSubmit(event) {
     return;
   }
 
+  if (!/^[\w-]{2,16}@[\w]{3,16}\.[a-z]{2,3}$/i.test(emailValue)) {
+    emailFieldUtiles.addError('Укажите корректный email');
+    return;
+  }
+
   if (selectPrize.value === "none") {
     selectPrize.classList.add(ERROR_CLASS_NAME);
     return;

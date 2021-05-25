@@ -1,40 +1,169 @@
 "use strict";
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 var blockFilmsWrapper = document.getElementById('block-mosaic_wrapper__id');
-blockFilmsWrapper.innerHTML = '';
-var apiHeaders = {
-  'accept': 'application/json',
-  'X-API-KEY': '4ff0511d-539f-4451-98c7-d1076f9af595'
-};
-fetch('https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_AWAIT_FILMS&page=1', {
-  headers: _objectSpread({}, apiHeaders),
-  cors: 'no-cors'
-}).then(function (data) {
-  return data.json();
-}).then(function (data) {
-  data.films.forEach(function (film) {
-    var id = "blocks-films-desk-".concat(film.filmId);
-    blockFilmsWrapper.innerHTML += "\n                <div class=\"film_pic film_item1\">\n                    <div class=\"wrapper_block__img\">\n                        <img alt=\"film1\" src=".concat(film.posterUrlPreview, ">\n                    </div>\n\n                    <div class=\"film_shadow\">\n                        <div class=\"films_block\">\n                            <h2 class=\"film_name\">").concat(film.nameRu, "</h2>\n                            <div id=\"").concat(id, "\" class=\"film_desc\">Loading...</div>\n                        </div>\n                    </div>\n                </div>\n            ");
-    fetch("https://kinopoiskapiunofficial.tech/api/v2.1/films/409424", {
-      headers: _objectSpread({}, apiHeaders),
-      cors: 'no-cors'
-    }).then(function (data) {
-      return data.json();
-    }).then(function (_ref) {
-      var description = _ref.data.description;
-      var desc = document.getElementById(id);
-      desc.innerHTML = description;
 
-      if (!description) {
-        var root = desc.parentNode.parentNode;
-        blockFilmsWrapper.removeChild(root);
-      }
-    });
+var kinopoiskapiunofficialRequest = function kinopoiskapiunofficialRequest(url) {
+  return fetch(url, {
+    headers: {
+      'accept': 'application/json',
+      'X-API-KEY': '4ff0511d-539f-4451-98c7-d1076f9af595'
+    },
+    cors: 'no-cors'
   });
-});
+};
+
+var topFilmsRequest = function topFilmsRequest() {
+  return kinopoiskapiunofficialRequest('https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_AWAIT_FILMS&page=1');
+};
+
+var filmDetailsRequest = function filmDetailsRequest(id) {
+  return kinopoiskapiunofficialRequest("https://kinopoiskapiunofficial.tech/api/v2.1/films/".concat(id));
+};
+
+function renderFilmBlock(posterUrl, filmName, id) {
+  var wrapper = document.createElement('div');
+  wrapper.classList.add('film_pic', 'film_item1');
+  var link = document.createElement('a');
+  link.href = "/single/?id".concat(id);
+  var wrapperImg = document.createElement('div');
+  wrapperImg.classList.add('wrapper_block__img');
+  var imgTag = document.createElement('img');
+  imgTag.src = posterUrl;
+  var divShadow = document.createElement('div');
+  divShadow.classList.add('film_shadow');
+  var divFilmBlock = document.createElement('div');
+  divFilmBlock.classList.add('films_block');
+  var header2 = document.createElement('h2');
+  header2.classList.add('film_name');
+  header2.textContent = filmName;
+  var divDesc = document.createElement('div');
+  divDesc.classList.add('film_desc');
+  wrapper.append(link);
+  link.append(wrapperImg, divShadow);
+  wrapperImg.append(imgTag);
+  divShadow.append(divFilmBlock);
+  divFilmBlock.append(header2, divDesc);
+  return [wrapper, divDesc];
+}
+
+;
+
+var fetchBlockFilms = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+    var result, data, requests, filmBlocksMap, elements;
+    return regeneratorRuntime.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            _context2.next = 2;
+            return topFilmsRequest();
+
+          case 2:
+            result = _context2.sent;
+            _context2.next = 5;
+            return result.json();
+
+          case 5:
+            data = _context2.sent;
+            requests = [];
+            filmBlocksMap = new Map();
+            data.films.forEach(function (film) {
+              var _renderFilmBlock = renderFilmBlock(film.posterUrlPreview, film.nameRu, film.filmId),
+                  _renderFilmBlock2 = _slicedToArray(_renderFilmBlock, 2),
+                  filmLayout = _renderFilmBlock2[0],
+                  divDesc = _renderFilmBlock2[1];
+
+              filmBlocksMap.set(film.filmId, filmLayout);
+              requests.push(new Promise( /*#__PURE__*/function () {
+                var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(resolve, reject) {
+                  var detailResult, detailData, description;
+                  return regeneratorRuntime.wrap(function _callee$(_context) {
+                    while (1) {
+                      switch (_context.prev = _context.next) {
+                        case 0:
+                          _context.next = 2;
+                          return filmDetailsRequest(film.filmId);
+
+                        case 2:
+                          detailResult = _context.sent;
+                          _context.next = 5;
+                          return detailResult.json();
+
+                        case 5:
+                          detailData = _context.sent;
+                          description = detailData.data.description;
+
+                          if (!description) {
+                            filmBlocksMap["delete"](film.filmId);
+                          } else {
+                            divDesc.textContent = description;
+                          }
+
+                          resolve();
+
+                        case 9:
+                        case "end":
+                          return _context.stop();
+                      }
+                    }
+                  }, _callee);
+                }));
+
+                return function (_x, _x2) {
+                  return _ref2.apply(this, arguments);
+                };
+              }()));
+            });
+            _context2.next = 11;
+            return Promise.all(requests);
+
+          case 11:
+            // let i = 0;
+            // for (const [id, element] of filmBlocksMap) {
+            //     blockFilmsWrapper.append(element);
+            //     i++;
+            //     if (i >= 9) {
+            //         break;
+            //     }
+            // }
+            elements = _toConsumableArray(filmBlocksMap.values()).slice(0, 9);
+            blockFilmsWrapper.append.apply(blockFilmsWrapper, _toConsumableArray(elements));
+
+          case 13:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+
+  return function fetchBlockFilms() {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+fetchBlockFilms();
