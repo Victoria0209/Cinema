@@ -12,7 +12,22 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/media.css">
 
-    <script defer src="/js/single-film.js"></script>
+
+    <link rel="stylesheet" href="/libs/own/owl.carousel.min.css">
+    <link rel="stylesheet" href="/libs/own/owl.theme.default.css">
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="/libs/own/owl.carousel.min.js"></script>
+
+
+
+
+
+
+    <script defer src="/libs/polyfill.min.js"></script>
+
+    <script defer src="/target/utilits.js"></script>
+    <script defer src="/target/single-film.js"></script>
+    <script defer src="/target/other-films-carousel.js"></script>
 </head>
 
 <body class="body_films">
@@ -180,36 +195,34 @@
             <div class="block__wrap_all">
                 <div class="block__wrap_img">
                     <div class="block_img">
-                        <img class="block_img__img" src="/images/film1.jpg">
+                        <img class="block_img__img" id="sf-poster" src="/images/placeholder-1.png">
                     </div>
                     <div class="block_desc">
-                        <h1 class="header_film">Живое</h1>
+                        <h1 class="header_film" id="sf-header">Загрузка...</h1>
                         <div class="rating">
                             <div class="appraisal">
                                 <div class="rating_stars_wrap">
-                                    <svg width="88" height="18" viewBox="0 0 88 18" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24.9925 1.5C20.8525 1.5 17.5 4.86 17.5 9C17.5 13.14 20.8525 16.5 24.9925 16.5C29.14 16.5 32.5 13.14 32.5 9C32.5 4.86 29.14 1.5 24.9925 1.5ZM28.1725 13.5L25 11.5875L21.8275 13.5L22.6675 9.8925L19.87 7.47L23.56 7.155L25 3.75L26.44 7.1475L30.13 7.4625L27.3325 9.885L28.1725 13.5Z"
-                                            fill="#A3CC40" />
-                                        <path
-                                            d="M60.9925 1.5C56.8525 1.5 53.5 4.86 53.5 9C53.5 13.14 56.8525 16.5 60.9925 16.5C65.14 16.5 68.5 13.14 68.5 9C68.5 4.86 65.14 1.5 60.9925 1.5ZM64.1725 13.5L61 11.5875L57.8275 13.5L58.6675 9.8925L55.87 7.47L59.56 7.155L61 3.75L62.44 7.1475L66.13 7.4625L63.3325 9.885L64.1725 13.5Z"
-                                            fill="#A3CC40" />
-                                        <path
-                                            d="M42.9925 1.5C38.8525 1.5 35.5 4.86 35.5 9C35.5 13.14 38.8525 16.5 42.9925 16.5C47.14 16.5 50.5 13.14 50.5 9C50.5 4.86 47.14 1.5 42.9925 1.5ZM46.1725 13.5L43 11.5875L39.8275 13.5L40.6675 9.8925L37.87 7.47L41.56 7.155L43 3.75L44.44 7.1475L48.13 7.4625L45.3325 9.885L46.1725 13.5Z"
-                                            fill="#A3CC40" />
-                                        <path
-                                            d="M78.9925 1.5C74.8525 1.5 71.5 4.86 71.5 9C71.5 13.14 74.8525 16.5 78.9925 16.5C83.14 16.5 86.5 13.14 86.5 9C86.5 4.86 83.14 1.5 78.9925 1.5ZM82.1725 13.5L79 11.5875L75.8275 13.5L76.6675 9.8925L73.87 7.47L77.56 7.155L79 3.75L80.44 7.1475L84.13 7.4625L81.3325 9.885L82.1725 13.5Z"
-                                            fill="#A3CC40" />
-                                        <path
-                                            d="M8.9925 1.5C4.8525 1.5 1.5 4.86 1.5 9C1.5 13.14 4.8525 16.5 8.9925 16.5C13.14 16.5 16.5 13.14 16.5 9C16.5 4.86 13.14 1.5 8.9925 1.5ZM12.1725 13.5L9 11.5875L5.8275 13.5L6.6675 9.8925L3.87 7.47L7.56 7.155L9 3.75L10.44 7.1475L14.13 7.4625L11.3325 9.885L12.1725 13.5Z"
-                                            fill="#A3CC40" />
-                                    </svg>
-                                    <span class="stars">5.0</span>
+                                    <div class="rating_stars">
+                                        <svg data-value="1" id="stars" class="rt-star">
+                                            <use xlink:href='#rating-star'></use>
+                                        </svg>
+                                        <svg data-value="2" id="stars" class="rt-star">
+                                            <use xlink:href='#rating-star'></use>
+                                        </svg>
+                                        <svg data-value="3" id="stars" class="rt-star">
+                                            <use xlink:href='#rating-star'></use>
+                                        </svg>
+                                        <svg data-value="4" id="stars" class="rt-star">
+                                            <use xlink:href='#rating-star'></use>
+                                        </svg>
+                                        <svg data-value="5" id="stars" class="rt-star">
+                                            <use xlink:href='#rating-star'></use>
+                                        </svg>
+                                    </div>
+                                    <span class="stars" id="sf-rating-number">5.0</span>
                                 </div>
                                 <div class="rating_wrap">
-                                    <span class="rating_second">9/10</span>
-                                    <span class="rating_from">Rotten Tomatoes</span>
+                                    <span class="rating_from">Inno Tomatoes</span>
                                 </div>
                             </div>
 
@@ -221,7 +234,7 @@
                                             d="M4.5 5.5H3.5V6.5H4.5V5.5ZM6.5 5.5H5.5V6.5H6.5V5.5ZM8.5 5.5H7.5V6.5H8.5V5.5ZM9.5 2H9V1H8V2H4V1H3V2H2.5C1.945 2 1.505 2.45 1.505 3L1.5 10C1.5 10.55 1.945 11 2.5 11H9.5C10.05 11 10.5 10.55 10.5 10V3C10.5 2.45 10.05 2 9.5 2ZM9.5 10H2.5V4.5H9.5V10Z"
                                             fill="#A3CC40" />
                                     </svg>
-                                    <span class="text_decor">25 Ноябрь 2019</span>
+                                    <span class="text_decor" id="sf-premiere">25 Ноябрь 2019</span>
 
                                 </div>
                                 <div class="film_info__blocks">
@@ -231,21 +244,21 @@
                                             d="M6 2.25C3.5 2.25 1.365 3.805 0.5 6C1.365 8.195 3.5 9.75 6 9.75C8.5 9.75 10.635 8.195 11.5 6C10.635 3.805 8.5 2.25 6 2.25ZM6 8.5C4.62 8.5 3.5 7.38 3.5 6C3.5 4.62 4.62 3.5 6 3.5C7.38 3.5 8.5 4.62 8.5 6C8.5 7.38 7.38 8.5 6 8.5ZM6 4.5C5.17 4.5 4.5 5.17 4.5 6C4.5 6.83 5.17 7.5 6 7.5C6.83 7.5 7.5 6.83 7.5 6C7.5 5.17 6.83 4.5 6 4.5Z"
                                             fill="#A3CC40" />
                                     </svg>
-                                    <span class="text_decor">2.5K Views</span>
+                                    <span class="text_decor" id="sf-views">2.5K Views</span>
 
                                 </div>
                                 <div class="film_info__blocks">
-                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="like-icon" id="like-icon" width="12" height="12" viewBox="0 0 12 12"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M6 10.675L5.275 10.015C2.7 7.68 1 6.14 1 4.25C1 2.71 2.21 1.5 3.75 1.5C4.62 1.5 5.455 1.905 6 2.545C6.545 1.905 7.38 1.5 8.25 1.5C9.79 1.5 11 2.71 11 4.25C11 6.14 9.3 7.68 6.725 10.02L6 10.675Z"
-                                            fill="#A3CC40" />
+                                            fill="currentColor" />
                                     </svg>
-                                    <span class="text_decor">200 Likes</span>
+                                    <span class="text_decor" id="sf-likes">200 Likes</span>
 
                                 </div>
                             </div>
-                            <div class="film_desc__block">
+                            <div class="film_desc__block" id="sf-desc">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Duis aute irure
                                 dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -296,12 +309,44 @@
                 </div>
             </div>
 
-            
+
             <div class="head__other_film__wrapper">
                 <div class="head__other_film">Другие фильмы</div>
                 <div class="block__other_films">
                     <div class="head__genre_film">Экшн</div>
-                    <div class="block__films_genre">
+                    <div class="block__films_genre owl-carousel owl-theme">
+                        <div class="film_block_carousel">
+                            <div class="wrap_block_carousel__img">
+                                <img src="/images/film2.jpg" alt="">
+                            </div>
+                            <div class="film_block_wrap_other_films">
+                                <span class="name_block_film">Лёд</span>
+                                <span class="author_year_block_film">2018, фильм Ивана Иванова</span>
+                            </div>
+                        </div>
+                        <div class="film_block_carousel">
+                            <div class="wrap_block_carousel__img">
+                                <img src="/images/film2.jpg" alt="">
+                            </div>
+                            <div class="film_block_wrap_other_films">
+                                <span class="name_block_film">Лёд</span>
+                                <span class="author_year_block_film">2018, фильм Ивана Иванова</span>
+                            </div>
+                        </div>
+                        <div class="film_block_carousel">
+                            <div class="wrap_block_carousel__img">
+                                <img src="/images/film2.jpg" alt="">
+                            </div>
+                            <div class="film_block_wrap_other_films">
+                                <span class="name_block_film">Лёд</span>
+                                <span class="author_year_block_film">2018, фильм Ивана Иванова</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block__other_films">
+                    <div class="head__genre_film">Драма</div>
+                    <div class="block__films_genre owl-carousel owl-theme">
                         <div class="film_block_carousel">
                             <div class="wrap_block_carousel__img">
                                 <img src="/images/film2.jpg" alt="">
@@ -476,6 +521,15 @@
             </div>
         </div>
     </footer>
+    <svg style="display: none;">
+        <symbol id="rating-star" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M7.9925 0.5C3.8525 0.5 0.5 3.86 0.5 8C0.5 12.14 3.8525 15.5 7.9925 15.5C12.14 15.5 15.5 12.14 15.5 8C15.5 3.86 12.14 0.5 7.9925 0.5ZM11.1725 12.5L8 10.5875L4.8275 12.5L5.6675 8.8925L2.87 6.47L6.56 6.155L8 2.75L9.44 6.1475L13.13 6.4625L10.3325 8.885L11.1725 12.5Z"
+                fill="currentColor" />
+        </symbol>
+    </svg>
+
+
 </body>
 
 </html>

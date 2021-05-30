@@ -1,19 +1,4 @@
 const blockFilmsWrapper = document.getElementById('block-mosaic_wrapper__id');
-const kinopoiskapiunofficialRequest = (url) => {
-    return fetch(url, {
-        headers: {
-            'accept': 'application/json',
-            'X-API-KEY': '4ff0511d-539f-4451-98c7-d1076f9af595',
-        },
-        cors: 'no-cors'
-    })
-}
-const topFilmsRequest = () => {
-    return kinopoiskapiunofficialRequest('https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_AWAIT_FILMS&page=1')
-};
-const filmDetailsRequest = (id) => {
-    return kinopoiskapiunofficialRequest(`https://kinopoiskapiunofficial.tech/api/v2.1/films/${id}`)
-};
 
 function renderFilmBlock(posterUrl, filmName, id) {
     const wrapper = document.createElement('div');
@@ -68,14 +53,6 @@ const fetchBlockFilms = async () => {
     })
     await Promise.all(requests);
 
-    // let i = 0;
-    // for (const [id, element] of filmBlocksMap) {
-    //     blockFilmsWrapper.append(element);
-    //     i++;
-    //     if (i >= 9) {
-    //         break;
-    //     }
-    // }
     const elements = [...filmBlocksMap.values()].slice(0, 9)
     blockFilmsWrapper.append(...elements)
 }

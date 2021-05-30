@@ -1327,18 +1327,14 @@ section.block10 {
     padding-left: 7.7rem;
 }
 
+
+/* new page */
 .header-block02 {
     height: 6.35rem;
     background: linear-gradient(89.92deg, #251A1B 24.47%, #4F272F 64.85%);
     overflow: hidden;
     position: relative;
 }
-
-/* .body_films {
-    min-width: 100%;
-    min-height: 100vh;
-    margin: 0;
-} */
 
 .block__wrap_all {
     grid-area: col2;
@@ -1352,10 +1348,11 @@ section.block10 {
 }
 
 .block_img {
-    width: 442px;
-    height: 510px;
+    /* width: 442px;
+    height: 510px; */
     padding: 40px;
     box-sizing: content-box;
+    width: 50%;
 }
 
 .block_img img {
@@ -1376,6 +1373,7 @@ section.block10 {
     padding-left: 40px;
     margin-top: 10px;
     width: 50%;
+    padding-right: 15px;
 }
 
 .rating {
@@ -1386,24 +1384,43 @@ section.block10 {
     display: flex;
 }
 
-.rating_stars_wrap {
-    padding-right: 20px;
+.rating_stars {
     display: flex;
+}
+
+.rating_stars_wrap {
+    display: flex;
+    margin-right: 10px;
+}
+
+#stars {
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
 }
 
 .stars {
     font-size: 13px;
     line-height: 17px;
     color: #A1A1A1;
-    padding-left: 10px;
+    margin-left: 10px;
 }
 
-.rating_second {
-    font-weight: bold;
-    font-size: 11px;
-    line-height: 1.2;
+.rating_stars {
+    color: #687250;
+    cursor: pointer;
+}
+
+.star-selected {
     color: #A3CC40;
-    padding-right: 8px;
+}
+
+.rt-star:hover {
+    color: #A3CC40;
+}
+
+.rt-star:hover~.rt-star {
+    color: #687250;
 }
 
 .rating_from {
@@ -1428,6 +1445,17 @@ section.block10 {
     margin-right: 38px;
 }
 
+.like-icon{
+    color: #687250;
+    cursor: pointer;
+}
+.like-icon:hover{
+    color: #A3CC40;
+}
+.like-icon__liked{
+    color: #A3CC40;
+}
+
 .film_info {
     display: flex;
     margin-top: 30px;
@@ -1438,7 +1466,7 @@ section.block10 {
     line-height: 1.2;
     color: #A1A1A1;
     margin-top: 35px;
-    padding-right: 90px;
+    /* padding-right: 90px; */
 }
 
 .table_fiml__info {
@@ -1499,7 +1527,6 @@ section.block10 {
 
 .film_block_carousel {
     margin-top: 20px;
-    margin-left: 15px;
 }
 
 .wrap_block_carousel__img {
@@ -1528,4 +1555,20 @@ section.block10 {
     color: #333333;
     margin-top: 5px;
     display: block;
+}
+
+.disabled .owl-prev{
+    position: absolute;
+    bottom: 89px;
+    left: -49px;
+    border: 1px solid #A3CC40;
+}
+/* .disabled .owl-prev span{
+    border: 1px solid #A3CC40;
+    border-radius: 50%;
+} */
+.disabled .owl-next{
+    position: absolute;
+    bottom: 89px;
+    left: 857px;
 }

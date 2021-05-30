@@ -35,7 +35,7 @@
     position: relative;
     overflow: hidden;
     -webkit-transform: translate3d(0, 0, 0);
-    height: 316px;;
+    /* height: 316px;; */
 }
 .owl-stage-outer .owl-stage{
     padding-top: 16px;
@@ -64,10 +64,10 @@
     width: 100%
 }
 
-.owl-carousel .owl-dots.disabled,
+/* .owl-carousel .owl-dots.disabled,
 .owl-carousel .owl-nav.disabled {
     display: none
-}
+} */
 
 .no-js .owl-carousel,
 .owl-carousel.owl-loaded {
