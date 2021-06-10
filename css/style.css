@@ -356,8 +356,6 @@
     justify-content: space-between;
 }
 
-
-
 .card_main {
     display: flex;
     flex-direction: column;
@@ -373,7 +371,6 @@
 }
 
 .card_all {
-
     max-width: 242px;
     flex: 1 0 242px;
     margin: 2.7rem 5px 0 5px;
@@ -633,7 +630,6 @@
 /* table films-mosaic */
 .block06 {
     margin-top: 3rem;
-    /* min-height: 51.25rem; */
 }
 
 .block06_mosaic {
@@ -1357,8 +1353,6 @@ section.block10 {
 }
 
 .block_img {
-    /* width: 442px;
-    height: 510px; */
     padding: 40px;
     box-sizing: content-box;
     width: 50%;
@@ -1477,7 +1471,6 @@ section.block10 {
     line-height: 1.2;
     color: #A1A1A1;
     margin-top: 35px;
-    /* padding-right: 90px; */
 }
 
 .table_fiml__info {
@@ -1570,14 +1563,14 @@ section.block10 {
 
 .disabled .owl-prev {
     position: absolute;
-    bottom: 89px;
+    bottom: 191px;
     left: -49px;
     border: 1px solid #A3CC40;
 }
 
 .disabled .owl-next {
     position: absolute;
-    bottom: 89px;
+    bottom: 191px;
     left: 857px;
 }
 
@@ -1632,7 +1625,6 @@ section.block10 {
 .skeleton-film-block:nth-child(9) {
     animation-delay: -1.8s;
 }
-
 
 @keyframes shine-avatar {
     0% {

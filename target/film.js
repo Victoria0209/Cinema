@@ -41,8 +41,7 @@ var Film = /*#__PURE__*/function () {
   }]);
 
   return Film;
-}(); // fetchKinopoiskFilmData()
-
+}();
 
 function _getStart2() {
   return this.start;
