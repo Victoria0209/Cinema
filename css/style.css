@@ -177,7 +177,6 @@
     position: absolute;
     bottom: 0;
     transform: translateY(100%);
-    display: none;
 }
 
 .lang_trigger {
@@ -185,13 +184,19 @@
     padding-bottom: 0.15rem;
     text-decoration: none;
     display: block;
+    background: none;
+    border: none;
 }
 
-.lang_list ul {
+.lang_list a {
     color: #FFFFFF;
     font-weight: 500;
     font-size: 0.6rem;
     background: rgba(0, 0, 0, 8);
+}
+
+.lang_list a {
+    color: #FFFFFF;
 }
 
 .lang_trigger:hover span {
@@ -202,11 +207,15 @@
     fill: #A3CC40;
 }
 
-.lang_list li {
-    padding: 0.2rem 0.8rem;
+.lang_list a:nth-child(1) {
+    padding: 4px 16px;
 }
 
-.lang_list li a:hover {
+.lang_list a:nth-child(2) {
+    padding: 4px 16.5px;
+}
+
+.lang_list a:hover {
     color: #A3CC40;
 }
 
@@ -624,7 +633,7 @@
 /* table films-mosaic */
 .block06 {
     margin-top: 3rem;
-    min-height: 51.25rem;
+    /* min-height: 51.25rem; */
 }
 
 .block06_mosaic {
@@ -1445,14 +1454,16 @@ section.block10 {
     margin-right: 38px;
 }
 
-.like-icon{
+.like-icon {
     color: #687250;
     cursor: pointer;
 }
-.like-icon:hover{
+
+.like-icon:hover {
     color: #A3CC40;
 }
-.like-icon__liked{
+
+.like-icon__liked {
     color: #A3CC40;
 }
 
@@ -1557,18 +1568,82 @@ section.block10 {
     display: block;
 }
 
-.disabled .owl-prev{
+.disabled .owl-prev {
     position: absolute;
     bottom: 89px;
     left: -49px;
     border: 1px solid #A3CC40;
 }
-/* .disabled .owl-prev span{
-    border: 1px solid #A3CC40;
-    border-radius: 50%;
-} */
-.disabled .owl-next{
+
+.disabled .owl-next {
     position: absolute;
     bottom: 89px;
     left: 857px;
+}
+
+.scrollUp {
+    position: fixed;
+    top: 31.4rem;
+    left: 60rem;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgba(97, 97, 93, 0.631);
+}
+
+.scrollUp__svg {
+    left: 6px;
+    width: 40px;
+    position: absolute;
+    top: 12px;
+    transform: rotate(180deg);
+}
+
+.skeleton-film-block {
+    width: 285px;
+    height: 285px;
+    animation: shine-avatar 1.6s infinite linear;
+}
+
+.skeleton-film-block:nth-child(1) {
+    animation-delay: -.2s;
+}
+.skeleton-film-block:nth-child(2) {
+    animation-delay: -.4s;
+}
+.skeleton-film-block:nth-child(3) {
+    animation-delay: -.6s;
+}
+.skeleton-film-block:nth-child(4) {
+    animation-delay: -.8s;
+}
+.skeleton-film-block:nth-child(5) {
+    animation-delay: -1s;
+}
+.skeleton-film-block:nth-child(6) {
+    animation-delay: -1.2s;
+}
+.skeleton-film-block:nth-child(7) {
+    animation-delay: -1.4s;
+}
+.skeleton-film-block:nth-child(8) {
+    animation-delay: -1.6s;
+}
+.skeleton-film-block:nth-child(9) {
+    animation-delay: -1.8s;
+}
+
+
+@keyframes shine-avatar {
+    0% {
+        background-color: #4C4D4F;
+    }
+
+    50% {
+        background-color: #A3CC40;
+    }
+
+    100% {
+        background-color: #4C4D4F;
+    }
 }

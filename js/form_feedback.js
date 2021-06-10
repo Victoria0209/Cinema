@@ -2,6 +2,7 @@ const nameFieldFeedback = document.querySelector('#feedback_form__id input[name=
 const feedbackField = document.querySelector('#feedback_form__id textarea[name="feedback_textarea"]').parentNode;
 const formFedback = document.getElementById('feddback_form__id');
 const selectFeedback = document.getElementById('feedback_select');
+const btnForm = document.getElementById('btn_form');
 
 const nameFeedbackFieldUtiles = initializeField(nameFieldFeedback);
 const feedbackFieldUtiles = initializeField(feedbackField);
@@ -37,7 +38,20 @@ function handleSubmitFeedback(event) {
     const url = new URL('http://inno-ijl.ru/multystub/stc-21-03/feedback');
     url.search = new URLSearchParams(data).toString();
 
-    fetch(url.toString());
+
+    fetch(url.toString())
+
+        .then(() => {
+            btnForm.innerText = "Форма отправлена";
+            btnForm.setAttribute("disabled", true);
+            btnForm.style.background = 'grey'
+            setTimeout(() => {
+                btnForm.innerText = "Послать";
+                btnForm.removeAttribute("disabled");
+                btnForm.style.background = '#A3CC40'
+            }, 2000)
+        });
+
 };
 
 selectFeedback.addEventListener('change', () => {

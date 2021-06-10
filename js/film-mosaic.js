@@ -4,7 +4,7 @@ function renderFilmBlock(posterUrl, filmName, id) {
     const wrapper = document.createElement('div');
     wrapper.classList.add('film_pic', 'film_item1');
     const link = document.createElement('a');
-    link.href = `/single/?id${id}`;
+    link.href = `/single/?id=${id}`;
     const wrapperImg = document.createElement('div');
     wrapperImg.classList.add('wrapper_block__img');
     const imgTag = document.createElement('img');
@@ -52,7 +52,7 @@ const fetchBlockFilms = async () => {
         }));
     })
     await Promise.all(requests);
-
+    blockFilmsWrapper.innerHTML = "";
     const elements = [...filmBlocksMap.values()].slice(0, 9)
     blockFilmsWrapper.append(...elements)
 }

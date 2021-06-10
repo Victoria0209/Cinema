@@ -25,7 +25,7 @@ var Film = /*#__PURE__*/function () {
     _getStart.add(this);
 
     this.data = filmData;
-    this.start = "".concat(toHour(getRandomToMax(14) + 9), ":").concat(toMinuts(getRandomToMax(5)));
+    this.start = "".concat(toHour(getRandomToMax(13) + 9), ":").concat(toMinuts(getRandomToMax(5)));
   }
 
   _createClass(Film, [{
@@ -41,7 +41,8 @@ var Film = /*#__PURE__*/function () {
   }]);
 
   return Film;
-}();
+}(); // fetchKinopoiskFilmData()
+
 
 function _getStart2() {
   return this.start;

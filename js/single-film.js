@@ -1,6 +1,5 @@
 const searchParams = new URLSearchParams(location.search);
-// const filmId = searchParams.get('id');
-const filmId = location.search.split('?id')[1];
+const filmId = searchParams.get('id');
 
 const likes = document.getElementById('sf-likes');
 const stars = document.querySelectorAll('.rt-star');
@@ -16,6 +15,7 @@ const fetchKinopoiskFilmData = async () => {
     const description = document.getElementById('sf-desc');
     const posterImage = document.getElementById('sf-poster');
     const premiere = document.getElementById('sf-premiere');
+
 
     header.textContent = filmData.nameRu;
     description.textContent = filmData.description;
@@ -35,9 +35,13 @@ const fethcFilmMeta = async () => {
     views.textContent = `${body.views} Views`;
     likes.textContent = `${body.likes} Likes`;
 
-    const rating = body.ratings.reduce((a, b) => a + b, 0) / body.ratings.length;
+    const rating = body.ratings.reduce((a, b) => parseInt(a) + parseInt(b), 0) / body.ratings.length;
     const intRating = Math.round(rating);
-    ratingNumber.textContent = Math.floor(rating * 10) / 10;
+    if (isNaN(intRating)) {
+        ratingNumber.textContent = "0.0"
+    } else {
+        ratingNumber.textContent = Math.floor(rating * 10) / 10;
+    }
 
     for (let i = 0; i < stars.length; i++) {
         if (i >= intRating) break;
@@ -47,8 +51,14 @@ const fethcFilmMeta = async () => {
 }
 
 const likeIcon = document.getElementById("like-icon");
+const FILM_KEY = `film-${filmId}`;
+const liked = localStorage.getItem(FILM_KEY);
+if (liked !== null) {
+    likeIcon.classList.add('like-icon__liked');
+}
 likeIcon.addEventListener("click", () => {
     if (!likeIcon.classList.contains('like-icon__liked')) {
+        localStorage.setItem(FILM_KEY, true)
         const likesCount = parseInt(likes.textContent, 10) + 1;
         likes.innerHTML = `${likesCount} Likes`;
         likeIcon.classList.add('like-icon__liked');
@@ -62,19 +72,21 @@ likeIcon.addEventListener("click", () => {
     }
 })
 
-for (const star of stars) {
-    star.addEventListener('click', () => {
-        fetch(`http://inno-ijl.ru/multystub/stc-21-03/film/${filmId}/rating`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                rating: +star.dataset.value
-            })
-        });
-    })
-}
+
+$('.rating_stars').on('click', '.rt-star', async function () {
+
+    await fetch(`http://inno-ijl.ru/multystub/stc-21-03/film/${filmId}/rating`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            rating: +this.dataset.value
+        })
+    });
+    fethcFilmMeta();
+})
+
 
 fetchKinopoiskFilmData();
 fethcFilmMeta();

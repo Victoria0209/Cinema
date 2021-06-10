@@ -30,7 +30,7 @@ function renderFilmBlock(posterUrl, filmName, id) {
   var wrapper = document.createElement('div');
   wrapper.classList.add('film_pic', 'film_item1');
   var link = document.createElement('a');
-  link.href = "/single/?id".concat(id);
+  link.href = "/single/?id=".concat(id);
   var wrapperImg = document.createElement('div');
   wrapperImg.classList.add('wrapper_block__img');
   var imgTag = document.createElement('img');
@@ -124,10 +124,11 @@ var fetchBlockFilms = /*#__PURE__*/function () {
             return Promise.all(requests);
 
           case 11:
+            blockFilmsWrapper.innerHTML = "";
             elements = _toConsumableArray(filmBlocksMap.values()).slice(0, 9);
             blockFilmsWrapper.append.apply(blockFilmsWrapper, _toConsumableArray(elements));
 
-          case 13:
+          case 14:
           case "end":
             return _context2.stop();
         }

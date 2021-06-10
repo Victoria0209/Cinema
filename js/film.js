@@ -1,7 +1,7 @@
 class Film {
     constructor(filmData) {
         this.data = filmData;
-        this.start = `${toHour(getRandomToMax(14) + 9)}:${toMinuts(getRandomToMax(5))}`;
+        this.start = `${toHour(getRandomToMax(13) + 9)}:${toMinuts(getRandomToMax(5))}`;
     }
 
     #getStart() {
@@ -42,3 +42,5 @@ class Film {
             `
     }
 }
+
+// fetchKinopoiskFilmData()

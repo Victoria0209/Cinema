@@ -110,19 +110,17 @@
                     <div class="wrap_lang">
                         <div class="lang_hidden">
                             <div class="dropdown">
-                                <a href="#" class="lang_trigger">
+                                <button class="lang_trigger">
                                     <span>RU</span>
                                     <svg class="lang_trigger__arrow" viewBox="0 0 8 4"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M4.00406 3.8728L0.824164 0.692904L1.38985 0.127219L4.00406 2.74143L6.61827 0.127219L7.18396 0.692905L4.00406 3.8728Z" />
                                     </svg>
-                                </a>
+                                </button>
                                 <div class="lang_list">
-                                    <ul>
-                                        <li><a href="">RU</a></li>
-                                        <li><a href="">EN</a></li>
-                                    </ul>
+                                    <a href="">RU</a>
+                                    <a href="">EN</a>
                                 </div>
                             </div>
                         </div>
@@ -177,18 +175,16 @@
         </div>
         <div class="lang">
             <div class="dropdown">
-                <a class="lang_trigger">
+                <button class="lang_trigger">
                     <span>RU</span>
                     <svg class="lang_trigger__arrow" viewBox="0 0 8 4" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M4.00406 3.8728L0.824164 0.692904L1.38985 0.127219L4.00406 2.74143L6.61827 0.127219L7.18396 0.692905L4.00406 3.8728Z" />
                     </svg>
-                </a>
+                </button>
                 <div class="lang_list">
-                    <ul>
-                        <li><a href="">RU</a></li>
-                        <li><a href="">EN</a></li>
-                    </ul>
+                    <a href="">RU</a>
+                    <a href="">EN</a>
                 </div>
             </div>
         </div>
@@ -492,6 +488,15 @@
                 </div>
 
                 <div class="block06_mosaic" id="block-mosaic_wrapper__id">
+                    <div class="skeleton-film-block"></div>
+                    <div class="skeleton-film-block"></div>
+                    <div class="skeleton-film-block"></div>
+                    <div class="skeleton-film-block"></div>
+                    <div class="skeleton-film-block"></div>
+                    <div class="skeleton-film-block"></div>
+                    <div class="skeleton-film-block"></div>
+                    <div class="skeleton-film-block"></div>
+                    <div class="skeleton-film-block"></div>
                     <!-- <div class="film_pic film_item1"><img alt="film1" src="images/film1.jpg">
                         <div class="film_shadow">
                             <div class="films_block">
@@ -621,7 +626,7 @@
                     <h2 title="Связаться с кинотеатром Иннополис" class="feedback__title">Обратная связь</h2>
 
                     <div class="input_block input__filled input__error feedback-form__name">
-                        <p class="input_lable" id="name_label">Полное имя</p>
+                        <label class="input_lable" id="name_label" for="feedback_name">Полное имя</label>
                         <input class="input__input" id="feedback_name" name="feedback_name__form" type="text"
                             aria-labelledby="name_label">
                         <p class="input__error_mmsg">Error message</p>
@@ -653,12 +658,13 @@
 
                     <div class="checkbox-field">
                         <input class="checkbox-field__checkbox visually-hidden" type="checkbox" id="feedback_checkbox"
-                            name="feedback_checkbox">
+                            name="feedback_checkbox" required>
                         <label class="checkbox-field__label" for="feedback_checkbox">Я согласен на обработку своих
                             персональных данных</label>
                     </div>
 
-                    <button class="feedback-form__button button_color_green button_form" type="submit">Послать</button>
+                    <button id="btn_form" class="feedback-form__button button_color_green button_form"
+                        type="submit">Послать</button>
                 </form>
             </div>
         </section>
@@ -823,14 +829,14 @@
                     подарок</h2>
 
                 <div class="input_block input__filled input__error feedback-form__name">
-                    <p class="input_lable" id="feedback_name">Введите имя</p>
-                    <input class="input__input" id="feedback_name" name="feedback_name" type="text"
+                    <label class="input_lable" for="feedback_name_prize__label" id="feedback_name">Введите имя</label>
+                    <input class="input__input" id="feedback_name_prize__label" name="feedback_name" type="text"
                         aria-labelledby="name_label" value="name">
                     <p class="input__error_mmsg ">Error message</p>
                 </div>
 
                 <div class="input_block input__filled input__error feedback-form__name">
-                    <p class="input_lable" id="name_label_prize">Введите email</p>
+                    <label for="feedback_name_prize" class="input_lable" id="name_label_prize">Введите email</label>
                     <input class="input__input" id="feedback_name_prize" name="email" type="text"
                         aria-labelledby="name_label" value="name">
                     <p class="input__error_mmsg">Error message</p>
@@ -846,7 +852,7 @@
 
                 <div class="checkbox-field">
                     <input class="checkbox-field__checkbox visually-hidden" type="checkbox" id="feedback_checkbox_prize"
-                        name="feedback_checkbox_prize">
+                        name="feedback_checkbox_prize" required>
                     <label class="checkbox-field__label" for="feedback_checkbox_prize">Я согласен на обработку своих
                         персональных данных</label>
                 </div>
@@ -856,6 +862,14 @@
                 </div>
             </form>
         </div>
+    </div>
+    <div class="scrollUp">
+        <svg class="scrollUp__svg" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M4.00406 3.8728L0.824164 0.692904L1.38985 0.127219L4.00406 2.74143L6.61827 0.127219L7.18396 0.692905L4.00406 3.8728Z"
+                fill="white" />
+        </svg>
+
     </div>
 </body>
 
