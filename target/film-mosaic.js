@@ -52,7 +52,7 @@ function renderFilmBlock(posterUrl, filmName, id) {
   return [wrapper, divDesc];
 }
 
-;
+; // создаем DOM элементы
 
 var fetchBlockFilms = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
@@ -77,9 +77,9 @@ var fetchBlockFilms = /*#__PURE__*/function () {
               var _renderFilmBlock = renderFilmBlock(film.posterUrlPreview, film.nameRu, film.filmId),
                   _renderFilmBlock2 = _slicedToArray(_renderFilmBlock, 2),
                   filmLayout = _renderFilmBlock2[0],
-                  divDesc = _renderFilmBlock2[1];
+                  divDesc = _renderFilmBlock2[1]; // отвечает за отрисовку блоков
 
-              filmBlocksMap.set(film.filmId, filmLayout);
+
               requests.push(new Promise( /*#__PURE__*/function () {
                 var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(resolve, reject) {
                   var detailResult, detailData, description;
@@ -99,9 +99,8 @@ var fetchBlockFilms = /*#__PURE__*/function () {
                           detailData = _context.sent;
                           description = detailData.data.description;
 
-                          if (!description) {
-                            filmBlocksMap["delete"](film.filmId);
-                          } else {
+                          if (description) {
+                            filmBlocksMap.set(film.filmId, filmLayout);
                             divDesc.textContent = description;
                           }
 
@@ -119,14 +118,18 @@ var fetchBlockFilms = /*#__PURE__*/function () {
                   return _ref2.apply(this, arguments);
                 };
               }()));
-            });
+            }); // отвечает за отображение desc и отрисовку блоков
+
             _context2.next = 11;
             return Promise.all(requests);
 
           case 11:
-            blockFilmsWrapper.innerHTML = "";
-            elements = _toConsumableArray(filmBlocksMap.values()).slice(0, 9);
-            blockFilmsWrapper.append.apply(blockFilmsWrapper, _toConsumableArray(elements));
+            // тз 20- отображение готовых блоков
+            blockFilmsWrapper.innerHTML = ""; // стирание скелета
+
+            elements = _toConsumableArray(filmBlocksMap.values()).slice(0, 9); // обрезка блоков
+
+            blockFilmsWrapper.append.apply(blockFilmsWrapper, _toConsumableArray(elements)); // добавление готовых блоков в разметку
 
           case 14:
           case "end":

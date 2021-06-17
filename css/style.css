@@ -1413,18 +1413,28 @@ section.block10 {
     color: #687250;
     cursor: pointer;
 }
+/* .rating_stars {
+    color: #A3CC40;
+    cursor: pointer;
+} */
 
 .star-selected {
     color: #A3CC40;
 }
 
 .rt-star:hover {
-    color: #A3CC40;
+    color:  #A3CC40;
 }
-
 .rt-star:hover~.rt-star {
-    color: #687250;
+    color:  #A3CC40;
 }
+/* .rt-star:hover~.rt-star {
+    color:  #687250;
+} */
+/* .rt-star:hover {
+    color:  #687250;
+} */
+
 
 .rating_from {
     font-size: 13px;
