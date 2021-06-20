@@ -18,14 +18,20 @@ $('.scrollUp').click(function () {
   $('html').animate({
     scrollTop: 0
   }, 1500);
-});
-$('.lang_list').slideUp(0);
-var lngOpened = false;
+}); // функция для скрола вверх
+
+$('.lang_list').slideUp(0); // сворачивает меню
+
+var lngOpened = false; // прописали false для дальнешйей работы с переворачиванием стрелочки
+
 $('.lang_trigger').on('click', function () {
-  $('.lang_list').slideToggle();
-  lngOpened = !lngOpened;
+  $('.lang_list').slideToggle(); // переключатель
+
+  lngOpened = !lngOpened; // инвертируем lngOpened
+
   $(this).find('svg').css({
-    transform: "rotate(".concat(lngOpened ? 180 : 0, "deg)")
+    transform: "rotate(".concat(lngOpened ? 180 : 0, "deg)") // условия для lngOpened
+
   });
 });
 //# sourceMappingURL=main.js.map
