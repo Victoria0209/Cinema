@@ -141,7 +141,8 @@
                                 <li class="list_li"><a class="tel" href="tel:+78003551256">+7 (800) 355 12-56</a></li>
                                 <li class="list_li"><a class="underline"
                                         href="mailto:kino@innopolis.ru">kino@innopolis.ru</a></li>
-                                <li class="list_white list_li"> <a id="city_link" data-fancybox data-src="#modal_city">Город</a></li>
+                                <li class="list_white list_li"> <a id="city_link" data-fancybox
+                                        data-src="#modal_city">Город</a></li>
                                 <li class="list_li list_li__last">
                                     <button class="call">
                                         <svg class="call_svg" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
@@ -343,7 +344,7 @@
                             </tr>
                         </thead>
                         <tbody id="block04_table_tbody">
-                            
+
                         </tbody>
                     </table>
                 </div>
@@ -550,43 +551,50 @@
 
         <section class="feedback container" id="feedback_form__id">
             <div class="feedback__block09">
-                <form action="#" method="post" class="feedback-form" id="feddback_form__id">
-                    <h2 title="Связаться с кинотеатром Иннополис" class="feedback__title">Обратная связь</h2>
+                <form class="feedback-form" id="feddback_form__id">
+                    <input type="hidden" name='api_key' value="QcFNsNVO1n5rfsuDBmgH">
+                    <h2 title="Связаться с кинотеатром Иннополис" class="feedback__title">Бронирование</h2>
 
-                    <div class="input_block input__filled input__error feedback-form__name">
+                    <div class="input_block input_block1 input__filled input__error feedback-form__name">
                         <label class="input_lable" id="name_label" for="feedback_name">Полное имя</label>
-                        <input class="input__input" id="feedback_name" name="feedback_name__form" type="text"
+                        <input class="input__input" id="feedback_name" name="name" type="text"
                             aria-labelledby="name_label">
-                        <p class="input__error_mmsg">Error message</p>
+
+                        <p class="input__error_mmsg"></p>
                     </div>
-
-                    <label for="feedback_select" id="select_label"></label>
-                    <select class="feedback-form__place feedback-select form-field" name="feedback_select"
-                        id="feedback_select" aria-labelledby="select_label">
-                        <option value="none" disabled selected>Номер места</option>
-                        <option value="1">1 ряд 1 место</option>
-                        <option value="2">1 ряд 2 место</option>
-                        <option value="3">1 ряд 3 место</option>
-                        <option value="4">1 ряд 4 место</option>
-                        <option value="5">1 ряд 5 место</option>
-                        <option value="6">1 ряд 6 место</option>
-                        <option value="7">1 ряд 7 место</option>
-                        <option value="8">1 ряд 8 место</option>
-                        <option value="9">1 ряд 9 место</option>
-                        <option value="10">1 ряд 10 место</option>
-                    </select>
-
-                    <div class="input_block input__filled input__error feedback-form__name">
+                    <div class="feedback-select_wrap">
+                        <label for="feedback_select" id="select_label"></label>
+                        <select class="feedback-form__place feedback-select form-field" name="place"
+                            id="feedback_select" aria-labelledby="select_label">
+                            <option value="none" disabled selected>Номер места</option>
+                            <option value="1">1 ряд 1 место</option>
+                            <option value="2">1 ряд 2 место</option>
+                            <option value="3">1 ряд 3 место</option>
+                            <option value="4">1 ряд 4 место</option>
+                            <option value="5">1 ряд 5 место</option>
+                            <option value="6">1 ряд 6 место</option>
+                            <option value="7">1 ряд 7 место</option>
+                            <option value="8">1 ряд 8 место</option>
+                            <option value="9">1 ряд 9 место</option>
+                            <option value="10">1 ряд 10 место</option>
+                            <option value="11">1 ряд 11 место</option>
+                            <option value="28">1 ряд 28 место</option>
+                            <option value="29">1 ряд 29 место</option>
+                            <option value="31">1 ряд 31 место</option>
+                        </select>
+                        <p class="input__error_mmsg "></p>
+                    </div>
+                    <div class="input_block input_block1 input__filled input__error feedback-form__name">
                         <label for="feedback_textarea" id="textarea_label"></label>
-                        <textarea class="feedback-form__review-field form-field input__input" name="feedback_textarea"
-                            id="feedback_textarea" rows="5" placeholder="Напишите свой отзыв"
-                            aria-labelledby="textarea_label"></textarea>
-                        <p class="input__error_mmsg">Error message</p>
+                        <input type="email" class="feedback-form__review-field form-field input__input" name="email"
+                            id="feedback_textarea" rows="5" placeholder="Ваш e-mail"
+                            aria-labelledby="textarea_label"></input>
+                        <p class="input__error_mmsg"></p>
                     </div>
 
                     <div class="checkbox-field">
                         <input class="checkbox-field__checkbox visually-hidden" type="checkbox" id="feedback_checkbox"
-                            name="feedback_checkbox" required>
+                            name="agree" required>
                         <label class="checkbox-field__label" for="feedback_checkbox">Я согласен на обработку своих
                             персональных данных</label>
                     </div>
@@ -800,8 +808,12 @@
     </div>
 
     <div id="modal_city">
-        <input type="text" id="city_input">
+        <input type="text" id="city_input" >
         <div id="search_result"></div>
+    </div>
+    <div class="modal_for_form modal-success" id="modal_form" style="display: none;">
+        Успешно сохранено
+        <div class="success-result"></div>
     </div>
 </body>
 

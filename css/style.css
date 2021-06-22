@@ -982,16 +982,14 @@
 }
 
 .feedback-form__name {
-    margin: 0 0 .65rem;
+    margin: 0 0 1.65rem;
 }
 
 .feedback-form__place {
-    margin: 0 0 1.5rem;
     cursor: pointer;
 }
 
 .feedback-form__review-field {
-    margin: 0 0 1.65rem;
     resize: none;
 }
 
@@ -1049,9 +1047,16 @@
     box-shadow: 0 0 0 0.25rem rgba(170, 243, 77, 0.52);
 }
 
-.input__error .input__input,
-select.input__error {
+.input__error  {
     box-shadow: 0 0 0 0.25rem rgba(243, 77, 77, 0.52);
+    border-radius: 0.25rem;
+
+}
+
+.feedback-select_wrap {
+    position: relative;
+    margin: 0 0 1.5rem;
+   
 }
 
 .input__error_mmsg {

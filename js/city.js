@@ -16,10 +16,12 @@ function getRequest(url, callback) {
         // проверка успешно ли выполнился запрос
         if (xhr.status != 200) {
             return xhr.statusText;
+            // текстовое представление состояния ответа от сервера.
         } else {
             // если вызвался запрос корректно, то в функцию callback передаем результаты запроса
             if (xhr.readyState == 4) {
                 callback.call(xhr.responseText);
+                // responseText — представление ответа сервера в виде обычного текста (строки).
             }
         }
     }
