@@ -13,13 +13,10 @@ function getRequest(url, callback) {
 
   xhr.onreadystatechange = function () {
     // проверка успешно ли выполнился запрос
-    if (xhr.status != 200) {
-      return xhr.statusText; // текстовое представление состояния ответа от сервера.
+    if (xhr.status == 200 && xhr.readyState == 4) {
+      callback.call(xhr.responseText);
     } else {
-      // если вызвался запрос корректно, то в функцию callback передаем результаты запроса
-      if (xhr.readyState == 4) {
-        callback.call(xhr.responseText); // responseText — представление ответа сервера в виде обычного текста (строки).
-      }
+      return xhr.statusText;
     }
   };
 }
@@ -44,8 +41,8 @@ function getCityList() {
   var html = '<ul>'; // Сравнение инпута с массивом и ограничение их до 5 шт
 
   for (var i = 0; i < cities.length; i++) {
-    // приравниваем города к верхнему регистру и сравниваем с буквами в инпуте (indexOf возвращает число -1 при несовпадении,и 0 при совпадении)
-    if (cities[i].name.toLowerCase().indexOf(val.toLowerCase()) >= 0 && counter < 5) {
+    // приравниваем города к ниж регистру и сравниваем с буквами в инпуте (indexOf возвращает число -1 при несовпадении,и 0 при совпадении)
+    if (cities[i].name.toLowerCase().includes(val.toLowerCase()) && counter < 5) {
       html += "<li>" + cities[i].name + '</li>';
       counter++;
     }
@@ -60,10 +57,9 @@ $(document).ready(function ($) {
   getRequest(SYPEX_URL, setCity); // вешаем событие keyup на инпут и запускаем проверку
 
   $(document).on('keyup', '#city_input', function () {
-    var val = $(this).val(); // если список пустой,его нет,значит выполняем запрос к серверу и вызываем функцию с отрисовкой городов
-
-    if (!cities) getRequest(GLAVPUNKT_URL, setCities);else {
-      getCityList();
+    // если список пустой,его нет,значит выполняем запрос к серверу и вызываем функцию с отрисовкой городов
+    if (cities) getCityList();else {
+      getRequest(GLAVPUNKT_URL, setCities);
     }
   });
   $('#search_result').on('click', 'li', function () {
