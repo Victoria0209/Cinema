@@ -1108,6 +1108,9 @@
     border: 0.05rem solid #A3CC40;
     border-radius: 0.25rem;
 }
+.checkbox-field {
+    padding-top: 1rem;
+}
 
 .visually-hidden {
     border: 0;
@@ -1357,7 +1360,7 @@ section.block10 {
 
 .block__wrap_all {
     grid-area: col2;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+    border-bottom: .05rem solid rgba(0, 0, 0, 0.13);
     padding: 25px 23px 0 23px;
 }
 
@@ -1367,7 +1370,7 @@ section.block10 {
 }
 
 .block_img {
-    padding: 40px;
+    padding: 2rem;
     box-sizing: content-box;
     width: 50%;
 }
@@ -1375,26 +1378,26 @@ section.block10 {
 .block_img img {
     width: 100%;
     height: 100%;
-    border-right: 1px solid rgba(0, 0, 0, 0.13);
-    padding-right: 40px;
+    border-right: .05rem solid rgba(0, 0, 0, 0.13);
+    padding-right: 2rem;
 }
 
 .header_film {
     font-weight: 600;
-    font-size: 60px;
+    font-size: 3rem;
     line-height: 1.2;
     color: #333333;
 }
 
 .block_desc {
-    padding-left: 40px;
-    margin-top: 10px;
+    padding-left: 2rem;
+    margin-top: .5rem;
     width: 50%;
-    padding-right: 15px;
+    padding-right: .75rem;
 }
 
 .rating {
-    margin-top: 45px;
+    margin-top: 2.25rem;
 }
 
 .appraisal {
@@ -1407,7 +1410,7 @@ section.block10 {
 
 .rating_stars_wrap {
     display: flex;
-    margin-right: 10px;
+    margin-right: 0.5rem;
 }
 
 #stars {
@@ -1428,10 +1431,6 @@ section.block10 {
     cursor: pointer;
 }
 
-/* .rating_stars {
-    color: #A3CC40;
-    cursor: pointer;
-} */
 
 .star-selected {
     color: #A3CC40;
@@ -1444,13 +1443,6 @@ section.block10 {
 .rt-star:hover~.rt-star {
     color: #A3CC40;
 }
-
-/* .rt-star:hover~.rt-star {
-    color:  #687250;
-} */
-/* .rt-star:hover {
-    color:  #687250;
-} */
 
 
 .rating_from {
@@ -1466,7 +1458,7 @@ section.block10 {
 
 .text_decor {
     font-weight: 600;
-    font-size: 11px;
+    font-size: .55rem;
     line-height: 1.2;
     color: #4C4D4F;
 }
@@ -1532,7 +1524,7 @@ section.block10 {
 }
 
 .block__other_films {
-    max-width: 850px;
+    max-width: 42.5rem;
     margin: 25px auto;
 }
 
@@ -1542,16 +1534,16 @@ section.block10 {
 
 .head__other_film {
     font-weight: 600;
-    font-size: 15px;
+    font-size: .75rem;
     line-height: 1.2;
     color: #A1A1A1;
-    max-width: 870px;
+    max-width: 43.5rem;
     margin: 0 auto;
 }
 
 .head__genre_film {
     font-weight: 600;
-    font-size: 15px;
+    font-size: .75rem;
     line-height: 1.2;
     color: #333333;
 }
@@ -1561,8 +1553,8 @@ section.block10 {
 }
 
 .wrap_block_carousel__img {
-    width: 128px;
-    height: 145px;
+    width: 6.4rem;
+    height: 7.25rem;
 }
 
 .film_block_carousel img {
@@ -1572,8 +1564,8 @@ section.block10 {
 }
 
 .name_block_film {
-    font-size: 12px;
-    line-height: 16px;
+    font-size: .6rem;
+    line-height: .8rem;
     color: #A3CC40;
     margin-top: 10px;
     display: block;
@@ -1590,31 +1582,32 @@ section.block10 {
 
 .disabled .owl-prev {
     position: absolute;
-    bottom: 191px;
-    left: -49px;
+    bottom: 9.55rem;
+    left: -2.45rem;
     border: 1px solid #A3CC40;
 }
 
 .disabled .owl-next {
     position: absolute;
-    bottom: 191px;
-    left: 857px;
+    bottom: 9.55rem;
+    left: 42.85rem;
 }
 
 .scrollUp {
+    font-size: 1.3vw;
     position: fixed;
-    top: 30rem;
-    left: 60rem;
+    top: 32em;
+    left: 64em;
     border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 45px;
+    height: 45px;
     background-color: rgba(97, 97, 93, 0.631);
     cursor: pointer;
 }
 
 .scrollUp__svg {
     left: 6px;
-    width: 40px;
+    width: 35px;
     position: absolute;
     top: 12px;
     transform: rotate(180deg);

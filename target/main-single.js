@@ -4,7 +4,15 @@ $(".owl-carousel").owlCarousel({
   loop: true,
   nav: true,
   dots: false,
-  items: 6
+  // items: 6
+  responsive: {
+    0: {
+      items: 4
+    },
+    721: {
+      items: 6
+    }
+  }
 });
 $('.lang_list').slideUp(0);
 var lngOpened = false;

@@ -1,0 +1,115 @@
+@media screen and (max-width:970px) {
+    /* html{
+        font-size: 1.4vw;
+    } */
+    .disabled .owl-prev {
+        bottom: 11.55rem;
+        left: -2.45rem;
+    }
+    .disabled .owl-next {
+        bottom: 11.55rem;
+        left: 42.85rem;
+    }
+    .head__other_film__wrapper {
+        margin: 3rem auto;
+    }
+}
+@media screen and (max-width:806px) {
+    .head__other_film__wrapper {
+        max-width: 600px;
+      
+    }
+    .disabled .owl-next {
+        bottom: 11.55rem;
+        left: 30.85rem;
+    }
+    #city_link {
+        margin-right:0;
+    }
+}
+@media screen and (max-width:769px) {
+    .disabled .owl-next {
+        left: 31.85rem;
+    }
+}
+
+@media screen and (max-width:721px) {
+    html {
+        font-size: 2vw;
+
+    }
+    .block__wrap_img {     
+        height: 400px;
+        
+    }
+    .film_desc__block {
+        font-size:.6rem;  
+    }
+    .head_info, .head_desc {  
+        font-size: 0.55rem; 
+    }
+    .header_film {   
+        font-size: 2rem;
+    }
+    #stars {
+        width: 8px;
+    }
+    .rating {
+        margin-top: 0.25rem;
+    }
+    .film_info {
+        margin-top: 7px;
+    }
+    .film_desc__block {
+        margin-top: 12px;
+    }
+    .table_fiml__info {
+        margin-top: 5px;
+    }
+    .head_info {
+        padding: 6px;
+    }
+    .film_info__blocks {
+        margin-right: 7px;
+    }
+    .head__other_film__wrapper {
+        max-width: 490px;
+    }
+    .owl-carousel .owl-stage-outer {
+        height: 13.85rem;
+    }
+    .disabled .owl-next {
+        left: 32.85rem;
+    }
+    
+}
+@media screen and (max-width:605px) {
+    .disabled .owl-next {
+        left: 38.85rem;
+        bottom: 13.55rem;
+    }
+    .disabled .owl-prev {
+        left: -3.45rem;
+        bottom: 13.55rem;
+    }
+}
+@media screen and (max-width:576px) {
+    html {
+        font-size: 2.2vw;
+    }
+    .block__wrap_img {
+        height: 38rem;
+    }
+    .stars, .rating_from {
+        font-size: .65rem;
+    } 
+    .block__other_films {
+        max-width: 33.5rem;
+    }
+    .disabled{
+       display: none;
+    }
+   
+}
+
+

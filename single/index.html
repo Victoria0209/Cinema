@@ -7,19 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Film</title>
     <link rel="shortcut icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/libs/own/owl.carousel.min.css">
+    <link rel="stylesheet" href="/libs/own/owl.theme.default.css">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/media.css">
-    <link rel="stylesheet" href="/libs/own/owl.carousel.min.css">
-    <link rel="stylesheet" href="/libs/own/owl.theme.default.css">
-    
+    <link rel="stylesheet" href="/css/media-single.css">
+
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script defer src="/libs/own/owl.carousel.min.js"></script>
     <script defer src="/node_modules/@babel/polyfill/dist/polyfill.min.js"></script>
     <script defer src="/target/utilits.js"></script>
     <script defer src="/target/single-film.js"></script>
     <script defer src="/target/main-single.js"></script>
+    <script defer src="/target/city.js"></script>
 </head>
 
 <body class="body_films">
@@ -134,7 +136,8 @@
                                 <li class="list_li"><a class="tel" href="tel:+78003551256">+7 (800) 355 12-56</a></li>
                                 <li class="list_li"><a class="underline"
                                         href="mailto:kino@innopolis.ru">kino@innopolis.ru</a></li>
-                                <li class="list_white list_li">ул.Спортивная д.1</li>
+                                <li class="list_white list_li"> <a id="city_link" data-fancybox
+                                        data-src="#modal_city">Город</a></li>
                                 <li class="list_li list_li__last">
                                     <button class="call">
                                         <svg class="call_svg" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
@@ -166,8 +169,7 @@
             <div class="dropdown">
                 <button class="lang_trigger">
                     <span>RU</span>
-                    <svg class="lang_trigger__arrow" viewBox="0 0 8 4"
-                        xmlns="http://www.w3.org/2000/svg">
+                    <svg class="lang_trigger__arrow" viewBox="0 0 8 4" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M4.00406 3.8728L0.824164 0.692904L1.38985 0.127219L4.00406 2.74143L6.61827 0.127219L7.18396 0.692905L4.00406 3.8728Z" />
                     </svg>
@@ -313,7 +315,25 @@
                                 <span class="author_year_block_film">2018, фильм Ивана Иванова</span>
                             </div>
                         </div>
-                     
+                        <div class="film_block_carousel">
+                            <div class="wrap_block_carousel__img">
+                                <img src="/images/film2.jpg" alt="">
+                            </div>
+                            <div class="film_block_wrap_other_films">
+                                <span class="name_block_film">Лёд</span>
+                                <span class="author_year_block_film">2018, фильм Ивана Иванова</span>
+                            </div>
+                        </div>
+                        <div class="film_block_carousel">
+                            <div class="wrap_block_carousel__img">
+                                <img src="/images/film2.jpg" alt="">
+                            </div>
+                            <div class="film_block_wrap_other_films">
+                                <span class="name_block_film">Лёд</span>
+                                <span class="author_year_block_film">2018, фильм Ивана Иванова</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <div class="block__other_films">

@@ -77,6 +77,9 @@
     .checkbox-field__label {
         font-size: 0.65rem;
     }
+    .scrollUp {
+        font-size: 1.4vw;
+    }
 }
 
 @media screen and (max-width:873px) {
@@ -106,9 +109,8 @@
     }
 
     .list_li {
-        margin-right: 1.5rem;
+        margin-right: .1rem;
     }
-
     .list2 li {
         margin-right: 2.5rem;
     }
@@ -470,13 +472,12 @@
     }
 
     .owl-next {
-        left: 28.8rem;
+        left: 33.8rem;
     }
 
     .owl-prev {
-        left: 8.2rem;
+        left: 3.2rem;
     }
-
     .feedback__block09 {
         width: 33.35rem;
     }
@@ -505,6 +506,9 @@
 
     .feedback-form__name {
         margin: 0 0 1rem;
+    }
+    #past-events {
+        min-height: 44rem;
     }
 }
 
@@ -695,7 +699,7 @@
     .card_desk {
         font-size: .8rem;
     }
-
+   
     .feedback-select {
         display: none;
     }
@@ -730,6 +734,12 @@
 
     .feedback-form__review-field {
         margin: 0px 0 0.65rem;
+    }
+    .owl-next {
+        left: 28.15rem;
+    }
+    .owl-prev {
+        left: 8rem;
     }
 
     .table {
@@ -788,14 +798,6 @@
         font-size: 4.6vw;
     }
 
-    .owl-next {
-        left: 20.8rem;
-    }
-
-    .owl-prev {
-        left: 0;
-    }
-
     .column {
         padding: 0px 75px;
     }
@@ -803,11 +805,14 @@
     .headers_p__size {
         width: auto;
     }
+    .scrollUp {
+        font-size: 1.3vw;
+    }
 
 }
 
 @media (max-width:500px) {
-    html {
+      html {
         font-size: 3vw;
     }
 
@@ -839,7 +844,6 @@
     }
 
     #past-events {
-        min-height: 43rem;
         font-size: 3vw;
     }
 
@@ -853,6 +857,12 @@
 
     .headers_p__size {
         font-size: 0.65em;
+    }
+    .owl-next {
+        left: 19.8rem;
+    }
+    .owl-prev {
+        left: -0.8rem;
     }
 
     .events_block1,
@@ -873,6 +883,9 @@
     .event2_blockquote,
     .event3_blockquote {
         font-size: 0.7em;
+    }
+    .scrollUp {
+        display: none;
     }
 }
 
@@ -952,24 +965,13 @@
     }
 
     .owl-next {
-        bottom: 12.5rem;
-        left: 18.8rem;
-    }
-
-    .owl-prev {
-        left: -0.5rem;
-        bottom: 12.5rem;
-    }
-}
-
-@media (max-width:320px) {
-    .owl-next {
-        bottom: 19.5rem;
-        left: 15.8rem;
+        bottom: 17.5rem;
+        left: 17.5rem;
     }
 
     .owl-prev {
         left: -2.5rem;
-    bottom: 19.5rem;
+    bottom: 17.5rem;
     }
+   
 }
