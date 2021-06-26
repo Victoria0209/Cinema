@@ -1,5 +1,7 @@
 "use strict";
 
+var _kinopoiskapiunofficialRequest = require("../__data__/api/kinopoiskapiunofficialRequest.js");
+
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -16,7 +18,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -52,7 +54,7 @@ function renderFilmBlock(posterUrl, filmName, id) {
   return [wrapper, divDesc];
 }
 
-; // создаем DOM элементы
+;
 
 var fetchBlockFilms = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
@@ -62,7 +64,7 @@ var fetchBlockFilms = /*#__PURE__*/function () {
         switch (_context2.prev = _context2.next) {
           case 0:
             _context2.next = 2;
-            return topFilmsRequest();
+            return (0, _kinopoiskapiunofficialRequest.topFilmsRequest)();
 
           case 2:
             result = _context2.sent;
@@ -77,8 +79,7 @@ var fetchBlockFilms = /*#__PURE__*/function () {
               var _renderFilmBlock = renderFilmBlock(film.posterUrlPreview, film.nameRu, film.filmId),
                   _renderFilmBlock2 = _slicedToArray(_renderFilmBlock, 2),
                   filmLayout = _renderFilmBlock2[0],
-                  divDesc = _renderFilmBlock2[1]; // отвечает за отрисовку блоков
-
+                  divDesc = _renderFilmBlock2[1];
 
               requests.push(new Promise( /*#__PURE__*/function () {
                 var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(resolve, reject) {
@@ -88,7 +89,7 @@ var fetchBlockFilms = /*#__PURE__*/function () {
                       switch (_context.prev = _context.next) {
                         case 0:
                           _context.next = 2;
-                          return filmDetailsRequest(film.filmId);
+                          return (0, _kinopoiskapiunofficialRequest.filmDetailsRequest)(film.filmId);
 
                         case 2:
                           detailResult = _context.sent;
@@ -118,18 +119,14 @@ var fetchBlockFilms = /*#__PURE__*/function () {
                   return _ref2.apply(this, arguments);
                 };
               }()));
-            }); // отвечает за отображение desc и отрисовку блоков
-
+            });
             _context2.next = 11;
             return Promise.all(requests);
 
           case 11:
-            // тз 20- отображение готовых блоков
-            blockFilmsWrapper.innerHTML = ""; // стирание скелета
-
-            elements = _toConsumableArray(filmBlocksMap.values()).slice(0, 9); // обрезка блоков
-
-            blockFilmsWrapper.append.apply(blockFilmsWrapper, _toConsumableArray(elements)); // добавление готовых блоков в разметку
+            blockFilmsWrapper.innerHTML = "";
+            elements = _toConsumableArray(filmBlocksMap.values()).slice(0, 9);
+            blockFilmsWrapper.append.apply(blockFilmsWrapper, _toConsumableArray(elements));
 
           case 14:
           case "end":

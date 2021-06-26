@@ -8,10 +8,10 @@
 Установить babel
 
 ```shell
-npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/polyfill
+npm install
 ```
 Запустить babel
 
 ```shell
-npx babel js -d target --watch --source-maps
+npm start
 ```

@@ -1,5 +1,9 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.films = void 0;
 var films = [{
   title: 'XXX',
   genre: [],
@@ -41,14 +45,5 @@ var films = [{
     name: 'комедия'
   }]
 }];
-var tableBody = document.getElementById('block04_table_tbody');
-tableBody.innerHTML = '';
-
-for (var index = 0; index < films.length; index++) {
-  var film = new Film(films[index]);
-
-  if (film.isNotForAdult()) {
-    tableBody.innerHTML += film.renderFilmTableItems();
-  }
-}
-//# sourceMappingURL=table.js.map
+exports.films = films;
+//# sourceMappingURL=mocks.js.map

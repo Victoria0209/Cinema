@@ -1,3 +1,5 @@
+import { topFilmsRequest, filmDetailsRequest } from '../__data__/api/kinopoiskapiunofficialRequest.js';
+
 const blockFilmsWrapper = document.getElementById('block-mosaic_wrapper__id');
 
 function renderFilmBlock(posterUrl, filmName, id) {
@@ -27,7 +29,6 @@ function renderFilmBlock(posterUrl, filmName, id) {
 
     return [wrapper, divDesc];
 };
-// создаем DOM элементы
 
 const fetchBlockFilms = async () => {
     const result = await topFilmsRequest();
@@ -38,7 +39,6 @@ const fetchBlockFilms = async () => {
 
     data.films.forEach((film) => {
         const [filmLayout, divDesc] = renderFilmBlock(film.posterUrlPreview, film.nameRu, film.filmId)
-        // отвечает за отрисовку блоков
         requests.push(new Promise(async (resolve, reject) => {
             const detailResult = await filmDetailsRequest(film.filmId);
             const detailData = await detailResult.json();
@@ -50,14 +50,9 @@ const fetchBlockFilms = async () => {
             resolve();
         }));
     })
-    // отвечает за отображение desc и отрисовку блоков
     await Promise.all(requests);
-    // тз 20- отображение готовых блоков
     blockFilmsWrapper.innerHTML = "";
-    // стирание скелета
     const elements = [...filmBlocksMap.values()].slice(0, 9)
-    // обрезка блоков
     blockFilmsWrapper.append(...elements)
-    // добавление готовых блоков в разметку
 }
 fetchBlockFilms();

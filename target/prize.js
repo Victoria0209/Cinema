@@ -1,5 +1,11 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.initializeField = initializeField;
+exports.handleSubmit = handleSubmit;
+exports.SELECT_SELECTED = exports.FOCUSED_CLASS_NAME = exports.ERROR_CLASS_NAME = void 0;
 var openBtn = document.getElementById('btn_prize_open');
 var popUp = document.getElementById('prize_pop-up');
 var closeBtn = document.getElementById('prize_pop-up__close');
@@ -14,8 +20,11 @@ function popUpToggle() {
 
 ;
 var ERROR_CLASS_NAME = 'input__error';
+exports.ERROR_CLASS_NAME = ERROR_CLASS_NAME;
 var FOCUSED_CLASS_NAME = 'input__filled';
+exports.FOCUSED_CLASS_NAME = FOCUSED_CLASS_NAME;
 var SELECT_SELECTED = 'input_select_selected';
+exports.SELECT_SELECTED = SELECT_SELECTED;
 
 function initializeField(field) {
   var input;

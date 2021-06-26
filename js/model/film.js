@@ -1,4 +1,6 @@
-class Film {
+ import { getRandomToMax, toHour, toMinuts } from "../utils/time.js"
+ 
+ class Film {
     constructor(filmData) {
         this.data = filmData;
         this.start = `${toHour(getRandomToMax(13) + 9)}:${toMinuts(getRandomToMax(5))}`;
@@ -39,6 +41,7 @@ class Film {
                 </td>
                 <td class="table_size_m">${this.#getGenre()}</td>
             </tr>
-            `
+         `
     }
 }
+export default Film;

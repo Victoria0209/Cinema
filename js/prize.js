@@ -10,11 +10,10 @@ function popUpToggle() {
     popUp.classList.toggle('hidden');
 };
 
-const ERROR_CLASS_NAME = 'input__error';
-const FOCUSED_CLASS_NAME = 'input__filled';
-const SELECT_SELECTED = 'input_select_selected';
-
-function initializeField(field) {
+export const ERROR_CLASS_NAME = 'input__error';
+export const FOCUSED_CLASS_NAME = 'input__filled';
+export const SELECT_SELECTED = 'input_select_selected';
+export function initializeField(field) {
     let input;
     if (field.getElementsByTagName('input')[0]) {
         input = field.getElementsByTagName('input')[0];
@@ -23,7 +22,6 @@ function initializeField(field) {
     };
 
     const fieldError = field.querySelector('.input__error_mmsg');
-
 
     reset();
 
@@ -45,6 +43,7 @@ function initializeField(field) {
     input.addEventListener('input', () => {
         clearError();
     });
+
     selectPrize.addEventListener('change', () => {
         selectPrize.classList.remove(ERROR_CLASS_NAME)
     });
@@ -77,12 +76,14 @@ openBtn.addEventListener('click', () => {
     popUpToggle();
     nameFieldUtiles.focus();
 });
+
 selectPrize.addEventListener('change', () => {
     selectPrize.classList.add('input_select_selected');
 });
+
 closeBtn.onclick = popUpToggle;
 
-function handleSubmit(event) {
+export function handleSubmit(event) {
     event.preventDefault();
     const nameValue = nameFieldUtiles.getValue();
     const emailValue = emailFieldUtiles.getValue();
@@ -91,6 +92,7 @@ function handleSubmit(event) {
         nameFieldUtiles.addError('Необходимо указать имя');
         return;
     }
+    
     if (!emailValue) {
         emailFieldUtiles.addError('Укажите email');
         return;

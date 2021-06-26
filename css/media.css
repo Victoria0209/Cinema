@@ -3,6 +3,11 @@
         font-size: 17px;
     }
 
+    .scrollUp {
+        top: 34em;
+        left: 69em;
+    }
+
     .card_all {
         max-width: 226px;
     }
@@ -77,6 +82,7 @@
     .checkbox-field__label {
         font-size: 0.65rem;
     }
+
     .scrollUp {
         font-size: 1.4vw;
     }
@@ -85,6 +91,11 @@
 @media screen and (max-width:873px) {
     html {
         font-size: 19px;
+    }
+
+    .scrollUp {
+        top: 31em;
+        left: 65em;
     }
 
     .table-scroll {
@@ -111,6 +122,7 @@
     .list_li {
         margin-right: .1rem;
     }
+
     .list2 li {
         margin-right: 2.5rem;
     }
@@ -146,6 +158,11 @@
         font-size: 18px;
     }
 
+    .scrollUp {
+        top: 34em;
+        left: 64em;
+    }
+
     .feedback__block09 {
         background-size: 19.5rem 100%, 20.7rem;
     }
@@ -156,6 +173,10 @@
 }
 
 @media screen and (max-width:768px) {
+    .scrollUp {
+        top: 40em;
+        left: 63em;
+    }
 
     .welcome_h2 {
         font-size: 1.4rem;
@@ -418,6 +439,10 @@
     html {
         font-size: 2.4vw;
     }
+    .scrollUp {
+        top: 40em;
+        left: 62em;
+    }
 
     .gift_img {
         font-size: 3.6vw;
@@ -478,6 +503,7 @@
     .owl-prev {
         left: 3.2rem;
     }
+
     .feedback__block09 {
         width: 33.35rem;
     }
@@ -507,6 +533,7 @@
     .feedback-form__name {
         margin: 0 0 1rem;
     }
+
     #past-events {
         min-height: 44rem;
     }
@@ -699,7 +726,7 @@
     .card_desk {
         font-size: .8rem;
     }
-   
+
     .feedback-select {
         display: none;
     }
@@ -735,9 +762,11 @@
     .feedback-form__review-field {
         margin: 0px 0 0.65rem;
     }
+
     .owl-next {
         left: 28.15rem;
     }
+
     .owl-prev {
         left: 8rem;
     }
@@ -805,6 +834,7 @@
     .headers_p__size {
         width: auto;
     }
+
     .scrollUp {
         font-size: 1.3vw;
     }
@@ -812,7 +842,7 @@
 }
 
 @media (max-width:500px) {
-      html {
+    html {
         font-size: 3vw;
     }
 
@@ -858,9 +888,11 @@
     .headers_p__size {
         font-size: 0.65em;
     }
+
     .owl-next {
         left: 19.8rem;
     }
+
     .owl-prev {
         left: -0.8rem;
     }
@@ -884,6 +916,7 @@
     .event3_blockquote {
         font-size: 0.7em;
     }
+
     .scrollUp {
         display: none;
     }
@@ -971,7 +1004,7 @@
 
     .owl-prev {
         left: -2.5rem;
-    bottom: 17.5rem;
+        bottom: 17.5rem;
     }
-   
+
 }

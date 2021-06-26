@@ -1,12 +1,16 @@
 "use strict";
 
+var _prize = require("./prize.js");
+
+require("../libs/fancybox/jquery.fancybox.min.js");
+
 var nameFieldFeedback = document.querySelector('#feedback_form__id input[name="name"]').parentNode;
 var feedbackField = document.querySelector('#feedback_form__id input[name="email"]').parentNode;
 var formFedback = document.getElementById('feddback_form__id');
 var selectFeedback = document.getElementById('feedback_select');
 var btnForm = document.getElementById('btn_form');
-var nameFeedbackFieldUtiles = initializeField(nameFieldFeedback);
-var feedbackFieldUtiles = initializeField(feedbackField);
+var nameFeedbackFieldUtiles = (0, _prize.initializeField)(nameFieldFeedback);
+var feedbackFieldUtiles = (0, _prize.initializeField)(feedbackField);
 selectFeedback.addEventListener('change', function () {
   selectFeedback.classList.add('input_select_selected');
 });
@@ -23,9 +27,9 @@ $(document).ready(function ($) {
       data: data,
       success: function success(msg) {
         document.getElementById('feddback_form__id').reset();
-        document.getElementById('feedback_name').parentNode.classList.remove(FOCUSED_CLASS_NAME);
+        document.getElementById('feedback_name').parentNode.classList.remove(_prize.FOCUSED_CLASS_NAME);
         document.getElementById('feedback_select').classList.remove("input_select_selected");
-        document.getElementById('feedback_textarea').parentNode.classList.remove(FOCUSED_CLASS_NAME);
+        document.getElementById('feedback_textarea').parentNode.classList.remove(_prize.FOCUSED_CLASS_NAME);
         $.fancybox.open({
           src: '.modal-success',
           type: "inline"
@@ -43,19 +47,12 @@ $(document).ready(function ($) {
 });
 
 function showErrors(msg) {
-  // перебираем инпуты через цикл each
   $('#feddback_form__id input, #feddback_form__id select').each(function () {
-    // перебираем errors через цикл
     for (var i in msg.responseJSON.errors) {
-      // сравниваем атрибут name с названием у errors(email,place,name)
       if (i == $(this).attr('name')) {
-        // если есть ошибка, входим в условие ниже, где ищем closest с названием '.input_block1' (наши 2 поля имеют класс input_block1)
-        var parent = $(this).closest('.input_block1'); // если closest не нашли, значит ошибка в select
-
-        if (!parent.length) // тогда мы ищем closest '.feedback-select_wrap'
-          parent = $(this).closest('.feedback-select_wrap'); //добавляем элементу класс ошибки 
-
-        parent.addClass('input__error'); // перебираем массив errors и добавляем название ошибки и append`им в разметку конкатенируем  с подходящей ошибкой
+        var parent = $(this).closest('.input_block1');
+        if (!parent.length) parent = $(this).closest('.feedback-select_wrap');
+        parent.addClass('input__error');
 
         for (var j in msg.responseJSON.errors[i]) {
           parent.append('<p class="input__error_mmsg">' + msg.responseJSON.errors[i][j] + '</p>');
@@ -66,6 +63,6 @@ function showErrors(msg) {
 }
 
 selectFeedback.addEventListener('change', function () {
-  selectFeedback.classList.remove(ERROR_CLASS_NAME);
+  selectFeedback.classList.remove(_prize.ERROR_CLASS_NAME);
 });
 //# sourceMappingURL=form_feedback.js.map

@@ -1,0 +1,1 @@
+export const KINOPOISK_UNOFFICIAL_URL='https://kinopoiskapiunofficial.tech/api';

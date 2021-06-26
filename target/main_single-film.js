@@ -1,12 +1,25 @@
 "use strict";
 
+require("https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js");
+
+require("../libs/own/owl.carousel.min.js");
+
+require("../node_modules/@babel/polyfill/dist/polyfill.min.js");
+
+require("../libs/fancybox/jquery.fancybox.min.js");
+
+require("./single.js");
+
+require("./city.js");
+
+var _kinopoiskapiunofficialRequest = require("./__data__/api/kinopoiskapiunofficialRequest.js");
+
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 var searchParams = new URLSearchParams(location.search);
-var filmId = searchParams.get('id'); // нашли ID
-
+var filmId = searchParams.get('id');
 var likes = document.getElementById('sf-likes');
 var stars = document.querySelectorAll('.rt-star');
 
@@ -19,7 +32,7 @@ var fetchKinopoiskFilmData = /*#__PURE__*/function () {
         switch (_context.prev = _context.next) {
           case 0:
             _context.next = 2;
-            return filmDetailsRequest(filmId);
+            return (0, _kinopoiskapiunofficialRequest.filmDetailsRequest)(filmId);
 
           case 2:
             answer = _context.sent;
@@ -29,7 +42,6 @@ var fetchKinopoiskFilmData = /*#__PURE__*/function () {
           case 5:
             _yield$answer$json = _context.sent;
             filmData = _yield$answer$json.data;
-            // получили детализацию о фильмах по ID 
             header = document.getElementById('sf-header');
             description = document.getElementById('sf-desc');
             posterImage = document.getElementById('sf-poster');
@@ -37,7 +49,7 @@ var fetchKinopoiskFilmData = /*#__PURE__*/function () {
             header.textContent = filmData.nameRu;
             description.textContent = filmData.description;
             posterImage.src = filmData.posterUrl;
-            premiere.textContent = filmData.premiereRu; // записали в разметку данные из детализации по фильмам
+            premiere.textContent = filmData.premiereRu;
 
           case 15:
           case "end":
@@ -71,24 +83,20 @@ var fethcFilmMeta = /*#__PURE__*/function () {
           case 5:
             _yield$answer$json2 = _context2.sent;
             body = _yield$answer$json2.body;
-            // запрос за др данными о лайках, просмотрах..
             views = document.getElementById('sf-views');
             ratingNumber = document.getElementById('sf-rating-number');
             views.textContent = "".concat(body.views, " Views");
-            likes.textContent = "".concat(body.likes, " Likes"); // в разметку вписываем полученные данные с сервера
-
+            likes.textContent = "".concat(body.likes, " Likes");
             rating = body.ratings.reduce(function (a, b) {
               return parseInt(a) + parseInt(b);
-            }, 0) / body.ratings.length; // суммируем все полученные оценки и делим на длину, чтобы получить среднее
-
-            intRating = Math.round(rating); // округляем полученную оценку
+            }, 0) / body.ratings.length;
+            intRating = Math.round(rating);
 
             if (isNaN(intRating)) {
-              ratingNumber.textContent = "0.0"; // если данных еще нет-прописываем 0,0
+              ratingNumber.textContent = "0.0";
             } else {
-              ratingNumber.textContent = rating.toFixed(1); // расчет полученных данных с сервера
-            } // TODO применить другой метод number tofixed
-
+              ratingNumber.textContent = rating.toFixed(1);
+            }
 
             stars.forEach(function (star, i) {
               if (i < intRating) {
@@ -109,8 +117,7 @@ var fethcFilmMeta = /*#__PURE__*/function () {
   return function fethcFilmMeta() {
     return _ref2.apply(this, arguments);
   };
-}(); // сравнение рейтинга и звездочек. Добавление класса звездочкам.
-
+}();
 
 var likeIcon = document.getElementById("like-icon");
 var FILM_KEY = "film-".concat(filmId);
@@ -118,13 +125,11 @@ var liked = localStorage.getItem(FILM_KEY);
 
 if (liked !== null) {
   likeIcon.classList.add('like-icon__liked');
-} // проверяем добавлялся ли ранее лайк через localStorage
-
+}
 
 likeIcon.addEventListener("click", function () {
   if (!likeIcon.classList.contains('like-icon__liked')) {
-    localStorage.setItem(FILM_KEY, true); // проверяем если нету класса like-icon__liked, то по клику добавляем в localStorage ключ и значение true
-
+    localStorage.setItem(FILM_KEY, true);
     var likesCount = parseInt(likes.textContent, 10) + 1;
     likes.innerHTML = "".concat(likesCount, " Likes");
     likeIcon.classList.add('like-icon__liked');
@@ -135,8 +140,7 @@ likeIcon.addEventListener("click", function () {
       }
     });
   }
-}); // отправили данные на сервер
-
+});
 $('.rating_stars').on('click', '.rt-star', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
   return regeneratorRuntime.wrap(function _callee3$(_context3) {
     while (1) {
@@ -162,8 +166,7 @@ $('.rating_stars').on('click', '.rt-star', /*#__PURE__*/_asyncToGenerator( /*#__
       }
     }
   }, _callee3, this);
-}))); // отправляем рейтинг звездочек на сервер
-
+})));
 fetchKinopoiskFilmData();
 fethcFilmMeta();
-//# sourceMappingURL=single-film.js.map
+//# sourceMappingURL=main_single-film.js.map

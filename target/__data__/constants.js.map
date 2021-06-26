@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../js/__data__/constants.js"],"names":["KINOPOISK_UNOFFICIAL_URL"],"mappings":";;;;;;AAAO,IAAMA,wBAAwB,GAAC,yCAA/B","sourcesContent":["export const KINOPOISK_UNOFFICIAL_URL='https://kinopoiskapiunofficial.tech/api';"],"file":"constants.js"}

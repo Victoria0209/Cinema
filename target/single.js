@@ -4,7 +4,6 @@ $(".owl-carousel").owlCarousel({
   loop: true,
   nav: true,
   dots: false,
-  // items: 6
   responsive: {
     0: {
       items: 4
@@ -23,4 +22,4 @@ $('.lang_trigger').on('click', function () {
     transform: "rotate(".concat(lngOpened ? 180 : 0, "deg)")
   });
 });
-//# sourceMappingURL=main-single.js.map
+//# sourceMappingURL=single.js.map

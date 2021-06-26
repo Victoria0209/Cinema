@@ -1,5 +1,4 @@
-const films = [
-{
+export const films = [{
     title: 'XXX',
     genre: [],
     adult: true,
@@ -55,14 +54,3 @@ const films = [
 
     }],
 }, ];
-
-const tableBody = document.getElementById('block04_table_tbody');
-tableBody.innerHTML = '';
-
-for (let index = 0; index < films.length; index++) {
-    const film = new Film(films[index]);
-    
-    if (film.isNotForAdult()) {
-        tableBody.innerHTML += film.renderFilmTableItems();
-    }
-}

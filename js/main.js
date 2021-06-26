@@ -1,3 +1,18 @@
+import 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js';
+import '../libs/own/owl.carousel.min.js';
+import '../node_modules/@babel/polyfill/dist/polyfill.min.js';
+import '../libs/fancybox/jquery.fancybox.min.js';
+
+import {createTable} from './companents/films-table.js';
+import {films} from './__data__/api/mocks.js';
+import "./companents/film-mosaic.js";
+import "../js/city.js";
+import "../js/prize.js";
+import "../js/form_feedback.js";
+
+const tableBody = document.getElementById('block04_table_tbody');
+createTable(films, tableBody);
+
 $(".owl-carousel").owlCarousel({
   loop: true,
   nav: true,
@@ -18,21 +33,17 @@ $('.scrollUp').click(function () {
     scrollTop: 0
   }, 1500)
 })
-// функция для скрола вверх
 
 $('.lang_list').slideUp(0)
-// сворачивает меню
 
 let lngOpened = false;
-// прописали false для дальнешйей работы с переворачиванием стрелочки
+
 $('.lang_trigger').on('click', function () {
   $('.lang_list').slideToggle();
-  // переключатель
-  
+
   lngOpened = !lngOpened;
-  // инвертируем lngOpened
+  
   $(this).find('svg').css({
     transform: `rotate(${lngOpened ? 180 : 0}deg)`,
-    // условия для lngOpened
   })
 })
