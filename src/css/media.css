@@ -517,7 +517,14 @@
     }
 
     .feedback__title {
-        padding-left: 1.7rem;
+        padding-left: 5.7rem;
+    }
+    .feedback__title__prize{
+        padding-left: 9.7rem;
+    }
+    .form_wrap {
+        max-width: 480px;
+        height: 346px;
     }
 
     .feedback-form__button {
@@ -526,9 +533,9 @@
         margin-top: 1.2rem;
     }
 
-    .feedback-form__review-field {
+    /* .feedback-form__review-field {
         margin: 0 0 0.65rem;
-    }
+    } */
 
     .feedback-form__name {
         margin: 0 0 1rem;
@@ -544,6 +551,9 @@
     html {
         font-size: 3.09vw;
     }
+    /* .feedback-select_wrap {
+       display: none;
+    } */
 
     .header-block01 {
         height: 25.4rem;
@@ -727,9 +737,9 @@
         font-size: .8rem;
     }
 
-    .feedback-select {
+    /* .feedback-select {
         display: none;
-    }
+    } */
 
     .feedback__block09 {
         background-image: url(../assets/img/group.png);
@@ -748,6 +758,13 @@
     .feedback__title {
         padding-left: 0.7rem;
     }
+    .feedback__title__prize{
+        padding-left: 6.7rem;
+    }
+
+    .form_wrap {
+        height: 297px;
+    }
 
     .feedback-form__button {
         width: 12.2rem;
@@ -755,20 +772,20 @@
         margin-top: 0.6rem;
     }
 
-    .feedback-form__name {
+    /* .feedback-form__name {
         margin: 0 0 0.65rem;
-    }
+    } */
 
-    .feedback-form__review-field {
+    /* .feedback-form__review-field {
         margin: 0px 0 0.65rem;
+    } */
+
+    .owl-prev {
+        left: 0rem;
     }
 
     .owl-next {
-        left: 28.15rem;
-    }
-
-    .owl-prev {
-        left: 8rem;
+        left: 20rem;
     }
 
     .table {
@@ -890,7 +907,7 @@
     }
 
     .owl-next {
-        left: 19.8rem;
+        left: 20.8rem;
     }
 
     .owl-prev {
@@ -919,6 +936,13 @@
 
     .scrollUp {
         display: none;
+    }
+    .form_wrap {
+        max-width: 392px;
+        height: 256px;
+    }
+    .feedback__title__prize {
+        padding-left: 4.7rem;
     }
 }
 
@@ -999,12 +1023,19 @@
 
     .owl-next {
         bottom: 17.5rem;
-        left: 17.5rem;
+        left: 19.5rem;
     }
 
     .owl-prev {
         left: -2.5rem;
         bottom: 17.5rem;
+    }
+    .feedback__title__prize {
+        padding-left: 5.7rem;
+    }
+    .form_wrap {
+        max-width: 358px;
+        height: 233px;
     }
 
 }
